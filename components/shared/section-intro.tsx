@@ -10,7 +10,7 @@ interface SectionIntroProps {
   number: string;
   label: string;
   title: ReactNode;
-  description: ReactNode;
+  description?: ReactNode;
   className?: string;
   colorClassName?: string;
   descriptionClassName?: string;
@@ -58,19 +58,21 @@ const SectionIntro = ({
         </div>
 
         {/* Right Column */}
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
-          }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className={cn(
-            "md:col-span-4 md:col-start-9 text-sm md:text-base leading-relaxed text-muted-foreground max-w-md",
-            descriptionClassName,
-          )}
-        >
-          {description}
-        </motion.div>
+        {description && (
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className={cn(
+              "md:col-span-4 md:col-start-9 text-sm md:text-base leading-relaxed text-muted-foreground max-w-md",
+              descriptionClassName,
+            )}
+          >
+            {description}
+          </motion.div>
+        )}
       </div>
     </motion.div>
   );

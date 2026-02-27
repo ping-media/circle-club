@@ -4,12 +4,19 @@ import { FEATURES } from "@/constants/features";
 import FeatureCard from "./feature-card";
 import FeatureProgress from "./feature-progress";
 import { useCarousel } from "@/hook/use-carousel";
+import { motion } from "framer-motion";
 
 const FeatureCarousel = () => {
   const { containerRef, activeIndex } = useCarousel();
 
   return (
-    <div className="relative">
+    <motion.div
+      className="relative"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+    >
       {/* Slides */}
       <div
         ref={containerRef}
@@ -27,8 +34,15 @@ const FeatureCarousel = () => {
       </div>
 
       {/* Progress Bar */}
-      <FeatureProgress activeIndex={activeIndex} />
-    </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 0.6 }}
+      >
+        <FeatureProgress activeIndex={activeIndex} />
+      </motion.div>
+    </motion.div>
   );
 };
 

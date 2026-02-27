@@ -8,6 +8,8 @@ interface HeroVideoProps {
   poster?: string;
   overlay?: boolean;
   className?: string;
+  objectPosition?: string;
+  overlayClassName?: string;
 }
 
 const HeroVideo = ({
@@ -15,6 +17,8 @@ const HeroVideo = ({
   poster,
   overlay = true,
   className = "",
+  objectPosition = "center",
+  overlayClassName = "",
 }: HeroVideoProps) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -24,6 +28,7 @@ const HeroVideo = ({
       <video
         ref={videoRef}
         className={cn("absolute inset-0 h-full w-full object-cover", className)}
+        style={{ objectPosition }}
         autoPlay
         muted
         loop
@@ -35,7 +40,9 @@ const HeroVideo = ({
       </video>
 
       {/* Optional Overlay */}
-      {overlay && <div className="absolute inset-0 bg-black/25" />}
+      {overlay && (
+        <div className={cn("absolute inset-0 bg-black/25", overlayClassName)} />
+      )}
     </>
   );
 };

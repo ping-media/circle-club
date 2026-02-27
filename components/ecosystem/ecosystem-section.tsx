@@ -16,7 +16,7 @@ const EcosystemSection = () => {
           </>
         }
         description="Unlike traditional concierge services, we operate our own luxury infrastructure — ensuring direct control, quality, and speed."
-        colorClassName="text-white"
+        colorClassName="text-white font-bold!"
         descriptionClassName="text-white/80"
       />
 

@@ -29,10 +29,9 @@ const EcosystemCarousel = () => {
       <motion.div
         ref={containerRef}
         className="
-            grid grid-flow-col auto-cols-[85%] md:auto-cols-[45%] lg:auto-cols-[30%]
+            grid grid-flow-col auto-cols-[85%] md:auto-cols-[45%] lg:auto-cols-[26%]
             gap-12 overflow-x-auto snap-x snap-mandatory
-            scroll-smooth no-scrollbar
-          "
+            scroll-smooth no-scrollbar"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -43,7 +42,7 @@ const EcosystemCarousel = () => {
             data-slide
             variants={cardVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="snap-start flex flex-col p-6 gap-6 bg-linear-to-b from-white/20 to-transparent"
+            className="snap-start flex flex-col p-6 gap-6 bg-linear-to-b from-white/20 to-transparent h-full  "
           >
             {/* Image with consistent ratio */}
             <div className="relative w-full aspect-3/2 overflow-hidden">
@@ -55,7 +54,7 @@ const EcosystemCarousel = () => {
               />
             </div>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col flex-1 gap-4">
               <h3 className="uppercase text-white font-semibold tracking-[1.1] text-lg">
                 {service.title}
               </h3>

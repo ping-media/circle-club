@@ -5,22 +5,14 @@ import Logo from "./logo";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-export interface NavItem {
-  label: string;
-  href: string;
-}
-
-const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Monaco F1 Grand Prix", href: "#" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+import { NAV_ITEMS } from "@/constants/nav-list";
+import { usePathname } from "next/navigation";
 
 const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
   const [showCenter, setShowCenter] = useState(false);
+  const pathname = usePathname();
+
+  const isHome = pathname === "/";
 
   useEffect(() => {
     if (window.scrollY === 0) {
@@ -55,7 +47,7 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
                 >
                   <Link
                     href={item.href}
-                    className="text-xs 2xl:text-sm tracking-[0.2em] uppercase text-white hover:text-white/90 transition-colors"
+                    className="text-xs 2xl:text-sm tracking-[0.2em] uppercase font-bold text-white hover:text-white/90 transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -69,7 +61,7 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
               transition={{ delay: 0.5, duration: 0.4 }}
             >
               <Button
-                variant="outline"
+                variant={isHome ? "outline" : "gold-gradient"}
                 className="text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em]"
               >
                 Send a Request

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer/footer";
+import { SITE_CONFIG } from "@/constants/site";
+import { AnimationProvider } from "@/context/animation-context";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -14,8 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Circle Club",
-  description: "Exclusive Social Club for the Elite",
+  title: SITE_CONFIG.name,
+  description: SITE_CONFIG.description,
 };
 
 export default function RootLayout({
@@ -28,7 +30,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
-        {children}
+        <AnimationProvider>
+          <main className="relative min-h-screen overflow-hidden">
+            {children}
+          </main>
+        </AnimationProvider>
         <Footer />
       </body>
     </html>

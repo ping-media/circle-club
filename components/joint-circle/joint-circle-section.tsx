@@ -39,7 +39,7 @@ const JointCircleSection = () => {
               number="007"
               label="Join the Circle"
               descriptionClassName="text-white/80"
-              colorClassName="text-white"
+              colorClassName="text-white font-bold!"
             />
 
             <motion.h2

@@ -54,7 +54,7 @@ const AboutSection = () => {
                 This Is A Circle.
               </>
             }
-            colorClassName="text-xl md:text-3xl lg:text-5xl"
+            colorClassName="text-xl md:text-3xl lg:text-5xl font-bold! leading-[1.3]"
           />
 
           <div className="flex flex-col gap-8">

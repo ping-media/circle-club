@@ -9,30 +9,42 @@ import Container from "../shared/container";
 import { Button } from "@/components/ui/button";
 import SocialBtn from "./social-button";
 import HeroReview from "./hero-review";
+import { useAnimationContext } from "@/context/animation-context";
 
 const HeroSection = () => {
-  const [phase, setPhase] = useState<AnimatedHeaderPhase>("center");
+  const { hasHeroAnimated, setHasHeroAnimated } = useAnimationContext();
+  const [phase, setPhase] = useState<AnimatedHeaderPhase>(
+    hasHeroAnimated ? "reveal" : "center",
+  );
 
   useEffect(() => {
+    if (hasHeroAnimated) {
+      setPhase("reveal");
+      return;
+    }
+
     const t1 = setTimeout(() => setPhase("nav"), 1800);
-    const t2 = setTimeout(() => setPhase("reveal"), 2800);
+    const t2 = setTimeout(() => {
+      setPhase("reveal");
+      setHasHeroAnimated(true);
+    }, 2800);
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
     };
-  }, []);
+  }, [hasHeroAnimated, setHasHeroAnimated]);
 
   return (
     <>
       {/* Video Background */}
-      <HeroVideo src="videos/hero.mp4" />
+      <HeroVideo src="videos/hero.mp4" poster="images/hero.webp" />
 
       {/* Animated Header */}
       <AnimatedHeader phase={phase} />
 
       {/* Hero Content */}
-      <Container className="relative z-10 flex h-full items-end pb-6 px-6 md:px-0">
-        <div className="grid w-full gap-8 md:grid-cols-12 md:items-end">
+      <Container className="relative z-10 flex h-full items-end px-6 md:px-0">
+        <div className="grid w-full gap-8 md:grid-cols-12 mb-8 md:items-end">
           {/* Left: Headline */}
           <div className="flex flex-col gap-8 md:col-span-6">
             <motion.div

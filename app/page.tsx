@@ -8,7 +8,7 @@ import SponsorSection from "@/components/sponsor/sponsor-section";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
+    <>
       <section className="relative h-screen w-full">
         <HeroSection />
       </section>
@@ -24,12 +24,12 @@ export default function Home() {
       <section className="bg-gold-50 py-11">
         <AboutSection />
       </section>
-      <section className="relative bg-gold-200 py-11">
+      <section className="bg-gold-200">
         <SponsorSection />
       </section>
       <section className="bg-brown-100 py-11">
         <JointCircleSection />
       </section>
-    </main>
+    </>
   );
 }

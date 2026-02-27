@@ -3,29 +3,21 @@
 import Container from "../shared/container";
 import SectionLabel from "../shared/section-label";
 import Link from "next/link";
-import { Facebook, Instagram, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
-const NAVIGATION = [
-  { label: "Legal Notice", href: "/legal" },
-  { label: "Services", href: "/services" },
-  { label: "Monaco F1 Grand Prix", href: "/monaco" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
-
-const CONNECT = [
-  { label: "Request Access", href: "/request-access" },
-  { label: "Sponsor Inquiry", href: "/sponsor" },
-  { label: "WhatsApp", href: "#" },
-  { label: "Instagram", href: "#" },
-];
+import { SITE_CONFIG } from "@/constants/site";
+import { CONNECT, NAVIGATION, SOCIAL } from "@/constants/footer";
 
 const Footer = () => {
   return (
-    <footer className="relative isolate overflow-hidden bg-transparent">
-      {/* footer background image  */}
+    <motion.footer
+      className="relative isolate overflow-hidden bg-transparent"
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+    >
+      {/* footer background  */}
       <div
         className="absolute inset-0 -z-20"
         style={{
@@ -34,53 +26,62 @@ const Footer = () => {
           backgroundPosition: "center",
         }}
       />
-      {/* <div className="absolute inset-0 -z-20">
-        <Image
-          src="/images/footer.webp"
-          alt="Footer Background"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div> */}
 
-      {/* Overlay (optional) */}
+      {/* Overlay */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/40 via-white/50 to-white/70 backdrop-blur-md" />
 
-      <Container className="relative z-10 py-24">
-        <div className="grid md:grid-cols-12 gap-12">
+      <Container className="relative z-10 my-24">
+        <motion.div
+          className="grid md:grid-cols-12 gap-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: {
+              transition: {
+                staggerChildren: 0.15,
+              },
+            },
+          }}
+        >
           {/* LEFT BLOCK */}
           <motion.div
             className="md:col-span-6 flex flex-col justify-between"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 },
+            }}
             transition={{ duration: 0.8 }}
           >
             <div className="space-y-6">
-              <SectionLabel label="Beyond Race" />
+              <SectionLabel
+                label="Beyond Race"
+                colorClassName="text-brown-100"
+              />
 
-              <h3 className="text-xl md:text-2xl font-medium">
+              <h3 className="text-xl md:text-2xl font-medium text-brown-100">
                 Private Concierge – Monaco
               </h3>
             </div>
 
-            <p className="text-xs tracking-[0.2em] uppercase text-brown-800/70 mt-16">
-              &copy; 2026 Circle Club. All rights reserved.
+            <p className="text-xs tracking-[0.2em] uppercase text-brown-100 mt-16">
+              &copy; 2026 {SITE_CONFIG.name}. All rights reserved.
             </p>
           </motion.div>
 
           {/* RIGHT SIDE */}
           <motion.div
             className="md:col-span-6 grid grid-cols-2 gap-12"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            variants={{
+              hidden: { opacity: 0, y: 40 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.8 }}
           >
             {/* NAVIGATION */}
             <div className="space-y-6">
-              <h4 className="text-xs uppercase tracking-[0.3em] text-brown-800/60">
+              <h4 className="text-xs uppercase tracking-[0.3em] text-brown-50">
                 Navigation
               </h4>
 
@@ -89,7 +90,7 @@ const Footer = () => {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="hover:opacity-70 transition"
+                      className="hover:opacity-70 transition text-brown-100"
                     >
                       {item.label}
                     </Link>
@@ -99,15 +100,25 @@ const Footer = () => {
 
               {/* SOCIAL ICONS */}
               <div className="flex items-center gap-4 pt-6">
-                <Facebook size={16} />
-                <Instagram size={16} />
-                <Youtube size={16} />
+                {SOCIAL.map((i) => (
+                  <div key={i.label}>
+                    <Link href={i.href}>
+                      <Image
+                        src={i.src}
+                        alt={i.label}
+                        width={24}
+                        height={24}
+                        className="object-contain hover:scale-105 transition-transform duration-200 ease-in-out"
+                      />
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
 
             {/* CONNECT */}
             <div className="space-y-6">
-              <h4 className="text-xs uppercase tracking-[0.3em] text-brown-800/60">
+              <h4 className="text-xs uppercase tracking-[0.3em] text-brown-50">
                 Connect
               </h4>
 
@@ -116,7 +127,7 @@ const Footer = () => {
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="hover:opacity-70 transition"
+                      className="hover:opacity-70 transition text-brown-100"
                     >
                       {item.label}
                     </Link>
@@ -125,19 +136,25 @@ const Footer = () => {
               </ul>
             </div>
           </motion.div>
-        </div>
+        </motion.div>
       </Container>
 
       {/* text cliping logo image at footer bottom  */}
-      <div className="relative w-full h-[260px] mt-16">
+      <motion.div
+        className="relative w-full h-[260px] mt-16"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+      >
         <Image
           src="/images/footer_text_clip.webp"
-          alt="Circle Club Text Clip"
+          alt="circle club footer logo"
           fill
           className="object-contain object-bottom"
         />
-      </div>
-    </footer>
+      </motion.div>
+    </motion.footer>
   );
 };
 
