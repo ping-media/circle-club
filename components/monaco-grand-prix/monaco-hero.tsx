@@ -2,11 +2,8 @@
 
 import AnimatedHeader from "../layout/animated-header";
 import Container from "../shared/container";
-import DotAndLabel from "../shared/DotAndLabel";
 import SectionTitle from "../shared/section-title";
 import { motion } from "framer-motion";
-
-const LIST = ["Monaco rooted", "Experience-focused", "Ecosystem-powered"];
 
 const containerVariants = {
   hidden: {},
@@ -23,12 +20,12 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const AboutHero = () => {
+const MonacoHero = () => {
   return (
     <>
       <AnimatedHeader phase={"reveal"} />
 
-      <Container className="mt-40 mb-10">
+      <Container className="mt-36 mb-10">
         <motion.div
           className="flex flex-col gap-6"
           initial="hidden"
@@ -42,8 +39,9 @@ const AboutHero = () => {
             <SectionTitle
               title={
                 <>
-                  Circle <br />
-                  Club
+                  Monaco <br />
+                  Grand Prix <br />
+                  Experience
                 </>
               }
               colorClassName="font-black text-white leading-[1.01] md:text-8xl!"
@@ -54,15 +52,14 @@ const AboutHero = () => {
             className="flex items-center gap-7"
             variants={containerVariants}
           >
-            {LIST.map((l) => (
-              <motion.div
-                key={l}
-                variants={itemVariants}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <DotAndLabel label={l} className="font-medium!" />
-              </motion.div>
-            ))}
+            <motion.p
+              variants={itemVariants}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="text-white"
+            >
+              The most iconic race in the world elevated through privileged
+              access.
+            </motion.p>
           </motion.div>
         </motion.div>
       </Container>
@@ -70,4 +67,4 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default MonacoHero;

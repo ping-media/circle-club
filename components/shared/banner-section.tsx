@@ -1,10 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Container from "../shared/container";
-import SectionLabel from "../shared/section-label";
-import SectionTitle from "../shared/section-title";
+import Container from "./container";
+import SectionLabel from "./section-label";
+import SectionTitle from "./section-title";
 import { Button } from "../ui/button";
+import { ReactNode } from "react";
+
+interface BannerSectionProps {
+  number: string;
+  label: string;
+  title: string | ReactNode;
+  description?: string;
+  btnLabel: string;
+}
 
 const containerVariants = {
   hidden: {},
@@ -21,7 +30,13 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const AboutInfoThree = () => {
+const BannerSection = ({
+  number,
+  label,
+  title,
+  description,
+  btnLabel,
+}: BannerSectionProps) => {
   return (
     <Container className="flex flex-col bg-white/20">
       <motion.div
@@ -37,43 +52,39 @@ const AboutInfoThree = () => {
         >
           <motion.div variants={itemVariants}>
             <SectionLabel
-              number="004"
-              label="Global Reach"
+              number={number}
+              label={label}
               colorClassName="text-white"
               descriptionClassName="text-white/64!"
               squareClassName="text-white/10!"
+              labelClassName="text-white"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
             <SectionTitle
-              title={
-                <>
-                  Based in monaco. Operating without <br /> borders
-                </>
-              }
+              title={title}
               colorClassName="lg:text-[40px]! text-white text-center"
             />
           </motion.div>
-          <motion.p
-            className="text-white md:max-w-lg text-center"
-            variants={itemVariants}
-          >
-            While rooted in Monaco, our services extend internationally and We
-            respond to requests wherever our clients operate.
-          </motion.p>
+          {description && (
+            <motion.p
+              className="text-white md:max-w-lg text-center font-normal"
+              variants={itemVariants}
+            >
+              {description}
+            </motion.p>
+          )}
         </motion.div>
 
-        {/* <motion.div variants={itemVariants}> */}
         <Button
           variant="outline"
-          className="md:w-1/3 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-100 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
+          className="md:w-1/4 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
         >
-          Request Access
+          {btnLabel}
         </Button>
-        {/* </motion.div> */}
       </motion.div>
     </Container>
   );
 };
 
-export default AboutInfoThree;
+export default BannerSection;

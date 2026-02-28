@@ -6,7 +6,8 @@ export interface NavItem {
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Monaco F1 Grand Prix", href: "#" },
+  { label: "Monaco F1 Grand Prix", href: "/monaco-f1-grand-prix" },
+  { label: "Sponsors", href: "/sponsors" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

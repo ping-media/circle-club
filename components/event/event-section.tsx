@@ -17,6 +17,7 @@ const EventSection = () => {
         }
         colorClassName="font-bold!"
         description="Access the Monaco Grand Prix from the most privileged vantage points terrace and sea."
+        squareClassName="bg-[#0E0E0E29]!"
       />
 
       <Feature />

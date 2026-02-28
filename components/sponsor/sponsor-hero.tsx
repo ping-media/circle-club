@@ -2,11 +2,8 @@
 
 import AnimatedHeader from "../layout/animated-header";
 import Container from "../shared/container";
-import DotAndLabel from "../shared/DotAndLabel";
 import SectionTitle from "../shared/section-title";
 import { motion } from "framer-motion";
-
-const LIST = ["Monaco rooted", "Experience-focused", "Ecosystem-powered"];
 
 const containerVariants = {
   hidden: {},
@@ -23,7 +20,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const AboutHero = () => {
+const SponsorHero = () => {
   return (
     <>
       <AnimatedHeader phase={"reveal"} />
@@ -42,32 +39,25 @@ const AboutHero = () => {
             <SectionTitle
               title={
                 <>
-                  Circle <br />
-                  Club
+                  Partner With
+                  <br /> Circle Club
                 </>
               }
               colorClassName="font-black text-white leading-[1.01] md:text-8xl!"
             />
           </motion.div>
 
-          <motion.div
-            className="flex items-center gap-7"
-            variants={containerVariants}
+          <motion.p
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="text-white"
           >
-            {LIST.map((l) => (
-              <motion.div
-                key={l}
-                variants={itemVariants}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <DotAndLabel label={l} className="font-medium!" />
-              </motion.div>
-            ))}
-          </motion.div>
+            Position your brand within Monaco’s most prestigious environments.
+          </motion.p>
         </motion.div>
       </Container>
     </>
   );
 };
 
-export default AboutHero;
+export default SponsorHero;

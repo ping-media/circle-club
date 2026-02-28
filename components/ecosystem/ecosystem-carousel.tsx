@@ -42,7 +42,7 @@ const EcosystemCarousel = () => {
             data-slide
             variants={cardVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="snap-start flex flex-col p-6 gap-6 bg-linear-to-b from-white/20 to-transparent h-full  "
+            className="snap-start flex flex-col p-6 gap-6 bg-linear-to-b from-white/20 to-transparent h-full"
           >
             {/* Image with consistent ratio */}
             <div className="relative w-full aspect-3/2 overflow-hidden">

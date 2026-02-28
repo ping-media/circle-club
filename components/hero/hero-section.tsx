@@ -60,7 +60,7 @@ const HeroSection = () => {
               animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
             >
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase leading-[0.9] text-white">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase text-white leading-[1.21]">
                 Join The
                 <br />
                 Experience
@@ -70,12 +70,12 @@ const HeroSection = () => {
 
           {/* Right: Description + CTAs */}
           <motion.div
-            className="md:col-span-6 md:col-start-9 max-w-sm flex flex-col gap-6"
+            className="md:col-span-6 md:col-start-9 max-w-sm flex flex-col gap-8 mb-6"
             initial={{ opacity: 0, y: 40 }}
             animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
           >
-            <p className="text-sm leading-relaxed text-white">
+            <p className="text-sm leading-relaxed font-normal text-white">
               Private access to Monaco's most prestigious moments, curated
               through trusted connections and discreet hospitality for a
               distinguished few.

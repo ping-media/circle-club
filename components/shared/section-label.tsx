@@ -7,12 +7,14 @@ const SectionLabel = ({
   squareClassName,
   number,
   label,
+  labelClassName,
 }: {
   colorClassName?: string;
   descriptionClassName?: string;
   squareClassName?: string;
   number?: string;
   label?: string;
+  labelClassName?: string;
 }) => {
   return (
     <motion.div
@@ -32,8 +34,14 @@ const SectionLabel = ({
           squareClassName,
         )}
       ></span>
-      {number && <span className={cn(descriptionClassName)}>{number}</span>}
-      {label && <span>{label}</span>}
+      {number && (
+        <span className={cn("font-light", descriptionClassName)}>{number}</span>
+      )}
+      {label && (
+        <span className={cn("font-light text-foreground", labelClassName)}>
+          {label}
+        </span>
+      )}
     </motion.div>
   );
 };

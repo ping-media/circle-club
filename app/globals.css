@@ -52,15 +52,18 @@
   --color-gold-50: var(--color-gold-50);
   --color-gold-100: var(--color-gold-100);
   --color-gold-200: var(--color-gold-200);
+  --color-gold-300: var(--color-gold-300);
   --color-brown-50: var(--color-brown-50);
   --color-brown-100: var(--color-brown-100);
   --color-brown-200: var(--color-brown-200);
+  --color-gray-warm: var(--color-gray-warm);
 }
 
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* --foreground: oklch(0.145 0 0); */
+  --foreground: #0e0e0e;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
@@ -96,11 +99,13 @@
   --color-gold-50: #fff6db;
   --color-gold-100: #fae4a2;
   --color-gold-200: #ffedbb;
+  --color-gold-300: #f3e5bb;
   --color-gold-medium: #f8e09a;
   --color-brown-50: #530e10a3;
   --color-brown-100: #4c1512;
   --color-brown-200: #530e10;
-  --color-new-black: #0e0e0e;
+  --color-gray-warm: #1c1917;
+  /* --color-new-black: #0e0e0e; */
 }
 
 .dark {

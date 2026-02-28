@@ -26,7 +26,7 @@ const HeroReview = () => {
       </div>
 
       {/* Rating Info */}
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-1">
         <div className="flex items-center gap-3">
           <Dots filledDots={filledDots} />
 

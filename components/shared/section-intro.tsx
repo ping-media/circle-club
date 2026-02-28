@@ -14,6 +14,8 @@ interface SectionIntroProps {
   className?: string;
   colorClassName?: string;
   descriptionClassName?: string;
+  squareClassName?: string;
+  labelClassName?: string;
 }
 
 const SectionIntro = ({
@@ -24,6 +26,8 @@ const SectionIntro = ({
   className = "",
   colorClassName = "",
   descriptionClassName = "",
+  squareClassName = "",
+  labelClassName = "",
 }: SectionIntroProps) => {
   return (
     <motion.div
@@ -51,6 +55,8 @@ const SectionIntro = ({
             label={label}
             colorClassName={colorClassName}
             descriptionClassName={descriptionClassName}
+            squareClassName={squareClassName}
+            labelClassName={labelClassName}
           />
 
           {/* Title */}

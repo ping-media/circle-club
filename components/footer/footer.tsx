@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { SITE_CONFIG } from "@/constants/site";
 import { CONNECT, NAVIGATION, SOCIAL } from "@/constants/footer";
+import BorderGrid from "../shared/border-grid";
 
 const Footer = () => {
   return (
@@ -17,6 +18,7 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
     >
+      <BorderGrid borderClassName="border-[#0000001F]!" />
       {/* footer background  */}
       <div
         className="absolute inset-0 -z-20"

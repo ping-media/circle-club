@@ -7,7 +7,6 @@ import SectionTitle from "../shared/section-title";
 import { Button } from "../ui/button";
 import { ABOUT_LIST_ONE } from "@/constants/about";
 import { motion } from "framer-motion";
-import BorderGrid from "../shared/border-grid";
 
 const containerVariants = {
   hidden: {},

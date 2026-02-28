@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { NAV_ITEMS } from "@/constants/nav-list";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
   const [showCenter, setShowCenter] = useState(false);
@@ -34,10 +35,12 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
         <header className="absolute top-0 inset-x-0 z-40 w-full md:max-w-6xl 2xl:max-w-7xl mx-auto py-5">
           <div className="flex items-center justify-between">
             {/* Logo left aligned */}
-            <Logo />
+            <Link href="/">
+              <Logo />
+            </Link>
 
             {/* Nav */}
-            <nav className="hidden md:flex items-center gap-10">
+            <nav className="hidden md:flex items-center gap-9">
               {NAV_ITEMS.map((item, i) => (
                 <motion.div
                   key={item.href}
@@ -47,7 +50,13 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
                 >
                   <Link
                     href={item.href}
-                    className="text-xs 2xl:text-sm tracking-[0.2em] uppercase font-bold text-white hover:text-white/90 transition-colors"
+                    // className="text-xs 2xl:text-sm tracking-[0.2em] uppercase font-bold text-white hover:text-white/90 transition-colors"
+                    className={cn(
+                      "text-xs 2xl:text-sm tracking-[0.2em] uppercase font-bold text-white hover:text-white/90 transition-colors relative",
+                      pathname === item.href
+                        ? "underline decoration-2 underline-offset-3"
+                        : "",
+                    )}
                   >
                     {item.label}
                   </Link>
