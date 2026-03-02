@@ -57,7 +57,7 @@ const ShowcaseCard = () => {
           <div className="h-8 border-r border-[#FFFFFF80] border-dashed" />
 
           <Image
-            src="/images/showcase/frame.svg"
+            src="/images/showcase/Frame.svg"
             alt="frame logo"
             width={35}
             height={24}
