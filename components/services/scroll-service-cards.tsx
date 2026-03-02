@@ -93,7 +93,7 @@ function ServiceCard({
 
 const ScrollServiceCards = () => {
   return (
-    <section className="relative bg-gold-50 py-11">
+    <>
       <Container className="relative z-50">
         <div className="space-y-8 md:space-y-12">
           {SERVICES_LIST.map((service, i) => (
@@ -103,7 +103,7 @@ const ScrollServiceCards = () => {
         {/* Extra scroll space so last card can fully pin */}
         <div className="h-[30vh]" />
       </Container>
-    </section>
+    </>
   );
 };
 

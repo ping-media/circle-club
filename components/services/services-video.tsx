@@ -12,7 +12,7 @@ const ServicesVideos = () => {
         overlayClassName="bg-white/25 backdrop-blur-md"
       />
 
-      <div className="absolute inset-0 w-full h-full flex items-center justify-center gap-12">
+      <div className="absolute inset-0 w-full h-full flex items-center justify-center gap-6 md:gap-12">
         {OPERATIONS.map((o) => (
           <DotAndLabel label={o} key={o} />
         ))}

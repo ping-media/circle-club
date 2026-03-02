@@ -41,6 +41,7 @@ const Partnership = () => {
               descriptionClassName="text-white/80"
               colorClassName="text-white font-bold!"
               labelClassName="text-white!"
+              squareClassName="bg-[#FFFFFF1A]!"
             />
 
             <motion.h2

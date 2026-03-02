@@ -37,7 +37,11 @@ const WhyPartnerOpportunities = () => {
           variants={itemVariants}
           className="flex flex-col items-center gap-4"
         >
-          <SectionLabel number="003" label="why partner" />
+          <SectionLabel
+            number="003"
+            label="why partner"
+            squareClassName="bg-[#0E0E0E29]!"
+          />
           <SectionTitle title="opportunities" colorClassName="font-bold!" />
         </motion.div>
 

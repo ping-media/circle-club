@@ -34,7 +34,11 @@ const AboutInfoTwo = () => {
         variants={containerVariants}
       >
         <motion.div variants={itemVariants} transition={{ duration: 0.6 }}>
-          <SectionLabel number="003" label="Our Strength" />
+          <SectionLabel
+            number="003"
+            label="Our Strength"
+            squareClassName="bg-[#0E0E0E29]!"
+          />
         </motion.div>
 
         <motion.div variants={itemVariants} transition={{ duration: 0.8 }}>
