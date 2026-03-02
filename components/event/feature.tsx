@@ -20,13 +20,13 @@ const FeatureCarousel = () => {
       {/* Slides */}
       <div
         ref={containerRef}
-        className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar gap-6 px-6"
+        className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar md:gap-6"
       >
         {FEATURES.map((feature, index) => (
           <div
             key={`feature-${index}`}
             data-slide
-            className="snap-start shrink-0 w-[95%]"
+            className="snap-start shrink-0 w-full md:w-[95%]"
           >
             <FeatureCard {...feature} />
           </div>

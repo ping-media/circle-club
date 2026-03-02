@@ -20,7 +20,7 @@ const itemVariants = {
 const ShowcaseCard = () => {
   return (
     <motion.div
-      className="bg-white/20 backdrop-blur-lg border border-white/20 p-8 flex flex-col gap-8 max-w-3xl ml-auto"
+      className="bg-[#FFFFFF33] backdrop-blur-[54px] p-4 md:p-8 flex flex-col gap-2.5 md:gap-8 md:max-w-3xl md:ml-auto"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -30,37 +30,37 @@ const ShowcaseCard = () => {
       <motion.div
         variants={itemVariants}
         transition={{ duration: 0.6 }}
-        className="flex items-center gap-4 text-xs uppercase text-white/70 tracking-[0.3em] font-space"
+        className="flex items-center gap-4 text-xs uppercase text-white/70 tracking-[0.3em]"
       >
-        <span className="w-3 h-3 2xl:w-4 2xl:h-4 bg-muted-foreground"></span>
-        <span className="-ml-2">003</span>
-        <span className="text-white leading-[1.2] tracking-[2.1]">
+        <span className="w-3 h-3 2xl:w-4 2xl:h-4 bg-[#FFFFFF29]"></span>
+        <span className="-ml-2 font-light! text-xs md:text-sm">003</span>
+        <span className="text-white leading-[1.2] tracking-[2.1] font-normal! text-xs md:text-base">
           Monaco Grand Prix – June 2026
         </span>
       </motion.div>
 
       {/* Logos + Title */}
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-3 md:gap-6">
         <motion.div
           variants={itemVariants}
           transition={{ duration: 0.6 }}
-          className="flex items-center gap-6"
+          className="flex items-center gap-3 md:gap-6"
         >
           <Image
             src="/images/showcase/F1.svg"
             alt="F1 logo"
-            width={80}
-            height={28}
+            width={76}
+            height={19}
             className="object-contain"
           />
 
-          <div className="h-8 border-r border-white border-dashed" />
+          <div className="h-8 border-r border-[#FFFFFF80] border-dashed" />
 
           <Image
             src="/images/showcase/frame.svg"
-            alt="Country flag"
-            width={40}
-            height={28}
+            alt="frame logo"
+            width={35}
+            height={24}
             className="object-contain"
           />
         </motion.div>
@@ -68,18 +68,18 @@ const ShowcaseCard = () => {
         <motion.h2
           variants={itemVariants}
           transition={{ duration: 0.8 }}
-          className="uppercase font-bold text-5xl text-white leading-[1.2]"
+          className="uppercase font-bold text-2xl md:text-[56px] text-white leading-normal md:leading-[1.4] tracking-tighter"
         >
           Rooted in Monaco.
           <br />
           Connected{" "}
-          <span className="italic text-white/70 font-normal">Worldwide</span>.
+          <span className="italic text-white/70 font-normal">Worldwide.</span>
         </motion.h2>
 
         <motion.p
           variants={itemVariants}
           transition={{ duration: 0.8 }}
-          className="text-white/80 text-sm leading-[1.6] w-full md:max-w-2xl"
+          className="text-[#FFFFFFCC] text-xs md:text-[20px] leading-normal md:leading-6 w-full md:max-w-2xl"
         >
           Our presence in Monaco places us at the center of the world’s most
           exclusive networks — from Formula 1 to private real estate and luxury

@@ -25,29 +25,29 @@ const FeatureCard = ({
     <div className={cn("w-full", className)}>
       <div
         className={cn(
-          "grid md:grid-cols-2 min-h-125",
+          "grid grid-cols-1 md:grid-cols-2 min-h-125",
           reverse ? "md:[&>*:first-child]:order-2" : "",
         )}
       >
         {/* Left Content */}
         <motion.div
-          className="bg-gold-200 px-8 py-16 md:px-16 flex flex-col justify-center items-center"
+          className="order-2 md:order-0 bg-gold-200 px-4 py-4 md:py-16 md:px-16 flex flex-col justify-center items-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <div className="w-full md:max-w-xs 2xl:max-w-sm space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold uppercase leading-tight text-black">
+            <h2 className="text-xl md:text-4xl font-bold uppercase leading-tight text-foreground">
               {title}
             </h2>
 
-            <p className="text-sm md:text-base text-black leading-relaxed">
+            <p className="text-sm md:text-[20px] text-foreground leading-normal">
               {description}
             </p>
 
             <motion.button
-              className="inline-block bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition"
+              className="inline-block w-full md:w-auto bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -60,7 +60,7 @@ const FeatureCard = ({
 
         {/* Right Video */}
         <motion.div
-          className="relative h-87.5 md:h-auto"
+          className="order-1 md:order-0 relative h-87.5 md:h-auto p-4 md:p-0 bg-gold-200"
           initial={{
             opacity: 0,
             x: reverse ? -80 : 80,

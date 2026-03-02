@@ -6,13 +6,13 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SITE_CONFIG } from "@/constants/site";
-import { CONNECT, NAVIGATION, SOCIAL } from "@/constants/footer";
+import { CONNECT, NAVIGATION, SOCIAL, SOCIAL_MOBILE } from "@/constants/footer";
 import BorderGrid from "../shared/border-grid";
 
 const Footer = () => {
   return (
     <motion.footer
-      className="relative isolate overflow-hidden bg-transparent"
+      className="relative isolate overflow-hidden flex flex-col gap-10 md:gap-[70px] bg-transparent pb-8"
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -25,16 +25,16 @@ const Footer = () => {
         style={{
           backgroundImage: "url('/images/footer.webp')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "bottom",
         }}
       />
 
       {/* Overlay */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/40 via-white/50 to-white/70 backdrop-blur-md" />
 
-      <Container className="relative z-10 my-24">
+      <Container className="relative top-15 md:top-30 mb-12 md:mb-24 z-10 px-6 md:px-0">
         <motion.div
-          className="grid md:grid-cols-12 gap-12"
+          className="grid md:grid-cols-12 gap-6 md:gap-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -59,15 +59,16 @@ const Footer = () => {
             <div className="space-y-6">
               <SectionLabel
                 label="Beyond Race"
-                colorClassName="text-brown-100"
+                squareClassName="bg-[#530E1029]!"
+                labelClassName="text-brown-100! tracking-[2.1] leading-4! text-sm font-normal!"
               />
 
-              <h3 className="text-xl md:text-2xl font-medium text-brown-100">
+              <h3 className="text-xl md:text-2xl font-normal text-brown-100">
                 Private Concierge – Monaco
               </h3>
             </div>
 
-            <p className="text-xs tracking-[0.2em] uppercase text-brown-100 mt-16">
+            <p className="hidden md:block text-xs tracking-[0.2em] uppercase text-brown-100 md:mt-16">
               &copy; 2026 {SITE_CONFIG.name}. All rights reserved.
             </p>
           </motion.div>
@@ -101,7 +102,7 @@ const Footer = () => {
               </ul>
 
               {/* SOCIAL ICONS */}
-              <div className="flex items-center gap-4 pt-6">
+              <div className="hidden md:flex items-center gap-4 pt-6">
                 {SOCIAL.map((i) => (
                   <div key={i.label}>
                     <Link href={i.href}>
@@ -137,13 +138,34 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+
+            {/* mobile social  */}
+            <div className="w-full col-span-full">
+              <p className="md:hidden text-xs tracking-[0.2em] uppercase text-white">
+                &copy; 2026 {SITE_CONFIG.name}. All rights reserved.
+              </p>
+
+              <div className="md:hidden flex items-center gap-4 pt-6">
+                {SOCIAL_MOBILE.map((i) => (
+                  <Link key={i.label} href={i.href}>
+                    <Image
+                      src={i.src}
+                      alt={i.label}
+                      width={18}
+                      height={18}
+                      className="object-contain hover:scale-105 transition-transform duration-200 ease-in-out"
+                    />
+                  </Link>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </motion.div>
       </Container>
 
       {/* text cliping logo image at footer bottom  */}
       <motion.div
-        className="relative w-full h-[260px] mt-16"
+        className="relative w-full h-[86px] md:h-[260px] z-[60] px-6 md:px-0"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

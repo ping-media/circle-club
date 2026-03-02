@@ -41,7 +41,7 @@ const MonacoTwoSection = () => {
             <SectionLabel
               number="003"
               label="yacht experience"
-              squareClassName="border-[#0E0E0E29]!"
+              squareClassName="bg-[#0E0E0E29]!"
             />
             <SectionTitle
               title={"Yacht Viewing Experience"}

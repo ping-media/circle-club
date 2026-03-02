@@ -56,7 +56,7 @@ const BannerSection = ({
               label={label}
               colorClassName="text-white"
               descriptionClassName="text-white/64!"
-              squareClassName="text-white/10!"
+              squareClassName="bg-[#FFFFFF1A]!"
               labelClassName="text-white"
             />
           </motion.div>

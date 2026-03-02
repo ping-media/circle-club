@@ -43,7 +43,11 @@ const ChooseSection = () => {
             variants={itemVariants}
             className="flex flex-col items-center gap-4"
           >
-            <SectionLabel number="004" label="Why choose us" />
+            <SectionLabel
+              number="004"
+              label="Why choose us"
+              squareClassName="bg-[#0E0E0E29]!"
+            />
             <SectionTitle title="why circle club" colorClassName="font-bold!" />
             <p>
               A curated private ecosystem built for individuals who expect more

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const JointCircleSection = () => {
   return (
-    <Container>
+    <Container className="relative z-50 px-6 md:px-0">
       <div className="grid md:grid-cols-12 md:items-stretch">
         <motion.div
           className="md:col-span-6"
@@ -28,7 +28,7 @@ const JointCircleSection = () => {
         </motion.div>
 
         <motion.div
-          className="md:col-span-6 flex flex-col p-14 bg-white/10 h-full"
+          className="md:col-span-6 flex flex-col p-4 md:p-14 bg-white/10 h-full"
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -41,6 +41,7 @@ const JointCircleSection = () => {
               descriptionClassName="text-white/80"
               colorClassName="text-white font-bold!"
               labelClassName="text-white!"
+              squareClassName="bg-[#FFFFFF29]!"
             />
 
             <motion.h2
@@ -69,7 +70,7 @@ const JointCircleSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-36 2xl:mt-42"
+            className="mt-4 md:mt-36 2xl:mt-42"
           >
             <Button className="text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5 w-full md:w-1/3 2xl:w-2/3">
               Request Access

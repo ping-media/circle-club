@@ -27,17 +27,18 @@ const HeroReview = () => {
 
       {/* Rating Info */}
       <div className="flex flex-col gap-1">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 font-light!">
           <Dots filledDots={filledDots} />
 
-          <span className="text-white text-sm font-light font-space">
-            {RATING} <span className="text-white/65">/ 5</span>
+          <span className="text-white text-sm">
+            {RATING}
+            <span className="text-[#FFFFFFA3]">/5</span>
           </span>
         </div>
 
-        <span className="text-white text-sm tracking-[0.3em] uppercase font-space">
-          <span className="text-white/65">Based on</span> {REVIEW_COUNT}{" "}
-          Verified Reviews
+        <span className="text-white text-xs md:text-sm tracking-[0.3em] uppercase font-light!">
+          <span className="text-[#FFFFFFA3] font-light!">Based on</span>{" "}
+          {REVIEW_COUNT} Verified Reviews
         </span>
       </div>
     </div>
@@ -52,7 +53,7 @@ const Dots = ({ filledDots }: { filledDots: number }) => {
       {Array.from({ length: filledDots }).map((_, i) => (
         <span
           key={i}
-          className={`w-3 h-3 rounded-full ${
+          className={`w-2 h-2 rounded-full ${
             i < filledDots ? "bg-white" : "bg-white/30"
           }`}
         />

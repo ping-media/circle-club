@@ -4,24 +4,26 @@ import Feature from "./feature";
 
 const EventSection = () => {
   return (
-    <Container className="flex flex-col items-center gap-11">
-      <SectionIntro
-        number="002"
-        label="Events"
-        title={
-          <>
-            Exclusive Monaco
-            <br />
-            Experiences
-          </>
-        }
-        colorClassName="font-bold!"
-        description="Access the Monaco Grand Prix from the most privileged vantage points terrace and sea."
-        squareClassName="bg-[#0E0E0E29]!"
-      />
+    <>
+      <Container className="flex flex-col items-center gap-11 relative z-50 px-6 md:px-0">
+        <SectionIntro
+          number="002"
+          label="Events"
+          title={
+            <>
+              Exclusive Monaco
+              <br />
+              Experiences
+            </>
+          }
+          colorClassName="font-bold!"
+          description="Access the Monaco Grand Prix from the most privileged vantage points terrace and sea."
+          squareClassName="bg-[#0E0E0E29]!"
+        />
 
-      <Feature />
-    </Container>
+        <Feature />
+      </Container>
+    </>
   );
 };
 

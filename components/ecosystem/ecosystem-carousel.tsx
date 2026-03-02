@@ -29,8 +29,8 @@ const EcosystemCarousel = () => {
       <motion.div
         ref={containerRef}
         className="
-            grid grid-flow-col auto-cols-[85%] md:auto-cols-[45%] lg:auto-cols-[26%]
-            gap-12 overflow-x-auto snap-x snap-mandatory
+            grid grid-flow-col auto-cols-[85%] md:auto-cols-[45%] lg:auto-cols-[29%]
+            gap-6 md:gap-8 overflow-x-auto snap-x snap-mandatory
             scroll-smooth no-scrollbar"
         variants={containerVariants}
         initial="hidden"
@@ -42,7 +42,7 @@ const EcosystemCarousel = () => {
             data-slide
             variants={cardVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="snap-start flex flex-col p-6 gap-6 bg-linear-to-b from-white/20 to-transparent h-full"
+            className="snap-start flex flex-col p-3 md:p-6 gap-10 md:gap-12 bg-linear-to-b from-white/20 to-transparent h-full"
           >
             {/* Image with consistent ratio */}
             <div className="relative w-full aspect-3/2 overflow-hidden">
@@ -54,16 +54,16 @@ const EcosystemCarousel = () => {
               />
             </div>
 
-            <div className="flex flex-col flex-1 gap-4">
-              <h3 className="uppercase text-white font-semibold tracking-[1.1] text-lg">
+            <div className="flex flex-col flex-1 gap-2 md:gap-4">
+              <h3 className="uppercase text-white font-semibold tracking-[1.1] leading-4 text-[22px]">
                 {service.title}
               </h3>
 
-              <p className="text-white/80 text-sm leading-relaxed">
+              <p className="text-white/80 text-[18px] leading-6">
                 {service.description}
               </p>
 
-              <button className="text-gold-200 cursor-pointer flex items-center gap-2 underline underline-offset-2 text-sm mt-auto">
+              <button className="text-gold-200 cursor-pointer flex items-center gap-2 underline underline-offset-2 mt-auto text-[18px] leading-6">
                 {service.buttonText}
                 <ArrowRight size={16} />
               </button>

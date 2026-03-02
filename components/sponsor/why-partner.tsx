@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const WhyPartner = () => {
   return (
-    <Container>
+    <Container className="relative z-50">
       <div className="grid md:grid-cols-12 gap-10">
         <div className="md:col-span-7 flex flex-col gap-44">
           <div className="flex flex-col gap-4">
@@ -17,6 +17,7 @@ const WhyPartner = () => {
               title="circle club provides access to:"
               colorClassName="font-bold! md:text-[56px]!"
             />
+            <div className="border-b border-[#0000002E]" />
           </div>
 
           <div className="grid md:grid-cols-2 gap-16">
@@ -45,10 +46,13 @@ const PartnerCard = ({ item }: { item: PartnerList }) => (
   <div className="flex flex-col gap-4">
     <SectionLabel
       label={item.title}
-      colorClassName="text-foreground! font-semibold! font-base!"
-      squareClassName="text-brown-100!"
+      colorClassName="tracking-tight! text-sm!"
+      labelClassName="text-foreground! font-semibold!"
+      squareClassName="bg-brown-100!"
     />
 
-    <p>{item.description}</p>
+    <p className="text-[#000000CC] md:w-2/3 font-normal leading-6">
+      {item.description}
+    </p>
   </div>
 );

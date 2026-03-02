@@ -7,7 +7,7 @@ import ShowcaseCard from "./showcase-card";
 
 const ShowcaseSection = () => {
   return (
-    <motion.section
+    <motion.div
       className="relative py-14 overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -15,18 +15,25 @@ const ShowcaseSection = () => {
       transition={{ duration: 1 }}
     >
       {/* Background Image with Mask */}
-      <div className="absolute inset-0 -z-10 mask-t-from-80% mask-b-from-90%">
-        <Image
-          src="/images/showcase/section_3.webp"
-          alt="Showcase"
-          fill
-          priority={false}
-          className="object-cover"
-          objectPosition="center"
-        />
-      </div>
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: "url('/images/showcase/section_3.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+        }}
+      />
 
-      <Container className="relative z-10 flex flex-col gap-20">
+      {/* top overlay  */}
+      <div
+        className="absolute inset-0 h-20 md:h-[122px] top-0 left-0 z-10 bg-[linear-gradient(180deg,_rgba(255,_255,_255,_0)_36.65%,_rgba(255,_255,_255,_0.009)_68.95%,_rgba(255,_255,_255,_0.1)_100%)
+] backdrop-blur-3xl"
+      />
+
+      {/* bottom overlay  */}
+      <div className="absolute bottom-0 left-0 w-full h-10 z-10 bg-[linear-gradient(180deg,_rgba(255,_255,_255,_0)_36.65%,_rgba(255,_255,_255,_0.009)_68.95%,_rgba(255,_255,_255,_0.1)_100%)] backdrop-blur-3xl" />
+
+      <Container className="relative z-50 flex flex-col px-6 md:px-0 gap-20">
         {/* Large Logo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -34,19 +41,26 @@ const ShowcaseSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          <Image
+          {/* <Image
             src="/images/logo_light.webp"
             alt="Circle Club Logo"
             width={724}
             height={164}
             className="object-contain"
+          /> */}
+          <Image
+            src="/images/logo_light.webp"
+            alt="Circle Club Logo"
+            width={724}
+            height={164}
+            className="w-48 sm:w-64 md:w-auto object-contain"
           />
         </motion.div>
 
         {/* Showcase Card */}
         <ShowcaseCard />
       </Container>
-    </motion.section>
+    </motion.div>
   );
 };
 
