@@ -28,7 +28,7 @@ const StackingCard = ({ index, children }: StackingCardProps) => {
         zIndex: index + 1,
       }}
     >
-      <motion.div className="w-full px-0 md:px-6 bg-gold-40 h-[65vh] md:h-[85vh] flex flex-col">
+      <motion.div className="w-full px-0 md:px-6 bg-gold-40 h-[75vh] md:h-[85vh] flex flex-col">
         {children}
       </motion.div>
     </div>

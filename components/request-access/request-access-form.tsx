@@ -138,7 +138,7 @@ export const RequestAccessForm = () => {
                   <Textarea
                     placeholder="MESSAGE"
                     autoComplete="off"
-                    className="p-4 border-none rounded-none border-b-2 border-[#530E104D] placeholder:text-brown-100 resize-none h-30 md:h-34"
+                    className="p-4 border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] placeholder:text-brown-100 resize-none h-30 md:h-34"
                     {...field}
                   />
                 </FormControl>
@@ -164,8 +164,8 @@ const Input = React.forwardRef<
   React.ComponentProps<typeof ShadcnInput>
 >(({ className, ...props }, ref) => (
   <ShadcnInput
-    className="p-4 border-none rounded-none border-b-2 border-[#530E104D] placeholder:text-brown-100 ring-0 outline-none focus:outline-none
-      focus:ring-0 focus:ring-offset-0 focus:border-[#530E104D]"
+    className="p-4 border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] placeholder:text-brown-100 ring-0 outline-none focus:outline-none
+      focus:ring-0 focus:ring-offset-0 focus:border-[#530E104D] shadow-none"
     {...props}
   />
 ));
@@ -188,7 +188,7 @@ const DateInput = ({
         value={field.value}
         placeholder="EVENT DATE"
         onClick={() => hiddenDateRef.current?.showPicker?.()}
-        className="p-4 border-none rounded-none border-b-2 border-[#530E104D] placeholder:text-brown-100 cursor-pointer"
+        className="p-4 border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] placeholder:text-brown-100 cursor-pointer"
       />
 
       {/* Hidden Native Date Input */}
