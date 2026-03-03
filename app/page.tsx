@@ -10,7 +10,7 @@ import SponsorSection from "@/components/sponsor/sponsor-section";
 export default function Home() {
   return (
     <>
-      <section className="relative h-screen w-full">
+      <section className="relative h-screen overflow-hidden w-full">
         <BorderGrid />
         <HeroSection />
       </section>

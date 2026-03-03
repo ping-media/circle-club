@@ -23,7 +23,7 @@ const Services = () => {
       </section>
       <section className="relative bg-gold-50 py-11">
         <BorderGrid />
-        {/* <ScrollServiceCards /> */}
+        <ScrollServiceCards />
       </section>
       <section className="relative bg-brown-100 py-11">
         <BorderGrid />

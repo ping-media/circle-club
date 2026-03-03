@@ -35,7 +35,14 @@ const SectionLabel = ({
         )}
       ></span>
       {number && (
-        <span className={cn("font-light", descriptionClassName)}>{number}</span>
+        <span
+          className={cn(
+            "font-light text-xs md:text-sm leading-4",
+            descriptionClassName,
+          )}
+        >
+          {number}
+        </span>
       )}
       {label && (
         <span

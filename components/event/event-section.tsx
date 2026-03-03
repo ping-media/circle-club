@@ -1,25 +1,56 @@
-import SectionIntro from "../shared/section-intro";
+"use client";
+
 import Container from "@/components/shared/container";
 import Feature from "./feature";
+import SectionLabel from "../shared/section-label";
+import SectionTitle from "../shared/section-title";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+      delayChildren: 0.15,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const EventSection = () => {
   return (
     <>
       <Container className="flex flex-col items-center gap-11 relative z-50 px-6 md:px-0">
-        <SectionIntro
-          number="002"
-          label="Events"
-          title={
-            <>
-              Exclusive Monaco
-              <br />
-              Experiences
-            </>
-          }
-          colorClassName="font-bold!"
-          description="Access the Monaco Grand Prix from the most privileged vantage points terrace and sea."
-          squareClassName="bg-[#0E0E0E29]!"
-        />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={containerVariants}
+          className="gap-4 md:gap-6"
+        >
+          <SectionLabel number="002" label="Events" colorClassName="text-sm" />
+          <div className="grid md:grid-cols-12 gap-4 md:gap-6 md:items-end">
+            <div className="md:col-span-7">
+              <SectionTitle
+                title="Exclusive Monaco Experiences"
+                colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19"
+              />
+            </div>
+            <motion.div
+              variants={itemVariants}
+              className="md:col-span-4 gap-2.5"
+            >
+              <p className="text-sm md:text-base">
+                Access the Monaco Grand Prix from the most privileged vantage
+                points terrace and sea.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
 
         <Feature />
       </Container>

@@ -33,8 +33,8 @@ const ShowcaseCard = () => {
         className="flex items-center gap-4 text-xs uppercase text-white/70 tracking-[0.3em]"
       >
         <span className="w-3 h-3 2xl:w-4 2xl:h-4 bg-[#FFFFFF29]"></span>
-        <span className="-ml-2 font-light! text-xs md:text-sm">003</span>
-        <span className="text-white leading-[1.2] tracking-[2.1] font-normal! text-xs md:text-base">
+        <span className="-ml-2 font-light! text-sm leading-4">003</span>
+        <span className="text-white tracking-[2.1] font-normal! text-sm leading-4">
           Monaco Grand Prix – June 2026
         </span>
       </motion.div>

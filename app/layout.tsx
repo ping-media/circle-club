@@ -31,9 +31,8 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
         <AnimationProvider>
-          <main className="relative min-h-screen overflow-hidden">
-            {children}
-          </main>
+          {/* <main className="relative min-h-screen overflow-hidden"> */}
+          <main className="relative min-h-screen">{children}</main>
         </AnimationProvider>
         <Footer />
       </body>
