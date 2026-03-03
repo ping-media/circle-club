@@ -5,8 +5,13 @@ import Container from "../shared/container";
 import SectionLabel from "../shared/section-label";
 import { Button } from "../ui/button";
 import { motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const JointCircleSection = () => {
+  const pathname = usePathname();
+
+  const isHome = pathname === "/";
+
   return (
     <Container className="relative z-50 px-6 md:px-0">
       <div className="grid md:grid-cols-12 md:items-stretch">
@@ -17,23 +22,26 @@ const JointCircleSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="relative w-full aspect-4/3">
-            <Image
-              src="/images/joint-circle/joint-circle.webp"
-              fill
-              className="object-cover"
-              alt="Joint circle"
-            />
-          </div>
-          {/* <video
-            className="w-full aspect-4/3 object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/videos/sponsor.mp4" type="video/mp4" />
-          </video> */}
+          {!isHome ? (
+            <div className="relative w-full aspect-4/3">
+              <Image
+                src="/images/joint-circle/joint-circle.webp"
+                fill
+                className="object-cover"
+                alt="Joint circle"
+              />
+            </div>
+          ) : (
+            <video
+              className="w-full aspect-4/3 object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/videos/sponsor.mp4" type="video/mp4" />
+            </video>
+          )}
         </motion.div>
 
         <motion.div
