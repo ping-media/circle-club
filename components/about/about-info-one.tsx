@@ -25,9 +25,9 @@ const itemVariants = {
 
 const AboutInfoOne = () => {
   return (
-    <Container className="flex flex-col gap-11">
+    <Container className="flex flex-col px-6 md:px-0 gap-11">
       <motion.div
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-3 md:gap-4"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -44,7 +44,7 @@ const AboutInfoOne = () => {
         <motion.div variants={itemVariants} transition={{ duration: 0.8 }}>
           <SectionTitle
             title="Beyond Traditional Concierge"
-            colorClassName="lg:text-[56px]! font-bold!"
+            colorClassName="text-2xl! lg:text-[56px]! font-bold!"
           />
         </motion.div>
       </motion.div>
@@ -70,13 +70,13 @@ const AboutInfoOne = () => {
           />
         </motion.div>
         <motion.div className="md:col-span-6" variants={containerVariants}>
-          <div className="flex flex-col gap-9 mt-5">
+          <div className="flex flex-col gap-6 md:gap-9 mt-5">
             <motion.p variants={itemVariants}>
               We design, manage, and execute experiences with complete ownership
               and oversight.
             </motion.p>
 
-            <motion.ul className="flex flex-col gap-3">
+            <motion.ul className="flex flex-col gap-1.5 md:gap-3">
               {ABOUT_LIST_ONE?.map((item) => (
                 <ListItem item={item} key={item} />
               ))}
@@ -85,7 +85,7 @@ const AboutInfoOne = () => {
             <motion.div variants={itemVariants} transition={{ duration: 0.6 }}>
               <Button
                 variant="outline"
-                className="md:w-1/3 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                className="w-full md:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
               >
                 Request Access
               </Button>
@@ -103,7 +103,7 @@ const ListItem = ({ item }: { item: string }) => (
   <motion.li
     variants={itemVariants}
     transition={{ duration: 0.5 }}
-    className="flex items-center gap-3 py-4 border-b border-[#00000014]"
+    className="flex items-center gap-3 py-2.5 md:py-4 border-b border-[#00000014]"
   >
     <Image
       src="/icons/checkmark-circle.svg"

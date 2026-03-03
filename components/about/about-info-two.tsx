@@ -25,7 +25,7 @@ const itemVariants = {
 
 const AboutInfoTwo = () => {
   return (
-    <Container className="flex flex-col gap-11">
+    <Container className="flex flex-col px-6 md:px-0 gap-11">
       <motion.div
         className="flex flex-col gap-4"
         initial="hidden"
@@ -44,7 +44,7 @@ const AboutInfoTwo = () => {
         <motion.div variants={itemVariants} transition={{ duration: 0.8 }}>
           <SectionTitle
             title="Operational Ecosystem"
-            colorClassName="lg:text-[56px]! font-bold!"
+            colorClassName="text-2xl! lg:text-[56px]! font-bold!"
           />
         </motion.div>
       </motion.div>
@@ -88,7 +88,7 @@ const AboutInfoTwo = () => {
             <motion.div variants={itemVariants} transition={{ duration: 0.6 }}>
               <Button
                 variant="outline"
-                className="md:w-1/3 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                className="w-full md:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
               >
                 Request Access
               </Button>
@@ -106,7 +106,7 @@ const ListItem = ({ item }: { item: string }) => (
   <motion.li
     variants={containerVariants}
     transition={{ duration: 0.5 }}
-    className="flex items-start gap-3 py-4 border-b border-[#00000014]"
+    className="flex items-start gap-3 py-2.5 md:py-4 border-b border-[#00000014]"
   >
     <Image
       src="/icons/checkmark-circle.svg"

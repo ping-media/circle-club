@@ -85,8 +85,9 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
                   "text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em] hidden md:flex",
                   isHome && "bg-gold-60 hover:bg-gold-60 border-none",
                 )}
+                asChild
               >
-                Send a Request
+                <Link href="/request-access">Send a Request</Link>
               </Button>
             </motion.div>
 
@@ -162,8 +163,9 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
                 "mt-auto rounded-none uppercase text-sm font-bold",
                 isHome && "bg-gold-60 hover:bg-gold-60 border-none",
               )}
+              asChild
             >
-              Send a Request
+              <Link href="/request-access">Send a Request</Link>
             </Button>
           </motion.div>
         </motion.div>

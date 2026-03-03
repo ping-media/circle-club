@@ -4,6 +4,12 @@ import BorderGrid from "@/components/shared/border-grid";
 import MonacoOneSection from "@/components/monaco-grand-prix/monaco-one-section";
 import MonacoTwoSection from "@/components/monaco-grand-prix/monaco-two-section";
 import ChooseSection from "@/components/monaco-grand-prix/choose-section";
+import { Metadata } from "next";
+import { SITE_CONFIG } from "@/constants/site";
+
+export const metadata: Metadata = {
+  title: `Monaco F1 Grand Prix | ${SITE_CONFIG.name}`,
+};
 
 const MonacoF1GrandPrix = () => {
   return (
@@ -12,29 +18,31 @@ const MonacoF1GrandPrix = () => {
         <BorderGrid />
         <MonacoHero />
       </section>
-      <section className="bg-gold-50 py-20 relative">
+      <section className="bg-gold-50 py-10 md:py-20 relative">
         <BorderGrid />
         <MonacoOneSection />
       </section>
-      <section className="bg-gold-300 py-20 relative">
+      <section className="bg-gold-300 py-10 md:py-20 relative">
         <BorderGrid />
         <MonacoTwoSection />
       </section>
-      <section className="py-20 relative">
+      <section className="py-10 md:py-20 relative">
         <BorderGrid />
         <ChooseSection />
       </section>
-      <section className="relative bg-brown-100 py-[120px]">
+      <section className="relative bg-brown-100 py-11 md:py-30">
         <BorderGrid />
-        <BannerSection
-          number={"005"}
-          label={"Global Reach"}
-          title={"SECURE YOUR POSITION"}
-          description={
-            "Claim your place within an exclusive circle where access, influence, and visibility converge."
-          }
-          btnLabel={"Send Request"}
-        />
+        <div className="relative z-50 px-6 md:px-0">
+          <BannerSection
+            number={"005"}
+            label={"Global Reach"}
+            title={"SECURE YOUR POSITION"}
+            description={
+              "Claim your place within an exclusive circle where access, influence, and visibility converge."
+            }
+            btnLabel={"Send Request"}
+          />
+        </div>
       </section>
     </>
   );

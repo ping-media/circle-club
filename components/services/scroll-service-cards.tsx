@@ -6,6 +6,8 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import { serviceList, SERVICES_LIST } from "@/constants/service";
 import Container from "../shared/container";
+import SectionLabel from "../shared/section-label";
+import SectionTitle from "../shared/section-title";
 
 function ServiceCard({
   service,
@@ -31,25 +33,25 @@ function ServiceCard({
       className="sticky top-20 md:top-24"
     >
       <div
-        className="bg-card rounded-sm border border-border shadow-lg overflow-hidden"
+        className="bg-gold-40 p-6 md:p-8 rounded-none border border-[#E9E4D6] overflow-hidden"
         style={{ marginTop: index * 12 }}
       >
-        {/* Label */}
-        <div className="px-6 pt-5 pb-2 md:px-10 md:pt-8">
-          <span className="text-xs tracking-[0.25em] text-muted-foreground font-medium font-[var(--font-body)]">
-            <span className="inline-block w-3 h-3 rounded-sm bg-primary mr-2 align-middle" />
-            {service.id} &nbsp; SERVICE
-          </span>
-        </div>
-
         {/* Content */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-12 px-6 pb-8 md:px-10 md:pb-10">
+        <div className="flex flex-col md:flex-row">
           {/* Left */}
           <div className="flex-1 flex flex-col justify-between min-h-[220px] md:min-h-[280px]">
-            <div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight mb-5">
-                {service.title}
-              </h2>
+            {/* Label */}
+            <SectionLabel
+              number={service.id}
+              label="SERVICE"
+              squareClassName="bg-[#0E0E0E29]"
+            />
+
+            <div className="flex flex-col gap-3">
+              <SectionTitle
+                title={service.title}
+                colorClassName="font-bold! leading-none!"
+              />
               {service.bullets && (
                 <ul className="space-y-2">
                   {service.bullets.map((b, i) => (
@@ -65,14 +67,14 @@ function ServiceCard({
               )}
             </div>
 
-            <button className="mt-6 self-start flex items-center gap-2 bg-primary text-primary-foreground px-5 py-3 text-xs tracking-[0.15em] font-semibold rounded-sm hover:opacity-90 transition-opacity">
+            <button className="mt-6 self-start flex items-center gap-2 bg-brown-100 text-primary-foreground px-5 py-3 text-xs tracking-[0.15em] font-semibold rounded-none hover:opacity-90 transition-opacity uppercase">
               {service.cta}
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
           {/* Right — Image */}
-          <div className="flex-1 relative rounded-sm overflow-hidden min-h-[200px] md:min-h-[320px]">
+          <div className="flex-1 relative rounded-sm overflow-hidden min-h-[200px] md:min-h-[460px]">
             <Image
               src={service.src}
               alt={service.title}
@@ -96,12 +98,13 @@ const ScrollServiceCards = () => {
     <>
       <Container className="relative z-50">
         <div className="space-y-8 md:space-y-12">
+          {/* <div className="relative"> */}
           {SERVICES_LIST.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
           ))}
         </div>
         {/* Extra scroll space so last card can fully pin */}
-        <div className="h-[30vh]" />
+        {/* <div className="h-[30vh]" /> */}
       </Container>
     </>
   );

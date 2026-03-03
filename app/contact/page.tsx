@@ -1,6 +1,12 @@
 import ContactHero from "@/components/contact/contact-hero";
 import ContactSection from "@/components/contact/contact-section";
 import BorderGrid from "@/components/shared/border-grid";
+import { SITE_CONFIG } from "@/constants/site";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Contact | ${SITE_CONFIG.name}`,
+};
 
 const Contact = () => {
   return (

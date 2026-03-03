@@ -1,10 +1,14 @@
-"use client";
-
 import AboutHero from "@/components/about/about-hero";
 import AboutInfoOne from "@/components/about/about-info-one";
-import BannerSection from "@/components/shared/banner-section";
 import AboutInfoTwo from "@/components/about/about-info-two";
 import BorderGrid from "@/components/shared/border-grid";
+import { Metadata } from "next";
+import { SITE_CONFIG } from "@/constants/site";
+import AboutInfoThree from "@/components/about/about-info-three";
+
+export const metadata: Metadata = {
+  title: `About | ${SITE_CONFIG.name}`,
+};
 
 const About = () => {
   return (
@@ -21,21 +25,9 @@ const About = () => {
         <BorderGrid />
         <AboutInfoTwo />
       </section>
-      <section className="relative bg-brown-100 py-[120px]">
+      <section className="relative bg-brown-100 py-20 md:py-30">
         <BorderGrid />
-        <BannerSection
-          number={"004"}
-          label={"Global Reach"}
-          title={
-            <>
-              Based in monaco. Operating without <br /> borders
-            </>
-          }
-          description={
-            "While rooted in Monaco, our services extend internationally and We respond to requests wherever our clients operate."
-          }
-          btnLabel={"Request Access"}
-        />
+        <AboutInfoThree />
       </section>
     </>
   );

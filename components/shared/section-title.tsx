@@ -20,7 +20,7 @@ const SectionTitle = ({
       }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={cn(
-        "text-3xl md:text-4xl lg:text-6xl font-black uppercase leading-[1.2]",
+        "text-5xl! md:text-4xl lg:text-6xl font-black uppercase leading-[1.2]",
         colorClassName,
       )}
     >

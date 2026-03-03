@@ -25,7 +25,7 @@ const SponsorHero = () => {
     <>
       <AnimatedHeader phase={"reveal"} />
 
-      <Container className="mt-40 mb-10">
+      <Container className="mt-40 px-6 md:px-0 mb-10">
         <motion.div
           className="flex flex-col gap-6"
           initial="hidden"

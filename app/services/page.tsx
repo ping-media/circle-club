@@ -1,7 +1,13 @@
 import JointCircleSection from "@/components/joint-circle/joint-circle-section";
-// import ScrollServiceCards from "@/components/services/scroll-service-cards";
+import ScrollServiceCards from "@/components/services/scroll-service-cards";
 import ServiceSection from "@/components/services/services-section";
 import ServicesVideos from "@/components/services/services-video";
+import { SITE_CONFIG } from "@/constants/site";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Services | ${SITE_CONFIG.name}`,
+};
 
 const Services = () => {
   return (
@@ -13,7 +19,7 @@ const Services = () => {
         <ServicesVideos />
       </section>
       <section className="bg-gold-50 py-11">
-        {/* <ScrollServiceCards /> */}
+        <ScrollServiceCards />
       </section>
       <section className="bg-brown-100 py-11">
         <JointCircleSection />

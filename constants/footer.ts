@@ -1,5 +1,5 @@
 export const NAVIGATION = [
-  { label: "Legal Notice", href: "/legal" },
+  { label: "Legal Notice", href: "#" },
   { label: "Services", href: "/services" },
   { label: "Monaco F1 Grand Prix", href: "/monaco-f1-grand-prix" },
   { label: "About", href: "/about" },

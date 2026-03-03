@@ -26,7 +26,7 @@ const itemVariants = {
 const MonacoTwoSection = () => {
   return (
     <>
-      <Container>
+      <Container className="relative z-50 px-6 md:px-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -36,7 +36,7 @@ const MonacoTwoSection = () => {
         >
           <motion.div
             variants={itemVariants}
-            className="md:col-span-4 flex flex-col justify-between"
+            className="md:col-span-4 flex flex-col gap-4 md:gap-0 justify-between"
           >
             <SectionLabel
               number="003"
@@ -45,7 +45,7 @@ const MonacoTwoSection = () => {
             />
             <SectionTitle
               title={"Yacht Viewing Experience"}
-              colorClassName="font-bold!"
+              colorClassName="text-2xl! font-bold! md:text-[56px]!"
             />
           </motion.div>
 
@@ -60,10 +60,10 @@ const MonacoTwoSection = () => {
           </motion.div>
 
           <motion.div
-            className="md:col-span-4 flex flex-col justify-end gap-7"
+            className="md:col-span-4 flex flex-col justify-end gap-6 md:gap-7"
             variants={itemVariants}
           >
-            <motion.ul className="flex flex-col gap-3">
+            <motion.ul className="flex flex-col gap-2.5 md:gap-3">
               {YACHT_LIST?.map((item) => (
                 <ListItem item={item} key={item} />
               ))}
@@ -72,7 +72,7 @@ const MonacoTwoSection = () => {
             <motion.div variants={itemVariants} transition={{ duration: 0.6 }}>
               <Button
                 variant="outline"
-                className="md:w-7/11 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                className="w-full md:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
               >
                 Request Yacht Access
               </Button>

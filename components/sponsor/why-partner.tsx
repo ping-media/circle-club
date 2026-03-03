@@ -24,7 +24,7 @@ const itemVariants = {
 
 const WhyPartner = () => {
   return (
-    <Container className="relative z-50">
+    <Container className="relative z-50 px-6 md:px-0">
       <motion.div
         className="grid md:grid-cols-12 gap-10"
         variants={containerVariants}
@@ -34,9 +34,9 @@ const WhyPartner = () => {
       >
         <motion.div
           variants={itemVariants}
-          className="md:col-span-7 flex flex-col gap-44"
+          className="md:col-span-7 flex flex-col gap-7 md:gap-44"
         >
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 md:gap-4">
             <SectionLabel
               number="002"
               label="Why Partner"
@@ -44,12 +44,12 @@ const WhyPartner = () => {
             />
             <SectionTitle
               title="circle club provides access to:"
-              colorClassName="font-bold! md:text-[56px]!"
+              colorClassName="text-2xl! font-bold! md:text-[56px]!"
             />
             <div className="border-b border-[#0000002E]" />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-16">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-16">
             {PARTNER_LIST.map((item) => (
               <motion.div key={item.title} variants={itemVariants}>
                 <PartnerCard item={item} />
@@ -75,7 +75,7 @@ const WhyPartner = () => {
 export default WhyPartner;
 
 const PartnerCard = ({ item }: { item: PartnerList }) => (
-  <div className="flex flex-col gap-4">
+  <div className="flex flex-col gap-1.5 md:gap-4">
     <SectionLabel
       label={item.title}
       colorClassName="tracking-tight! text-sm!"

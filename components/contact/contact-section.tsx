@@ -22,7 +22,7 @@ const itemVariants = {
 
 const ContactSection = () => {
   return (
-    <Container>
+    <Container className="relative z-50 px-6 md:px-0">
       <motion.div
         className="grid md:grid-cols-4 gap-3"
         initial="hidden"
@@ -46,7 +46,7 @@ const ContactCard = ({ item }: { item: ContactList }) => (
     transition={{ duration: 0.6, ease: "easeOut" }}
     className="bg-gold-200 flex flex-col justify-between p-5 gap-2 group hover:scale-107 transition-transform duration-150 ease-in-out hover:bg-brown-200 cursor-pointer"
   >
-    <h2 className="text-[#00000026] font-semibold md:text-[84px] group-hover:text-gold-200">
+    <h2 className="text-[#00000026] font-semibold text-[84px] group-hover:text-gold-200">
       {item.number}
     </h2>
 

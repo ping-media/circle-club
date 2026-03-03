@@ -44,7 +44,7 @@ const BannerSection = ({
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={containerVariants}
-        className="flex flex-col items-center justify-center p-14 gap-14"
+        className="flex flex-col items-center justify-center px-5 py-10 md:p-14 gap-4 md:gap-14"
       >
         <motion.div
           variants={containerVariants}
@@ -63,7 +63,7 @@ const BannerSection = ({
           <motion.div variants={itemVariants}>
             <SectionTitle
               title={title}
-              colorClassName="lg:text-[40px]! text-white text-center"
+              colorClassName="text-2xl! lg:text-[40px]! text-white text-center"
             />
           </motion.div>
           {description && (

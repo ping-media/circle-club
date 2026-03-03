@@ -3,6 +3,12 @@ import Partnership from "@/components/sponsor/partnership";
 import SponsorHero from "@/components/sponsor/sponsor-hero";
 import WhyPartner from "@/components/sponsor/why-partner";
 import WhyPartnerOpportunities from "@/components/sponsor/why-partner-opportunities";
+import { SITE_CONFIG } from "@/constants/site";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `Sponsors | ${SITE_CONFIG.name}`,
+};
 
 const Sponsors = () => {
   return (
@@ -19,7 +25,7 @@ const Sponsors = () => {
         <BorderGrid borderClassName="border-[#EBE3CA]!" />
         <WhyPartnerOpportunities />
       </section>
-      <section className="relative bg-brown-100 py-[120px]">
+      <section className="relative bg-brown-100 py-11 md:py-30">
         <BorderGrid />
         <Partnership />
       </section>

@@ -25,7 +25,7 @@ const itemVariants = {
 
 const WhyPartnerOpportunities = () => {
   return (
-    <Container className="relative z-50">
+    <Container className="relative px-6 md:px-0 z-50">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -42,12 +42,15 @@ const WhyPartnerOpportunities = () => {
             label="why partner"
             squareClassName="bg-[#0E0E0E29]!"
           />
-          <SectionTitle title="opportunities" colorClassName="font-bold!" />
+          <SectionTitle
+            title="opportunities"
+            colorClassName="text-2xl! font-bold! md:text-[56px]!"
+          />
         </motion.div>
 
         <motion.div
           variants={containerVariants}
-          className="grid w-full grid-cols-1 md:grid-cols-4"
+          className="w-full flex md:grid md:grid-cols-4 gap-4 md:gap-0 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar"
         >
           {OPPORTUNNITIES_LIST.map((opp, index) => (
             <OpportunitiesCard
@@ -76,12 +79,12 @@ const OpportunitiesCard = ({
     <motion.div
       variants={itemVariants}
       className={cn(
-        "relative flex",
-        index === 0 && "justify-start",
-        index === OPPORTUNNITIES_LIST.length - 1 && "justify-end",
+        "relative flex snap-start shrink-0 w-1/2 md:w-auto",
+        index === 0 && "md:justify-start",
+        index === OPPORTUNNITIES_LIST.length - 1 && "md:justify-end",
         index !== 0 &&
           index !== OPPORTUNNITIES_LIST.length - 1 &&
-          "justify-center",
+          "md:justify-center",
         index + 1 < OPPORTUNNITIES_LIST.length && "border-r border-[#D1CAB3]",
       )}
     >
@@ -90,14 +93,14 @@ const OpportunitiesCard = ({
         <div
           className={cn(
             "relative w-full aspect-4/5 overflow-hidden",
-            isGrow ? "aspect-2/3" : "aspect-4/5",
+            isGrow ? "md:aspect-2/3" : "aspect-4/5",
           )}
         >
           <Image src={src} alt={title} fill className="object-cover" />
         </div>
 
         {/* Label */}
-        <div className="bg-brown-100 px-4 py-2">
+        <div className="bg-brown-100 px-2.5 md:px-4 py-1.5 md:py-2">
           <p className="text-white text-sm font-medium leading-snug">{title}</p>
         </div>
       </div>
