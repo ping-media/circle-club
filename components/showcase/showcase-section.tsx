@@ -20,7 +20,8 @@ const ShowcaseSection = () => {
         style={{
           backgroundImage: "url('/images/showcase/section_3.webp')",
           backgroundSize: "cover",
-          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left center",
         }}
       />
 

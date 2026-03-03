@@ -96,16 +96,16 @@ function ServiceCard({
 const ScrollServiceCards = () => {
   return (
     <>
-      <Container className="relative z-50">
+      {/* <Container className="relative z-50"> */}
+      <div className="relative py-16 md:py-24 px-4 md:px-8 max-w-6xl mx-auto">
         <div className="space-y-8 md:space-y-12">
-          {/* <div className="relative"> */}
           {SERVICES_LIST.map((service, i) => (
             <ServiceCard key={service.id} service={service} index={i} />
           ))}
         </div>
         {/* Extra scroll space so last card can fully pin */}
-        {/* <div className="h-[30vh]" /> */}
-      </Container>
+        <div className="h-[30vh]" />
+      </div>
     </>
   );
 };

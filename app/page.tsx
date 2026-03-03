@@ -14,7 +14,7 @@ export default function Home() {
         <BorderGrid />
         <HeroSection />
       </section>
-      <section className="relative bg-gold-50 py-11">
+      <section className="relative bg-gold-50 py-11 md:py-25">
         <BorderGrid borderClassName="border-white/20" />
         <EventSection />
       </section>
@@ -22,7 +22,7 @@ export default function Home() {
         <BorderGrid />
         <ShowcaseSection />
       </section>
-      <section className="relative bg-brown-100 py-11">
+      <section className="relative bg-brown-100 py-11 md:py-16">
         <BorderGrid />
         <EcosystemSection />
       </section>

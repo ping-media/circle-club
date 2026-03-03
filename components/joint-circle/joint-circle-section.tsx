@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Container from "../shared/container";
 import SectionLabel from "../shared/section-label";
 import { Button } from "../ui/button";
@@ -16,7 +17,15 @@ const JointCircleSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <video
+          <div className="relative w-full aspect-4/3">
+            <Image
+              src="/images/joint-circle/joint-circle.webp"
+              fill
+              className="object-cover"
+              alt="Joint circle"
+            />
+          </div>
+          {/* <video
             className="w-full aspect-4/3 object-cover"
             autoPlay
             muted
@@ -24,7 +33,7 @@ const JointCircleSection = () => {
             playsInline
           >
             <source src="/videos/sponsor.mp4" type="video/mp4" />
-          </video>
+          </video> */}
         </motion.div>
 
         <motion.div

@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import AnimatedHeader from "../layout/animated-header";
-import HeroVideo from "./hero-video";
+// import HeroVideo from "./hero-video";
 import Container from "../shared/container";
 import { Button } from "@/components/ui/button";
 import SocialBtn from "./social-button";
 import HeroReview from "./hero-review";
 import { useAnimationContext } from "@/context/animation-context";
+import Image from "next/image";
 
 const HeroSection = () => {
   const { hasHeroAnimated, setHasHeroAnimated } = useAnimationContext();
@@ -37,7 +38,16 @@ const HeroSection = () => {
   return (
     <>
       {/* Video Background */}
-      <HeroVideo src="videos/hero.mp4" poster="images/hero.webp" />
+      {/* <HeroVideo src="videos/hero.mp4" poster="images/hero.webp" /> */}
+
+      <div className="absolute inset-0 h-full w-full">
+        <Image
+          src="/images/hero.webp"
+          alt="circle club hero"
+          fill
+          className="object-cover"
+        />
+      </div>
 
       {/* Animated Header */}
       <AnimatedHeader phase={phase} />
