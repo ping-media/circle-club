@@ -23,11 +23,11 @@ const SponsorSection = () => {
               label="Become a Sponsor"
               descriptionClassName="text-muted-foreground"
               squareClassName="bg-[#0E0E0E29]!"
-              labelClassName="text-foreground! text-sm"
+              labelClassName="text-foreground! md:text-sm"
               colorClassName="text-black"
             />
 
-            <div className="flex flex-col gap-3 md:gap-6">
+            <div className="flex flex-col gap-2 md:gap-6">
               <SectionTitle
                 title={
                   <>
@@ -37,7 +37,7 @@ const SponsorSection = () => {
                     <p className="block md:hidden">Become a Sponsor</p>
                   </>
                 }
-                colorClassName="font-bold! lg:text-[56px]! leading-[77px]!"
+                colorClassName="text-2xl! font-bold! lg:text-[56px]! leading-normal! md:leading-[77px]!"
               />
 
               <p className="w-full md:max-w-sm 2xl:max-w-md text-foreground text-sm md:text-[20px] leading-normal">

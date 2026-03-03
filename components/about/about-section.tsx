@@ -30,7 +30,7 @@ const AboutSection = () => {
               label="About"
               colorClassName="text-[#0E0E0EA3]! font-light!"
               squareClassName="bg-[#0E0E0E29]!"
-              labelClassName="text-foreground! text-sm"
+              labelClassName="text-foreground! md:text-sm"
             />
 
             <SectionTitle

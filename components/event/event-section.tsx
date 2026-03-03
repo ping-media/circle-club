@@ -30,7 +30,7 @@ const EventSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
-          className="gap-4 md:gap-6"
+          className="flex flex-col gap-4 md:gap-6"
         >
           <SectionLabel number="002" label="Events" colorClassName="text-sm" />
           <div className="grid md:grid-cols-12 gap-4 md:gap-6 md:items-end">

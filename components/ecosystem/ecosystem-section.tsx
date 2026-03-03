@@ -29,7 +29,7 @@ const EcosystemSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={containerVariants}
-        className="gap-4 md:gap-6"
+        className="flex flex-col gap-4 md:gap-6"
       >
         <SectionLabel
           number="004"
