@@ -25,7 +25,7 @@ const About = () => {
         <BorderGrid />
         <AboutInfoTwo />
       </section>
-      <section className="relative bg-brown-100 py-20 md:py-30">
+      <section className="relative bg-brown-100 py-20 lg:py-30">
         <BorderGrid />
         <AboutInfoThree />
       </section>

@@ -78,7 +78,8 @@ const BannerSection = ({
 
         <Button
           variant="outline"
-          className="md:w-1/4 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
+          className="w-full lg:w-1/4 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
+          // className="md:w-1/4 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
         >
           {btnLabel}
         </Button>

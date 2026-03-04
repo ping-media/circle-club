@@ -53,7 +53,8 @@ export const RequestAccessForm = () => {
     <>
       <Form {...form}>
         <form
-          className="flex flex-col gap-5 md:gap-8 mt-10 md:mt-14 pb-6 md:pb-0"
+          className="flex flex-col gap-5 lg:gap-8 mt-10 lg:mt-14 pb-6 lg:pb-0"
+          // className="flex flex-col gap-5 md:gap-8 mt-10 md:mt-14 pb-6 md:pb-0"
           onSubmit={form.handleSubmit(onSubmit)}
         >
           <FormField
@@ -138,7 +139,7 @@ export const RequestAccessForm = () => {
                   <Textarea
                     placeholder="MESSAGE"
                     autoComplete="off"
-                    className="p-4 border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] placeholder:text-brown-100 resize-none h-30 md:h-34"
+                    className="p-4 border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] placeholder:text-brown-100 resize-none h-30 md:h-34 shadow-none"
                     {...field}
                   />
                 </FormControl>

@@ -30,9 +30,12 @@ const MonacoF1GrandPrix = () => {
         <BorderGrid />
         <ChooseSection />
       </section>
-      <section className="relative bg-brown-100 py-11 md:py-30">
+      <section className="relative bg-brown-100 py-11 lg:py-30">
         <BorderGrid />
-        <div className="relative z-50 px-6 md:px-0">
+        <div
+          className="relative z-50 px-6 lg:px-0"
+          // className="relative z-50 px-6 md:px-0"
+        >
           <BannerSection
             number={"005"}
             label={"Global Reach"}

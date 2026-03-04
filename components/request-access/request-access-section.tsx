@@ -9,7 +9,10 @@ const RequestAccessSection = () => {
     <>
       <AnimatedHeader phase={"reveal"} />
 
-      <Container className="mt-40 mb-10 px-6 md:px-0">
+      <Container
+        className="mt-40 mb-10 px-6 lg:px-0"
+        // className="mt-40 mb-10 px-6 md:px-0"
+      >
         <div className="md:max-w-3xl 2xl:max-w-4xl flex flex-col gap-6">
           <SectionTitle
             title={

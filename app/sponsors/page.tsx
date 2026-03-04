@@ -25,7 +25,7 @@ const Sponsors = () => {
         <BorderGrid borderClassName="border-[#EBE3CA]!" />
         <WhyPartnerOpportunities />
       </section>
-      <section className="relative bg-brown-100 py-11 md:py-30">
+      <section className="relative bg-brown-100 py-11 lg:py-30">
         <BorderGrid />
         <Partnership />
       </section>

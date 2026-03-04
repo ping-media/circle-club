@@ -25,7 +25,10 @@ const itemVariants = {
 
 const WhyPartnerOpportunities = () => {
   return (
-    <Container className="relative px-6 md:px-0 z-50">
+    <Container
+      className="relative px-6 lg:px-0 z-50"
+      // className="relative px-6 md:px-0 z-50"
+    >
       <motion.div
         initial="hidden"
         whileInView="visible"

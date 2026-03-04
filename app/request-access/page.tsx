@@ -15,7 +15,7 @@ const RequestAccess = () => {
         <BorderGrid />
         <RequestAccessSection />
       </section>
-      <section className="relative bg-gold-40 pt-11 md:py-20">
+      <section className="relative bg-gold-40 pt-11 lg:py-20">
         <BorderGrid />
         <RequestAccessFormSection />
       </section>

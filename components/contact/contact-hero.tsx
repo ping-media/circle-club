@@ -28,7 +28,10 @@ const ContactHero = () => {
     <>
       <AnimatedHeader phase={"reveal"} />
 
-      <Container className="mt-40 mb-10 px-6 md:px-0">
+      <Container
+        className="mt-40 mb-10 px-6 lg:px-0"
+        // className="mt-40 mb-10 px-6 md:px-0"
+      >
         <motion.div
           className="flex flex-col gap-6"
           initial="hidden"
@@ -55,7 +58,8 @@ const ContactHero = () => {
         </motion.div>
 
         <motion.div
-          className="ml-auto w-8/12 md:w-full flex flex-wrap md:flex-nowrap items-center justify-start md:justify-end mt-16 md:mt-24 2xl:mt-30 gap-1.5 md:gap-16"
+          className="ml-auto w-8/12 lg:w-full flex flex-wrap md:flex-nowrap items-center justify-start md:justify-end mt-16 md:mt-24 2xl:mt-30 gap-1.5 lg:gap-16"
+          // className="ml-auto w-8/12 md:w-full flex flex-wrap md:flex-nowrap items-center justify-start md:justify-end mt-16 md:mt-24 2xl:mt-30 gap-1.5 md:gap-16"
           initial="hidden"
           animate="visible"
           variants={containerVariants}

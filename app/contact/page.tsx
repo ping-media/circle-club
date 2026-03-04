@@ -15,7 +15,7 @@ const Contact = () => {
         <BorderGrid />
         <ContactHero />
       </section>
-      <section className="bg-gold-50 py-20 relative">
+      <section className="bg-gold-50 py-11 lg:py-20 relative">
         <BorderGrid />
         <ContactSection />
       </section>

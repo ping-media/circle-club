@@ -26,17 +26,22 @@ const itemVariants = {
 const MonacoTwoSection = () => {
   return (
     <>
-      <Container className="relative z-50 px-6 md:px-0">
+      <Container
+        className="relative z-50 px-6 lg:px-0"
+        // className="relative z-50 px-6 md:px-0"
+      >
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
-          className="grid md:grid-cols-12 gap-11"
+          // className="grid md:grid-cols-12 gap-11"
+          className="grid lg:grid-cols-12 gap-11"
         >
           <motion.div
             variants={itemVariants}
-            className="md:col-span-4 flex flex-col gap-4 md:gap-0 justify-between"
+            className="lg:col-span-4 flex flex-col gap-4 lg:gap-0 justify-between"
+            // className="md:col-span-4 flex flex-col gap-4 md:gap-0 justify-between"
           >
             <SectionLabel
               number="003"
@@ -49,7 +54,11 @@ const MonacoTwoSection = () => {
             />
           </motion.div>
 
-          <motion.div className="md:col-span-4" variants={itemVariants}>
+          <motion.div
+            className="lg:col-span-4"
+            // className="md:col-span-4"
+            variants={itemVariants}
+          >
             <Image
               src="/images/monaco/yacht.webp"
               alt="yacht viewing experience"
@@ -60,7 +69,8 @@ const MonacoTwoSection = () => {
           </motion.div>
 
           <motion.div
-            className="md:col-span-4 flex flex-col justify-end gap-6 md:gap-7"
+            className="lg:col-span-4 flex flex-col justify-end gap-6 lg:gap-7"
+            // className="md:col-span-4 flex flex-col justify-end gap-6 md:gap-7"
             variants={itemVariants}
           >
             <motion.ul className="flex flex-col gap-2.5 md:gap-3">
@@ -72,7 +82,8 @@ const MonacoTwoSection = () => {
             <motion.div variants={itemVariants} transition={{ duration: 0.6 }}>
               <Button
                 variant="outline"
-                className="w-full md:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                className="w-full lg:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                // className="w-full md:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
               >
                 Request Yacht Access
               </Button>

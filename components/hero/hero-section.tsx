@@ -40,11 +40,22 @@ const HeroSection = () => {
       {/* <HeroVideo src="videos/hero.mp4" poster="images/hero.webp" /> */}
 
       <div className="absolute inset-0 h-full w-full">
+        {/* Desktop image */}
         <Image
-          src="/images/hero.webp"
+          src="/images/hero-desktop.webp"
           alt="circle club hero"
           fill
-          className="object-cover"
+          priority
+          className="hidden md:block object-cover"
+        />
+
+        {/* Mobile image */}
+        <Image
+          src="/images/hero-mobile.webp"
+          alt="circle club hero"
+          fill
+          priority
+          className="block md:hidden object-cover"
         />
       </div>
 

@@ -9,8 +9,14 @@ const ServiceSection = () => {
     <>
       <AnimatedHeader phase={"reveal"} />
 
-      <Container className="mt-40 mb-10 px-6 md:px-0">
-        <div className="md:max-w-xl 2xl:max-w-2xl flex flex-col gap-6">
+      <Container
+        // className="mt-40 mb-10 px-6 md:px-0"
+        className="mt-40 mb-10 px-6 lg:px-0"
+      >
+        <div
+          // className="md:max-w-xl 2xl:max-w-2xl flex flex-col gap-6"
+          className="lg:max-w-xl 2xl:max-w-2xl flex flex-col gap-6"
+        >
           <SectionTitle
             title={
               <>

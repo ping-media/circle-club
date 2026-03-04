@@ -22,9 +22,12 @@ const itemVariants = {
 
 const ContactSection = () => {
   return (
-    <Container className="relative z-50 px-6 md:px-0">
+    <Container
+      className="relative z-50 px-6 lg:px-0"
+      // className="relative z-50 px-6 md:px-0"
+    >
       <motion.div
-        className="grid md:grid-cols-4 gap-3"
+        className="grid md:grid-cols-2 lg:grid-cols-4 gap-3"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}

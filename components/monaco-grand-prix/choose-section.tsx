@@ -32,7 +32,10 @@ const ChooseSection = () => {
         overlayClassName="bg-[linear-gradient(0deg,_rgba(255,246,219,0.2)_0%,_#FFF6DB_100%)]!"
       />
 
-      <Container className="relative z-50 px-6 md:px-0">
+      <Container
+        className="relative z-50 px-6 lg:px-0"
+        // className="relative z-50 px-6 md:px-0"
+      >
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -86,7 +89,8 @@ const ChooseCard = ({
     <motion.div
       variants={itemVariants}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="snap-start shrink-0 w-[88%] md:w-auto flex flex-col p-4 md:p-6 gap-4.5 md:gap-6 bg-[linear-gradient(180deg,_rgba(33,34,17,0.3)_0%,_rgba(0,0,0,0.3)_100%)] shadow-[0px_0px_2px_0.25px_#FFFFFF80_inset] backdrop-blur-md h-full"
+      className="snap-start shrink-0 w-[88%] md:w-auto flex flex-col p-4 lg:p-6 gap-4.5 lg:gap-6 bg-[linear-gradient(180deg,_rgba(33,34,17,0.3)_0%,_rgba(0,0,0,0.3)_100%)] shadow-[0px_0px_2px_0.25px_#FFFFFF80_inset] backdrop-blur-md h-full"
+      // className="snap-start shrink-0 w-[88%] md:w-auto flex flex-col p-4 md:p-6 gap-4.5 md:gap-6 bg-[linear-gradient(180deg,_rgba(33,34,17,0.3)_0%,_rgba(0,0,0,0.3)_100%)] shadow-[0px_0px_2px_0.25px_#FFFFFF80_inset] backdrop-blur-md h-full"
     >
       {/* Image with consistent ratio */}
       <div className="relative w-full aspect-3/2 overflow-hidden">
@@ -98,7 +102,10 @@ const ChooseCard = ({
         />
       </div>
 
-      <div className="flex flex-col flex-1 gap-3 md:gap-4">
+      <div
+        className="flex flex-col flex-1 gap-3 lg:gap-4"
+        // className="flex flex-col flex-1 gap-3 md:gap-4"
+      >
         <h3
           className={cn(
             "uppercase text-white font-semibold tracking-[1.1] text-lg",
