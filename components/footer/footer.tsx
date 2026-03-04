@@ -12,7 +12,8 @@ import BorderGrid from "../shared/border-grid";
 const Footer = () => {
   return (
     <motion.footer
-      className="relative isolate overflow-hidden flex flex-col gap-10 md:gap-[70px] bg-transparent pb-8"
+      className="relative isolate overflow-hidden flex flex-col gap-10 lg:gap-[70px] bg-transparent pb-8"
+      // className="relative isolate overflow-hidden flex flex-col gap-10 md:gap-[70px] bg-transparent pb-8"
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -32,9 +33,13 @@ const Footer = () => {
       {/* Overlay */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/40 via-white/50 to-white/70 backdrop-blur-md" />
 
-      <Container className="relative top-15 md:top-30 mb-12 md:mb-24 z-10 px-6 md:px-0">
+      <Container
+        className="relative top-15 lg:top-30 mb-12 lg:mb-24 z-10 px-6 lg:px-0"
+        // className="relative top-15 md:top-30 mb-12 md:mb-24 z-10 px-6 md:px-0"
+      >
         <motion.div
-          className="grid md:grid-cols-12 gap-6 md:gap-12"
+          className="grid lg:grid-cols-12 gap-6 lg:gap-12"
+          // className="grid md:grid-cols-12 gap-6 md:gap-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -49,7 +54,8 @@ const Footer = () => {
         >
           {/* LEFT BLOCK */}
           <motion.div
-            className="md:col-span-6 flex flex-col justify-between"
+            className="lg:col-span-6 flex flex-col justify-between"
+            // className="md:col-span-6 flex flex-col justify-between"
             variants={{
               hidden: { opacity: 0, y: 40 },
               visible: { opacity: 1, y: 0 },
@@ -165,7 +171,8 @@ const Footer = () => {
 
       {/* text cliping logo image at footer bottom  */}
       <motion.div
-        className="relative w-full h-[86px] md:h-[260px] z-[60] px-6 md:px-0"
+        className="relative w-full h-[86px] md:h-[140px] lg:h-[260px] z-[60] px-6 lg:px-0"
+        // className="relative w-full h-[86px] md:h-[260px] z-[60] px-6 md:px-0"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

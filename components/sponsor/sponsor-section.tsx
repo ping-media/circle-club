@@ -8,11 +8,21 @@ import Image from "next/image";
 
 const SponsorSection = () => {
   return (
-    <div className="grid md:grid-cols-12 md:items-start">
-      <div className="order-2 md:order-0 md:col-span-6">
-        <Container className="max-w-lg! px-6 md:px-0">
+    <div
+      className="grid lg:grid-cols-12 lg:items-start"
+      // className="grid md:grid-cols-12 md:items-start"
+    >
+      <div
+        // className="order-2 md:order-0 md:col-span-6"
+        className="order-2 lg:order-0 lg:col-span-6"
+      >
+        <Container
+          className="max-w-lg! px-6 lg:px-0"
+          // className="max-w-lg! px-6 md:px-0"
+        >
           <motion.div
-            className="flex flex-col gap-3 md:gap-8 py-11"
+            // className="flex flex-col gap-3 md:gap-8 py-11"
+            className="flex flex-col gap-3 lg:gap-8 py-11"
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -27,14 +37,17 @@ const SponsorSection = () => {
               colorClassName="text-black"
             />
 
-            <div className="flex flex-col gap-2 md:gap-6">
+            <div
+              className="flex flex-col gap-2 lg:gap-6"
+              // className="flex flex-col gap-2 md:gap-6"
+            >
               <SectionTitle
                 title={
                   <>
-                    <p className="hidden md:block">
+                    <p className="hidden lg:block">
                       Become a <br /> Sponsor
                     </p>
-                    <p className="block md:hidden">Become a Sponsor</p>
+                    <p className="block lg:hidden">Become a Sponsor</p>
                   </>
                 }
                 colorClassName="text-2xl! font-bold! lg:text-[56px]! leading-normal! md:leading-[77px]!"
@@ -56,7 +69,8 @@ const SponsorSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-block w-full md:w-5/12 2xl:1/4 bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer mt-6 md:mt-0"
+              className="inline-block w-full lg:w-5/12 2xl:1/4 bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer mt-6 md:mt-0"
+              // className="inline-block w-full md:w-5/12 2xl:1/4 bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer mt-6 md:mt-0"
             >
               Sponsor Inquiry
             </motion.button>
@@ -64,8 +78,14 @@ const SponsorSection = () => {
         </Container>
       </div>
 
-      <div className="order-1 md:order-0 md:col-span-6 relative z-50">
-        <div className="w-full p-4 md:p-0">
+      <div
+        className="order-1 lg:order-0 lg:col-span-6 relative z-50"
+        // className="order-1 md:order-0 md:col-span-6 relative z-50"
+      >
+        <div
+          className="w-full p-4 lg:p-0"
+          // className="w-full p-4 md:p-0"
+        >
           <Image
             src="/images/sponsor/sponsor.webp"
             className="w-full aspect-square object-cover"

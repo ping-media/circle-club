@@ -24,17 +24,25 @@ const itemVariants = {
 const EventSection = () => {
   return (
     <>
-      <Container className="flex flex-col items-center gap-11 relative z-50 px-6 md:px-0">
+      {/* <Container className="flex flex-col items-center gap-11 relative z-50 px-6 md:px-0"> */}
+      <Container className="flex flex-col items-center gap-11 relative z-50 px-6 lg:px-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
-          className="flex flex-col gap-4 md:gap-6"
+          // className="flex flex-col gap-4 md:gap-6"
+          className="flex flex-col gap-4 lg:gap-6"
         >
           <SectionLabel number="002" label="Events" colorClassName="text-sm" />
-          <div className="grid md:grid-cols-12 gap-4 md:gap-6 md:items-end">
-            <div className="md:col-span-7">
+          <div
+            // className="grid md:grid-cols-12 gap-4 md:gap-6 md:items-end"
+            className="grid lg:grid-cols-12 gap-4 lg:gap-6 lg:items-end"
+          >
+            <div
+              className="lg:col-span-7"
+              // className="md:col-span-7"
+            >
               <SectionTitle
                 title="Exclusive Monaco Experiences"
                 colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19"
@@ -42,7 +50,8 @@ const EventSection = () => {
             </div>
             <motion.div
               variants={itemVariants}
-              className="md:col-span-4 gap-2.5"
+              // className="md:col-span-4 gap-2.5"
+              className="lg:col-span-4 gap-2.5"
             >
               <p className="text-sm md:text-base">
                 Access the Monaco Grand Prix from the most privileged vantage

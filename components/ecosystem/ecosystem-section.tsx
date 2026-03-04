@@ -23,13 +23,17 @@ const itemVariants = {
 
 const EcosystemSection = () => {
   return (
-    <Container className="relative z-50 flex flex-col items-center px-6 md:px-0 gap-11">
+    <Container
+      className="relative z-50 flex flex-col items-center px-6 lg:px-0 gap-11"
+      // className="relative z-50 flex flex-col items-center px-6 md:px-0 gap-11"
+    >
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={containerVariants}
-        className="flex flex-col gap-4 md:gap-6"
+        className="flex flex-col gap-4 lg:gap-6"
+        // className="flex flex-col gap-4 md:gap-6"
       >
         <SectionLabel
           number="004"
@@ -39,8 +43,14 @@ const EcosystemSection = () => {
           descriptionClassName="text-[#FFFFFFA3]!"
           labelClassName="text-white"
         />
-        <div className="grid md:grid-cols-12 gap-4 md:gap-6 md:items-end">
-          <div className="md:col-span-4">
+        <div
+          className="grid lg:grid-cols-12 gap-4 lg:gap-6 lg:items-end"
+          // className="grid md:grid-cols-12 gap-4 md:gap-6 md:items-end"
+        >
+          <div
+            className="lg:col-span-4"
+            // className="md:col-span-4"
+          >
             <SectionTitle
               title="The Circle Ecosystem"
               colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19 text-white"
@@ -48,7 +58,8 @@ const EcosystemSection = () => {
           </div>
           <motion.div
             variants={itemVariants}
-            className="md:col-span-7 md:col-start-8 gap-2.5"
+            // className="md:col-span-7 md:col-start-8 gap-2.5"
+            className="lg:col-span-7 lg:col-start-8 gap-2.5"
           >
             <p className="text-sm md:text-base text-white">
               Unlike traditional concierge services, we operate our own luxury

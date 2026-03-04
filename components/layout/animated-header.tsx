@@ -43,7 +43,8 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
 
       {/* Header State */}
       {(phase === "nav" || phase === "reveal") && (
-        <header className="absolute top-0 inset-x-0 z-40 w-full md:max-w-6xl 2xl:max-w-7xl mx-auto py-5 px-4 md:px-0">
+        <header className="absolute top-0 inset-x-0 z-40 w-full lg:max-w-6xl 2xl:max-w-7xl mx-auto py-5 px-4 lg:px-0">
+          {/* <header className="absolute top-0 inset-x-0 z-40 w-full md:max-w-6xl 2xl:max-w-7xl mx-auto py-5 px-4 md:px-0"> */}
           <div className="flex items-center justify-between">
             {/* Logo left aligned */}
             <Link href="/">
@@ -51,7 +52,8 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
             </Link>
 
             {/* Nav */}
-            <nav className="hidden md:flex items-center gap-9">
+            <nav className="hidden lg:flex items-center gap-9">
+              {/* <nav className="hidden md:flex items-center gap-9"> */}
               {NAV_ITEMS.map((item, i) => (
                 <motion.div
                   key={item.href}
@@ -82,9 +84,13 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
               <Button
                 variant={isHome ? "outline" : "gold-gradient"}
                 className={cn(
-                  "text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em] hidden md:flex",
+                  "text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em] hidden lg:flex",
                   isHome && "bg-gold-60 hover:bg-gold-60 border-none",
                 )}
+                // className={cn(
+                //   "text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em] hidden md:flex",
+                //   isHome && "bg-gold-60 hover:bg-gold-60 border-none",
+                // )}
                 asChild
               >
                 <Link href="/request-access">Send a Request</Link>
@@ -98,7 +104,8 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
               transition={{ delay: 0.5, duration: 0.4 }}
             >
               <Button
-                className="bg-gold-50 rounded-none p-2 md:hidden"
+                // className="bg-gold-50 rounded-none p-2 md:hidden"
+                className="bg-gold-50 rounded-none p-2 lg:hidden"
                 onClick={() => setIsOpen(true)}
               >
                 <Image

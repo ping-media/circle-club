@@ -14,11 +14,18 @@ const LIST = [
 
 const AboutSection = () => {
   return (
-    <Container className="px-6 md:px-0">
-      <div className="grid gap-6 md:gap-16 md:grid-cols-12 md:items-start relative z-50">
+    <Container
+      className="px-6 lg:px-0"
+      // className="px-6 md:px-0"
+    >
+      <div
+        className="grid gap-6 lg:gap-16 lg:grid-cols-12 lg:items-start relative z-50"
+        // className="grid gap-6 md:gap-16 md:grid-cols-12 md:items-start relative z-50"
+      >
         {/* Left Column */}
         <motion.div
-          className="w-full md:col-span-5 flex flex-col h-full"
+          // className="w-full md:col-span-5 flex flex-col h-full"
+          className="w-full lg:col-span-5 flex flex-col h-full"
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -39,7 +46,10 @@ const AboutSection = () => {
             />
           </div>
 
-          <div className="mt-4 md:mt-36 w-full">
+          <div
+            className="mt-4 lg:mt-36 w-full"
+            // className="mt-4 md:mt-36 w-full"
+          >
             <Image
               src="/images/about/about.webp"
               className="w-full aspect-square object-cover"
@@ -61,7 +71,8 @@ const AboutSection = () => {
 
         {/* right Column  */}
         <motion.div
-          className="space-y-6 md:col-span-7 flex flex-col gap-3 md:gap-10"
+          className="space-y-6 lg:col-span-7 flex flex-col gap-3 lg:gap-10"
+          // className="space-y-6 md:col-span-7 flex flex-col gap-3 md:gap-10"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import AnimatedHeader from "../layout/animated-header";
-// import HeroVideo from "./hero-video";
 import Container from "../shared/container";
 import { Button } from "@/components/ui/button";
 import SocialBtn from "./social-button";
@@ -53,10 +52,13 @@ const HeroSection = () => {
       <AnimatedHeader phase={phase} />
 
       {/* Hero Content */}
-      <Container className="relative z-10 flex h-full items-end px-6 md:px-0">
-        <div className="flex flex-col md:grid w-full gap-8 md:grid-cols-12 mb-8 md:items-end">
+      <Container className="relative z-10 flex h-full items-end px-6 lg:px-0">
+        {/* <Container className="relative z-10 flex h-full items-end px-6 md:px-0"> */}
+        <div className="flex flex-col lg:grid w-full gap-8 lg:grid-cols-12 mb-8 lg:items-end">
+          {/* <div className="flex flex-col md:grid w-full gap-8 md:grid-cols-12 mb-8 md:items-end"> */}
           {/* Left: Headline */}
-          <div className="flex flex-col gap-8 md:col-span-6">
+          <div className="flex flex-col gap-8 lg:col-span-6">
+            {/* <div className="flex flex-col gap-8 md:col-span-6"> */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
@@ -80,7 +82,8 @@ const HeroSection = () => {
 
           {/* Right: Description + CTAs */}
           <motion.div
-            className="flex flex-col md:col-span-6 md:col-start-9 md:max-w-sm gap-6 md:gap-8 mb-6"
+            className="flex flex-col lg:col-span-6 lg:col-start-9 lg:max-w-sm gap-6 lg:gap-8 mb-6"
+            // className="flex flex-col md:col-span-6 md:col-start-9 md:max-w-sm gap-6 md:gap-8 mb-6"
             initial={{ opacity: 0, y: 40 }}
             animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
@@ -91,14 +94,19 @@ const HeroSection = () => {
               distinguished few.
             </p>
 
-            <div className="flex flex-wrap md:flex-nowrap items-center gap-3">
-              <Button className="w-full md:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5">
+            {/* <div className="flex flex-wrap md:flex-nowrap items-center gap-3"> */}
+            <div className="flex flex-wrap lg:flex-nowrap items-center gap-3">
+              <Button
+                className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5"
+                // className="w-full md:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5"
+              >
                 Explore the Experience
               </Button>
 
               <Button
                 variant="outline"
-                className="w-full md:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] px-3 py-5 bg-transparent text-gold-100 border-gold-100 hover:bg-gold-100/40 hover:border-gold-100 hover:text-white transition-colors"
+                className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] px-3 py-5 bg-transparent text-gold-100 border-gold-100 hover:bg-gold-100/40 hover:border-gold-100 hover:text-white transition-colors"
+                // className="w-full md:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] px-3 py-5 bg-transparent text-gold-100 border-gold-100 hover:bg-gold-100/40 hover:border-gold-100 hover:text-white transition-colors"
               >
                 Request Access
               </Button>

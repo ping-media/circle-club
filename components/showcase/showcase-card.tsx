@@ -20,7 +20,8 @@ const itemVariants = {
 const ShowcaseCard = () => {
   return (
     <motion.div
-      className="bg-[#FFFFFF33] backdrop-blur-[54px] p-4 md:p-8 flex flex-col gap-2.5 md:gap-8 md:max-w-3xl md:ml-auto"
+      // className="bg-[#FFFFFF33] backdrop-blur-[54px] p-4 md:p-8 flex flex-col gap-2.5 md:gap-8 md:max-w-3xl md:ml-auto"
+      className="bg-[#FFFFFF33] backdrop-blur-[54px] p-4 lg:p-8 flex flex-col gap-2.5 lg:gap-8 lg:max-w-3xl md:ml-auto"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
