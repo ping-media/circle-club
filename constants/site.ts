@@ -1,8 +1,8 @@
 export interface ContactInfo {
   icon: string;
   label: string;
-  value: string;
-  href: string;
+  value: string | string[];
+  href: string | string[];
 }
 
 export const SITE_CONFIG = {
@@ -14,13 +14,13 @@ export const CONTACT_INFO: ContactInfo[] = [
   {
     icon: "icons/phone.svg",
     label: "Phone",
-    value: "+01 74846-54854",
-    href: "tel:+01 74846-54854",
+    value: ["+41 78 303 83 13", "+33 6 27 08 53 55"],
+    href: ["tel:+41 78 303 83 13", "tel:+33 6 27 08 53 55"],
   },
   {
     icon: "icons/email.svg",
     label: "Email",
-    value: "Circleclube21@gmail.com",
-    href: "mailto:circleclube21@gmail.com",
+    value: "contact@circleclub.co",
+    href: "mailto:contact@circleclub.co",
   },
 ];

@@ -24,13 +24,9 @@ const itemVariants = {
 
 const WhyPartner = () => {
   return (
-    <Container
-      className="relative z-50 px-6 lg:px-0"
-      // className="relative z-50 px-6 md:px-0"
-    >
+    <Container className="relative z-50 px-6 lg:px-0">
       <motion.div
         className="grid lg:grid-cols-12 gap-10"
-        // className="grid md:grid-cols-12 gap-10"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -39,12 +35,8 @@ const WhyPartner = () => {
         <motion.div
           variants={itemVariants}
           className="lg:col-span-7 flex flex-col gap-7 lg:gap-44"
-          // className="md:col-span-7 flex flex-col gap-7 md:gap-44"
         >
-          <div
-            className="flex flex-col gap-3 lg:gap-4"
-            // className="flex flex-col gap-3 md:gap-4"
-          >
+          <div className="flex flex-col gap-3 lg:gap-4">
             <SectionLabel
               number="002"
               label="Why Partner"
@@ -57,10 +49,7 @@ const WhyPartner = () => {
             <div className="border-b border-[#0000002E]" />
           </div>
 
-          <div
-            className="grid md:grid-cols-2 gap-4 md:gap-16"
-            // className="grid md:grid-cols-2 gap-4 md:gap-16"
-          >
+          <div className="grid md:grid-cols-2 gap-4 md:gap-16">
             {PARTNER_LIST.map((item) => (
               <motion.div key={item.title} variants={itemVariants}>
                 <PartnerCard item={item} />
@@ -69,11 +58,7 @@ const WhyPartner = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          variants={itemVariants}
-          className="lg:col-span-5"
-          // className="md:col-span-5"
-        >
+        <motion.div variants={itemVariants} className="lg:col-span-5">
           <Image
             width={515}
             height={620}

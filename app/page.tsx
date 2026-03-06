@@ -9,8 +9,8 @@ import SponsorSection from "@/components/sponsor/sponsor-section";
 
 export default function Home() {
   return (
-    <>
-      <section className="relative h-screen overflow-hidden w-full">
+    <div className="overflow-hidden">
+      <section className="relative h-screen w-full">
         <BorderGrid />
         <HeroSection />
       </section>
@@ -38,6 +38,6 @@ export default function Home() {
         <BorderGrid />
         <JointCircleSection />
       </section>
-    </>
+    </div>
   );
 }

@@ -36,30 +36,36 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
     <>
       {/* Center State */}
       {phase === "center" && showCenter && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 1.2,
+            ease: "easeOut",
+          }}
+          className="fixed inset-0 flex items-center md:items-start justify-center md:justify-start top-24 md:left-60"
+        >
           <Logo size="large" />
-        </div>
+        </motion.div>
       )}
 
       {/* Header State */}
-      {(phase === "nav" || phase === "reveal") && (
+      {phase !== "center" && (
         <header className="absolute top-0 inset-x-0 z-40 w-full lg:max-w-6xl 2xl:max-w-7xl mx-auto py-5 px-4 lg:px-0">
-          {/* <header className="absolute top-0 inset-x-0 z-40 w-full md:max-w-6xl 2xl:max-w-7xl mx-auto py-5 px-4 md:px-0"> */}
           <div className="flex items-center justify-between">
             {/* Logo left aligned */}
             <Link href="/">
               <Logo />
             </Link>
-
             {/* Nav */}
             <nav className="hidden lg:flex items-center gap-9">
-              {/* <nav className="hidden md:flex items-center gap-9"> */}
               {NAV_ITEMS.map((item, i) => (
                 <motion.div
                   key={item.href}
                   initial={{ opacity: 0, y: -20 }}
                   animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
-                  transition={{ delay: i * 0.1, duration: 0.4 }}
+                  // transition={{ delay: i * 0.1, duration: 0.4 }}
+                  transition={{ duration: 0.4 }}
                 >
                   <Link
                     href={item.href}
@@ -75,7 +81,6 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
                 </motion.div>
               ))}
             </nav>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={phase === "reveal" ? { opacity: 1, x: 0 } : {}}
@@ -87,24 +92,18 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
                   "text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em] hidden lg:flex",
                   isHome && "bg-gold-60 hover:bg-gold-60 border-none",
                 )}
-                // className={cn(
-                //   "text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em] hidden md:flex",
-                //   isHome && "bg-gold-60 hover:bg-gold-60 border-none",
-                // )}
                 asChild
               >
                 <Link href="/request-access">Send a Request</Link>
               </Button>
             </motion.div>
-
-            {/* menu button  */}
+            {/* menu button */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={phase === "reveal" ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.4 }}
             >
               <Button
-                // className="bg-gold-50 rounded-none p-2 md:hidden"
                 className="bg-gold-50 rounded-none p-2 lg:hidden"
                 onClick={() => setIsOpen(true)}
               >
@@ -127,7 +126,6 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          // className="fixed inset-0 z-[80] bg-black/60 backdrop-blur-sm md:hidden"
           className="fixed inset-0 z-[80] bg-black/60 backdrop-blur-sm lg:hidden"
           onClick={() => setIsOpen(false)}
         >

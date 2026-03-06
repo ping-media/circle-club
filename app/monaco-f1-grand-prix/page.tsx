@@ -32,10 +32,7 @@ const MonacoF1GrandPrix = () => {
       </section>
       <section className="relative bg-brown-100 py-11 lg:py-30">
         <BorderGrid />
-        <div
-          className="relative z-50 px-6 lg:px-0"
-          // className="relative z-50 px-6 md:px-0"
-        >
+        <div className="relative z-50 px-6 lg:px-0">
           <BannerSection
             number={"005"}
             label={"Global Reach"}
@@ -44,6 +41,7 @@ const MonacoF1GrandPrix = () => {
               "Claim your place within an exclusive circle where access, influence, and visibility converge."
             }
             btnLabel={"Send Request"}
+            href="/request-access"
           />
         </div>
       </section>

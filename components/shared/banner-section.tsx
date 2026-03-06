@@ -6,6 +6,7 @@ import SectionLabel from "./section-label";
 import SectionTitle from "./section-title";
 import { Button } from "../ui/button";
 import { ReactNode } from "react";
+import Link from "next/link";
 
 interface BannerSectionProps {
   number: string;
@@ -13,6 +14,7 @@ interface BannerSectionProps {
   title: string | ReactNode;
   description?: string;
   btnLabel: string;
+  href: string;
 }
 
 const containerVariants = {
@@ -36,6 +38,7 @@ const BannerSection = ({
   title,
   description,
   btnLabel,
+  href,
 }: BannerSectionProps) => {
   return (
     <Container className="flex flex-col bg-white/20">
@@ -79,9 +82,9 @@ const BannerSection = ({
         <Button
           variant="outline"
           className="w-full lg:w-1/4 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
-          // className="md:w-1/4 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
+          asChild
         >
-          {btnLabel}
+          <Link href={href}>{btnLabel}</Link>
         </Button>
       </motion.div>
     </Container>

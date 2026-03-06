@@ -21,11 +21,11 @@ const formSchema = z.object({
   fullName: z
     .string()
     .min(5, "Full Name must be at least 5 characters.")
-    .max(12, "Full Name must be at most 12 characters."),
+    .max(80, "Full Name must be at most 80 characters."),
   phone: z
     .string()
-    .min(10, "Enter valid phone number")
-    .max(10, "Enter valid phone number"),
+    .min(8, "Enter valid phone number")
+    .max(30, "Enter valid phone number"),
   email: z.string().email("Enter valid email"),
   service: z.string().min(1, "Service category required"),
   eventDate: z.string().min(1, "Event date required"),

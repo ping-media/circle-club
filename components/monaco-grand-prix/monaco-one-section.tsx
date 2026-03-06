@@ -7,6 +7,7 @@ import SectionTitle from "../shared/section-title";
 import { motion } from "framer-motion";
 import { TERRACE_LIST } from "@/constants/monaco";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: {},
@@ -26,22 +27,17 @@ const itemVariants = {
 const MonacoOneSection = () => {
   return (
     <>
-      <Container
-        className="relative z-50 px-6 lg:px-0"
-        // className="relative z-50 px-6 md:px-0"
-      >
+      <Container className="relative z-50 px-6 lg:px-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={containerVariants}
-          // className="grid md:grid-cols-12 gap-11"
           className="grid lg:grid-cols-12 gap-11"
         >
           <motion.div
             variants={itemVariants}
             className="lg:col-span-4 flex flex-col gap-4 lg:gap-0 justify-between"
-            // className="md:col-span-4 flex flex-col gap-4 md:gap-0 justify-between"
           >
             <SectionLabel
               number="002"
@@ -54,11 +50,7 @@ const MonacoOneSection = () => {
             />
           </motion.div>
 
-          <motion.div
-            variants={itemVariants}
-            className="lg:col-span-4"
-            // className="md:col-span-4"
-          >
+          <motion.div variants={itemVariants} className="lg:col-span-4">
             <Image
               src="/images/monaco/terrace.webp"
               alt="private terrace access"
@@ -70,13 +62,9 @@ const MonacoOneSection = () => {
 
           <motion.div
             className="lg:col-span-4 flex flex-col justify-end gap-6 lg:gap-7"
-            // className="md:col-span-4 flex flex-col justify-end gap-6 md:gap-7"
             variants={itemVariants}
           >
-            <motion.ul
-              className="flex flex-col gap-2.5 lg:gap-3"
-              // className="flex flex-col gap-2.5 md:gap-3"
-            >
+            <motion.ul className="flex flex-col gap-2.5 lg:gap-3">
               {TERRACE_LIST?.map((item) => (
                 <ListItem item={item} key={item} />
               ))}
@@ -86,9 +74,9 @@ const MonacoOneSection = () => {
               <Button
                 variant="outline"
                 className="w-full lg:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
-                // className="w-full md:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                asChild
               >
-                Request Access
+                <Link href="/request-access">Request Access</Link>
               </Button>
             </motion.div>
           </motion.div>

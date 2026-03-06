@@ -25,10 +25,7 @@ const itemVariants = {
 
 const WhyPartnerOpportunities = () => {
   return (
-    <Container
-      className="relative px-6 lg:px-0 z-50"
-      // className="relative px-6 md:px-0 z-50"
-    >
+    <Container className="relative px-6 lg:px-0 z-50">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -103,8 +100,10 @@ const OpportunitiesCard = ({
         </div>
 
         {/* Label */}
-        <div className="bg-brown-100 px-2.5 md:px-4 py-1.5 md:py-2">
-          <p className="text-white text-sm font-medium leading-snug">{title}</p>
+        <div className="bg-brown-100 px-2.5 md:px-4 py-1.5 md:py-2.5">
+          <p className="text-white text-sm md:text-base font-medium leading-6.5 lg:min-h-[72px] flex items-center justify-center">
+            {title}
+          </p>
         </div>
       </div>
     </motion.div>

@@ -32,7 +32,6 @@ const FeatureCard = ({
         {/* Left Content */}
         <motion.div
           className="order-2 md:order-0 bg-gold-200 px-4 py-4 lg:py-16 lg:px-16 flex flex-col justify-center items-center"
-          // className="order-2 md:order-0 bg-gold-200 px-4 py-4 md:py-16 md:px-16 flex flex-col justify-center items-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -48,8 +47,7 @@ const FeatureCard = ({
             </p>
 
             <motion.button
-              className="inline-block w-full lg:w-auto bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition"
-              // className="inline-block w-full md:w-auto bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition"
+              className="inline-block w-full lg:w-auto bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -37,7 +37,7 @@ export const OPPORTUNNITIES_LIST = [
   {
     title: "Brand placement on Terraces & Yachts",
     src: "/images/partner/opp_2.webp",
-    isGrow: true,
+    isGrow: false,
   },
   {
     title: "VIP Hosting Collaboration",

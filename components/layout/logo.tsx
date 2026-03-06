@@ -12,7 +12,7 @@ const Logo = ({ size = "normal" }: LogoProps) => {
       layoutId="circleclub-logo"
       className={cn(
         "w-30 md:w-35 2xl:w-40",
-        size === "large" ? "scale-150" : "scale-100",
+        size === "large" ? "scale-250 md:scale-350" : "scale-100",
       )}
     >
       <Image

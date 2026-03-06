@@ -7,6 +7,7 @@ import SectionTitle from "../shared/section-title";
 import { Button } from "../ui/button";
 import { ABOUT_LIST_TWO } from "@/constants/about";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: {},
@@ -25,10 +26,7 @@ const itemVariants = {
 
 const AboutInfoTwo = () => {
   return (
-    <Container
-      className="flex flex-col px-6 lg:px-0 gap-11"
-      // className="flex flex-col px-6 md:px-0 gap-11"
-    >
+    <Container className="flex flex-col px-6 lg:px-0 gap-11 relative z-50">
       <motion.div
         className="flex flex-col gap-4"
         initial="hidden"
@@ -54,7 +52,6 @@ const AboutInfoTwo = () => {
 
       <motion.div
         className="grid gap-11 lg:grid-cols-12 lg:items-start"
-        // className="grid gap-11 md:grid-cols-12 md:items-start"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
@@ -62,7 +59,6 @@ const AboutInfoTwo = () => {
       >
         <motion.div
           className="lg:col-span-6"
-          // className="md:col-span-6"
           variants={itemVariants}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
@@ -74,11 +70,7 @@ const AboutInfoTwo = () => {
             alt="about info one"
           />
         </motion.div>
-        <motion.div
-          className="lg:col-span-6"
-          // className="md:col-span-6"
-          variants={containerVariants}
-        >
+        <motion.div className="lg:col-span-6" variants={containerVariants}>
           <div className="flex flex-col gap-9 mt-5">
             <motion.p variants={itemVariants}>
               We design, manage, and execute experiences with complete ownership
@@ -98,9 +90,9 @@ const AboutInfoTwo = () => {
               <Button
                 variant="outline"
                 className="w-full lg:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
-                // className="w-full md:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                asChild
               >
-                Request Access
+                <Link href="/request-access">Request Access</Link>
               </Button>
             </motion.div>
           </div>

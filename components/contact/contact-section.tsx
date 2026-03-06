@@ -22,10 +22,7 @@ const itemVariants = {
 
 const ContactSection = () => {
   return (
-    <Container
-      className="relative z-50 px-6 lg:px-0"
-      // className="relative z-50 px-6 md:px-0"
-    >
+    <Container className="relative z-50 px-6 lg:px-0">
       <motion.div
         className="grid md:grid-cols-2 lg:grid-cols-4 gap-3"
         initial="hidden"
@@ -57,8 +54,8 @@ const ContactCard = ({ item }: { item: ContactList }) => (
       <Image
         src={item.src}
         width={317}
-        height={270}
-        className="w-full aspect-5/4 object-cover invisible group-hover:visible transition-transform duration-200 ease-in-out"
+        height={320}
+        className="w-full aspect-4/5 lg:aspect-3/4 object-cover opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-transform duration-200 ease-in-out"
         alt={item.title}
       />
     </div>

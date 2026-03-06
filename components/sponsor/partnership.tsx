@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Container from "../shared/container";
 import SectionLabel from "../shared/section-label";
 import { Button } from "../ui/button";
@@ -7,17 +8,10 @@ import { motion } from "framer-motion";
 
 const Partnership = () => {
   return (
-    <Container
-      className="relative z-50 px-6 lg:px-0"
-      // className="relative z-50 px-6 md:px-0"
-    >
-      <div
-        className="grid lg:grid-cols-12 lg:items-stretch"
-        // className="grid md:grid-cols-12 md:items-stretch"
-      >
+    <Container className="relative z-50 px-6 lg:px-0">
+      <div className="grid lg:grid-cols-12 lg:items-stretch">
         <motion.div
           className="lg:col-span-6"
-          // className="md:col-span-6"
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -36,7 +30,6 @@ const Partnership = () => {
 
         <motion.div
           className="lg:col-span-6 flex flex-col p-4 lg:p-14 bg-white/10 h-full"
-          // className="md:col-span-6 flex flex-col p-4 md:p-14 bg-white/10 h-full"
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -72,9 +65,9 @@ const Partnership = () => {
           >
             <Button
               className="text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5 w-full lg:w-1/3 2xl:w-2/3"
-              // className="text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5 w-full md:w-1/3 2xl:w-2/3"
+              asChild
             >
-              contact our team
+              <Link href="/contact">contact our team</Link>
             </Button>
           </motion.div>
         </motion.div>

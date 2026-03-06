@@ -16,11 +16,11 @@ export const FEATURES: FeatureItem[] = [
     thumbnail: "/images/event/event_1.webp",
   },
   {
-    title: "VIP Terrace Experience",
+    title: "Private Yacht Experience",
     description:
-      "Elevated views over the Monaco circuit. Curated guest list. Elite race weekend positioning.",
+      "Front-row harbor access. Private deck atmosphere. Champagne service during the Grand Prix weekend.",
     buttonText: "Request Terrace Access",
     videoSrc: "/videos/event/event_1.mp4",
-    thumbnail: "/images/event/event_1.webp",
+    thumbnail: "/images/sponsor/sponsor.webp",
   },
 ];

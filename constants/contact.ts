@@ -25,12 +25,12 @@ export const CONTACT_LIST: ContactList[] = [
     title: "Partnerships & Sponsors",
     description:
       "Brand collaborations, corporate hosting, and strategic partnerships.",
-    src: "/images/contact/contact_1.webp",
+    src: "/images/contact/contact_3.webp",
   },
   {
     number: "04.",
     title: "Automotive / Villas / Real Estate",
     description: "Direct connection to activity managers.",
-    src: "/images/contact/contact_2.webp",
+    src: "/images/contact/contact_4.webp",
   },
 ];
