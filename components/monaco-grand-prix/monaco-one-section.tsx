@@ -73,10 +73,10 @@ const MonacoOneSection = () => {
             <motion.div variants={itemVariants} transition={{ duration: 0.6 }}>
               <Button
                 variant="outline"
-                className="w-full lg:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                className="w-full lg:w-auto text-sm lg:text-base rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
                 asChild
               >
-                <Link href="/request-access">Request Access</Link>
+                <Link href="/request-access">Request Terrace Access</Link>
               </Button>
             </motion.div>
           </motion.div>
