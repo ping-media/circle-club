@@ -44,7 +44,7 @@ const SponsorHero = () => {
                   <br /> Circle Club
                 </>
               }
-              colorClassName="font-black text-white leading-normal md:leading-[1.01] lg:leading-[124px] text-[42px] md:text-8xl! lg:text-[128px]! lg:tracking-[-4.32px]"
+              colorClassName="font-black text-white leading-normal! md:leading-[1.01] lg:leading-[124px] text-[42px]! md:text-8xl! lg:text-[128px]! lg:tracking-[-4.32px]"
             />
           </motion.div>
 

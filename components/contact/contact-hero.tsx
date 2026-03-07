@@ -38,17 +38,18 @@ const ContactHero = () => {
           <motion.div
             variants={itemVariants}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            className="w-full lg:max-w-[964px]"
           >
             <SectionTitle
               title={"Contact Us"}
-              colorClassName="font-black text-white leading-[1.01] md:text-8xl!"
+              colorClassName="font-black text-white leading-normal! md:leading-[1.01] lg:leading-[124px] text-[42px]! md:text-8xl! lg:text-[128px]! lg:tracking-[-4.32px]"
             />
           </motion.div>
 
           <motion.p
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-white"
+            className="text-white text-sm lg:text-xl leading-normal lg:leading-6"
           >
             Direct access. Discreet communication. Fast response.
           </motion.p>

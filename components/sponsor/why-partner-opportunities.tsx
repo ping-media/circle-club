@@ -50,7 +50,7 @@ const WhyPartnerOpportunities = () => {
 
         <motion.div
           variants={containerVariants}
-          className="w-full min-w-0 flex md:grid md:grid-cols-4 gap-4 md:gap-0 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar"
+          className="w-full min-w-0 flex md:grid md:grid-cols-4 gap-4 md:gap-10.5 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar"
         >
           {OPPORTUNNITIES_LIST.map((opp, index) => (
             <OpportunitiesCard
@@ -72,37 +72,23 @@ export default WhyPartnerOpportunities;
 const OpportunitiesCard = ({
   src,
   title,
-  isGrow,
-  index,
 }: opportunitiesList & { index: number }) => {
   return (
     <motion.div
       variants={itemVariants}
       className={cn(
-        // "relative flex snap-start shrink-0 w-1/2 md:w-auto",
         "relative flex snap-start shrink-0 w-[70%] sm:w-[45%] md:w-auto",
-        index === 0 && "md:justify-start",
-        index === OPPORTUNNITIES_LIST.length - 1 && "md:justify-end",
-        index !== 0 &&
-          index !== OPPORTUNNITIES_LIST.length - 1 &&
-          "md:justify-center",
-        index + 1 < OPPORTUNNITIES_LIST.length && "border-r border-[#D1CAB3]",
       )}
     >
-      <div className="flex flex-col gap-4 w-10/12">
+      <div className="flex flex-col gap-3.5 w-full">
         {/* Image */}
-        <div
-          className={cn(
-            "relative w-full aspect-4/5 overflow-hidden",
-            isGrow ? "md:aspect-2/3" : "aspect-4/5",
-          )}
-        >
+        <div className="relative w-full aspect-4/5 overflow-hidden">
           <Image src={src} alt={title} fill className="object-cover" />
         </div>
 
         {/* Label */}
         <div className="bg-brown-100 px-2.5 md:px-4 py-1.5 md:py-2.5">
-          <p className="text-white text-sm md:text-base font-medium leading-6.5 lg:min-h-[72px] flex items-center justify-center">
+          <p className="text-white text-sm md:text-lg font-medium leading-4.5 md:leading-5.5 h-[52px] lg:min-h-[72px] flex items-center justify-center">
             {title}
           </p>
         </div>
@@ -110,3 +96,46 @@ const OpportunitiesCard = ({
     </motion.div>
   );
 };
+
+// old card layout
+// const OpportunitiesCard = ({
+//   src,
+//   title,
+//   isGrow,
+//   index,
+// }: opportunitiesList & { index: number }) => {
+//   return (
+//     <motion.div
+//       variants={itemVariants}
+//       className={cn(
+//         // "relative flex snap-start shrink-0 w-1/2 md:w-auto",
+//         "relative flex snap-start shrink-0 w-[70%] sm:w-[45%] md:w-auto",
+//         index === 0 && "md:justify-start",
+//         index === OPPORTUNNITIES_LIST.length - 1 && "md:justify-end",
+//         index !== 0 &&
+//           index !== OPPORTUNNITIES_LIST.length - 1 &&
+//           "md:justify-center",
+//         index + 1 < OPPORTUNNITIES_LIST.length && "border-r border-[#D1CAB3]",
+//       )}
+//     >
+//       <div className="flex flex-col gap-4 w-10/12">
+//         {/* Image */}
+//         <div
+//           className={cn(
+//             "relative w-full aspect-4/5 overflow-hidden",
+//             isGrow ? "md:aspect-2/3" : "aspect-4/5",
+//           )}
+//         >
+//           <Image src={src} alt={title} fill className="object-cover" />
+//         </div>
+
+//         {/* Label */}
+//         <div className="bg-brown-100 px-2.5 md:px-4 py-1.5 md:py-2.5">
+//           <p className="text-white text-sm md:text-base font-medium leading-6.5 lg:min-h-[72px] flex items-center justify-center">
+//             {title}
+//           </p>
+//         </div>
+//       </div>
+//     </motion.div>
+//   );
+// };

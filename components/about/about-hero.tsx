@@ -28,12 +28,9 @@ const AboutHero = () => {
     <>
       <AnimatedHeader phase={"reveal"} />
 
-      <Container
-        className="mt-40 mb-10 px-6 lg:px-0"
-        // className="mt-40 mb-10 px-6 md:px-0"
-      >
+      <Container className="mt-40 mb-10 px-6 lg:px-0">
         <motion.div
-          className="flex flex-col gap-6"
+          className="flex flex-col gap-8 md:gap-11"
           initial="hidden"
           animate="visible"
           variants={containerVariants}
@@ -41,6 +38,7 @@ const AboutHero = () => {
           <motion.div
             variants={itemVariants}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            className="w-full lg:max-w-[964px]"
           >
             <SectionTitle
               title={
@@ -49,13 +47,12 @@ const AboutHero = () => {
                   Club
                 </>
               }
-              colorClassName="font-black text-white leading-[1.01] md:text-8xl!"
+              colorClassName="font-black text-white leading-normal! md:leading-[1.01] lg:leading-[124px] text-[42px]! md:text-8xl! lg:text-[128px]! lg:tracking-[-4.32px]"
             />
           </motion.div>
 
           <motion.div
             className="flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-7"
-            // className="flex flex-col md:flex-row md:items-center gap-2 md:gap-7"
             variants={containerVariants}
           >
             {LIST.map((l) => (
