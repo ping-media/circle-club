@@ -70,7 +70,7 @@ const ShowcaseCard = () => {
         <motion.h2
           variants={itemVariants}
           transition={{ duration: 0.8 }}
-          className="uppercase font-bold text-2xl md:text-[56px] text-white leading-normal md:leading-[77px] tracking-tighter"
+          className="uppercase font-bold text-2xl md:text-[56px] text-white leading-[100%] md:leading-[77px] tracking-tighter"
         >
           Rooted in Monaco.
           <br />
@@ -81,7 +81,7 @@ const ShowcaseCard = () => {
         <motion.p
           variants={itemVariants}
           transition={{ duration: 0.8 }}
-          className="text-[#FFFFFFCC] text-xs md:text-[20px] leading-normal md:leading-6 w-full md:max-w-2xl font-medium md:font-normal"
+          className="text-[#FFFFFFCC] text-xs md:text-[20px] leading-[100%] md:leading-6 w-full md:max-w-2xl font-medium md:font-normal"
         >
           Our presence in Monaco places us at the center of the world’s most
           exclusive networks — from Formula 1 to private real estate and luxury

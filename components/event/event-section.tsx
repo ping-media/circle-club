@@ -50,7 +50,7 @@ const EventSection = () => {
             <div className="lg:col-span-7">
               <SectionTitle
                 title="Exclusive Monaco Experiences"
-                colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19"
+                colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]! md:leading-19"
               />
             </div>
             <motion.div

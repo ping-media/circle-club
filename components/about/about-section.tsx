@@ -104,7 +104,7 @@ const AboutSection = () => {
             transition={{ duration: 0.8, delay: 0.45, ease: "easeOut" }}
           >
             <div className="flex flex-col gap-3 md:gap-8">
-              <h2 className="font-semibold text-xl md:text-[40px] leading-normal">
+              <h2 className="font-semibold text-xl md:text-[40px] leading-[100%]">
                 You don't hire us. <br /> You enter the Circle.
               </h2>
 

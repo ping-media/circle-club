@@ -79,7 +79,7 @@ const ServiceCard = ({
           <div className="flex flex-col gap-3 mt-3 lg:mt-5">
             <SectionTitle
               title={title}
-              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19!"
+              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]! md:leading-19!"
             />
 
             {bullets && (

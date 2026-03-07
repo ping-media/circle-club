@@ -43,7 +43,7 @@ const EcosystemSection = () => {
           <div className="lg:col-span-4">
             <SectionTitle
               title="The Circle Ecosystem"
-              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19 text-white"
+              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]! md:leading-19 text-white"
             />
           </div>
           <motion.div

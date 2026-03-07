@@ -42,7 +42,7 @@ const FeatureCard = ({
               {title}
             </h2>
 
-            <p className="text-sm md:text-[20px] text-foreground leading-normal">
+            <p className="text-sm md:text-[20px] text-foreground leading-[100%]">
               {description}
             </p>
 

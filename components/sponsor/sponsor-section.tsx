@@ -38,15 +38,15 @@ const SponsorSection = () => {
                     <p className="block lg:hidden">Become a Sponsor</p>
                   </>
                 }
-                colorClassName="text-2xl! font-bold! lg:text-[56px]! leading-normal! md:leading-[77px]!"
+                colorClassName="text-2xl! font-bold! lg:text-[56px]! leading-[100%]! md:leading-[77px]!"
               />
 
-              <p className="w-full md:max-w-sm 2xl:max-w-md text-foreground text-sm md:text-[20px] leading-normal">
+              <p className="w-full md:max-w-sm 2xl:max-w-md text-foreground text-sm md:text-[20px] leading-[100%]">
                 Partner with Circle Club during Monaco’s most prestigious
                 events.
               </p>
 
-              <p className="w-full md:max-w-md 2xl:max-w-lg text-foreground text-sm md:text-[20px] leading-normal">
+              <p className="w-full md:max-w-md 2xl:max-w-lg text-foreground text-sm md:text-[20px] leading-[100%]">
                 We collaborate with brands aligned with excellence and
                 discretion.
               </p>
