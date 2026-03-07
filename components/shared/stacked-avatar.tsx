@@ -13,7 +13,7 @@ const StackedAvatar = ({
   return (
     <div
       className={cn(
-        "relative w-7 h-7 md:w-10 md:h-10 rounded-full border border-white overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer",
+        "relative w-7 h-7 md:w-10 md:h-10 rounded-full border border-white overflow-hidden",
         index !== 0 ? "-ml-1.5" : "",
       )}
       style={{ zIndex: 10 + index }}

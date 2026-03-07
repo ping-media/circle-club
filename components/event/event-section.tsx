@@ -32,7 +32,20 @@ const EventSection = () => {
           variants={containerVariants}
           className="flex flex-col gap-4 lg:gap-6"
         >
-          <SectionLabel number="002" label="Events" colorClassName="text-sm" />
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
+            <SectionLabel
+              number="002"
+              label="Events"
+              colorClassName="text-sm"
+              squareClassName="bg-[#0E0E0E29]"
+            />
+          </motion.div>
+
           <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 lg:items-end">
             <div className="lg:col-span-7">
               <SectionTitle

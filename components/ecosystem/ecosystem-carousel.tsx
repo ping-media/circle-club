@@ -8,17 +8,31 @@ import { ECOSYSTEM_CARD } from "@/constants/ecosystem";
 import Image from "next/image";
 
 const containerVariants = {
-  hidden: {},
+  hidden: {
+    opacity: 1,
+  },
   visible: {
+    opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0.25,
+      delayChildren: 0.2,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
 };
 
 const EcosystemCarousel = () => {
@@ -34,7 +48,8 @@ const EcosystemCarousel = () => {
             scroll-smooth no-scrollbar"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
       >
         {ECOSYSTEM_CARD.map((service) => (
           <motion.div

@@ -28,10 +28,7 @@ const StackingCard = ({ index, children }: StackingCardProps) => {
         zIndex: index + 1,
       }}
     >
-      <motion.div
-        className="w-full px-0 lg:px-6 bg-gold-40 h-[75vh] lg:h-[85vh] flex flex-col"
-        // className="w-full px-0 md:px-6 bg-gold-40 h-[75vh] md:h-[85vh] flex flex-col"
-      >
+      <motion.div className="w-full px-0 lg:px-6 bg-gold-40 h-[75vh] lg:h-[85vh] flex flex-col">
         {children}
       </motion.div>
     </div>
@@ -68,48 +65,38 @@ const ServiceCard = ({
   description,
 }: serviceList) => {
   return (
-    <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] flex-1 h-full">
-      <div
-        className="flex flex-col gap-6 lg:gap-8 lg:flex-row h-full"
-        // className="flex flex-col gap-6 md:gap-8 md:flex-row h-full"
-      >
+    <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] p-6 md:p-8 flex-1 h-full">
+      {/* <div className="flex flex-col gap-6 lg:gap-8 lg:flex-row h-full"> */}
+      <div className="flex flex-col gap-6 lg:flex-row h-full">
         {/* Left content */}
-        <div
-          className="order-2 lg:order-0 flex-1 h-full p-4 flex flex-col lg:justify-between"
-          // className="order-2 md:order-0 flex-1 h-full p-4 flex flex-col md:justify-between"
-        >
-          <div>
-            <SectionLabel
-              number={id}
-              label="Service"
-              squareClassName="bg-[#0E0E0E29]!"
+        <div className="order-2 lg:order-0 flex-1 h-full flex flex-col lg:justify-between">
+          <SectionLabel
+            number={id}
+            label="Service"
+            squareClassName="bg-[#0E0E0E29]!"
+          />
+
+          <div className="flex flex-col gap-3 mt-3 lg:mt-5">
+            <SectionTitle
+              title={title}
+              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19!"
             />
 
-            <div
-              className="flex flex-col gap-3 mt-3 lg:mt-5"
-              // className="flex flex-col gap-3 mt-3 md:mt-5"
-            >
-              <SectionTitle
-                title={title}
-                colorClassName="text-2xl! font-bold! md:text-[56px]! leading-normal! md:leading-19!"
-              />
+            {bullets && (
+              <ul className="flex flex-col gap-3 mb-8">
+                {bullets.map((bullet, i) => (
+                  <li
+                    key={i}
+                    className="text-base font-body text-foreground flex items-start gap-2"
+                  >
+                    <span className="mt-1.5 w-1 h-1 rounded-full bg-foreground shrink-0" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
 
-              {bullets && (
-                <ul className="flex flex-col gap-3 mb-8">
-                  {bullets.map((bullet, i) => (
-                    <li
-                      key={i}
-                      className="text-base font-body text-foreground flex items-start gap-2"
-                    >
-                      <span className="mt-1.5 w-1 h-1 rounded-full bg-foreground shrink-0" />
-                      {bullet}
-                    </li>
-                  ))}
-                </ul>
-              )}
-
-              {description && <p className="space-y-2 mb-8">{description}</p>}
-            </div>
+            {description && <p className="space-y-2 mb-8">{description}</p>}
           </div>
 
           <button className="inline-flex items-center gap-2 bg-brown-100 text-white px-5 py-3 text-xs font-body font-semibold tracking-widest uppercase w-fit hover:opacity-90 transition-opacity">
@@ -119,21 +106,13 @@ const ServiceCard = ({
         </div>
 
         {/* Right image */}
-        <div
-          className="order-1 lg:order-0 flex-1 flex items-center justify-end mt-3 lg:mt-5 p-4 lg:p-8"
-          // className="order-1 md:order-0 flex-1 flex items-center justify-end mt-3 md:mt-5 p-4 md:p-8"
-        >
-          <div
-            className="relative w-full lg:w-[85%] h-full overflow-hidden"
-            // className="relative w-full md:w-[85%] h-full overflow-hidden"
-          >
+        {/* <div className="order-1 lg:order-0 flex-1 flex items-center justify-end mt-3 lg:mt-5 p-4 lg:p-8"> */}
+        <div className="order-1 lg:order-0 flex-1 flex items-center justify-end p-4 lg:p-8">
+          <div className="relative w-full lg:w-[85%] h-[385px] md:h-[460px] overflow-hidden">
             <Image src={src} alt={title} fill className="object-cover" />
 
             {overlay && (
-              <div
-                className="absolute inset-x-0 bottom-0 bg-[#FFFFFF1A] backdrop-blur-3xl h-[105px] lg:h-[161px] p-5 lg:p-8"
-                // className="absolute inset-x-0 bottom-0 bg-[#FFFFFF1A] backdrop-blur-3xl h-[105px] md:h-[161px] p-5 md:p-8"
-              >
+              <div className="absolute inset-x-0 bottom-0 bg-[#FFFFFF1A] backdrop-blur-3xl h-[105px] lg:h-[161px] p-5 lg:p-8">
                 <p className="font-display text-2xl md:text-3xl font-bold text-[#FFFFFF5E]! uppercase leading-tight">
                   {overlay}
                 </p>

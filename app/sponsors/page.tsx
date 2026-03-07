@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 const Sponsors = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <section className="bg-brown-100 relative py-11">
         <BorderGrid />
         <SponsorHero />
@@ -29,7 +29,7 @@ const Sponsors = () => {
         <BorderGrid />
         <Partnership />
       </section>
-    </>
+    </div>
   );
 };
 

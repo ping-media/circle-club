@@ -50,7 +50,7 @@ const WhyPartnerOpportunities = () => {
 
         <motion.div
           variants={containerVariants}
-          className="w-full flex md:grid md:grid-cols-4 gap-4 md:gap-0 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar"
+          className="w-full min-w-0 flex md:grid md:grid-cols-4 gap-4 md:gap-0 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar"
         >
           {OPPORTUNNITIES_LIST.map((opp, index) => (
             <OpportunitiesCard
@@ -79,7 +79,8 @@ const OpportunitiesCard = ({
     <motion.div
       variants={itemVariants}
       className={cn(
-        "relative flex snap-start shrink-0 w-1/2 md:w-auto",
+        // "relative flex snap-start shrink-0 w-1/2 md:w-auto",
+        "relative flex snap-start shrink-0 w-[70%] sm:w-[45%] md:w-auto",
         index === 0 && "md:justify-start",
         index === OPPORTUNNITIES_LIST.length - 1 && "md:justify-end",
         index !== 0 &&

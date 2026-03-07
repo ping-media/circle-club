@@ -9,8 +9,8 @@ import SponsorSection from "@/components/sponsor/sponsor-section";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden">
-      <section className="relative h-screen w-full">
+    <div className="overflow-x-hidden">
+      <section className="relative h-screen w-full overflow-x-hidden">
         <BorderGrid />
         <HeroSection />
       </section>

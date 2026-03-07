@@ -79,79 +79,76 @@ const HeroSection = () => {
 
       {/* Hero Content */}
       {phase === "reveal" && (
-        <Container className="relative z-10 flex h-full items-end px-6 lg:px-0">
-          <div className="flex flex-col lg:grid w-full gap-8 lg:grid-cols-12 mb-8 lg:items-end">
-            {/* Left: Headline */}
-            <div className="flex flex-col gap-8 lg:col-span-6">
-              <motion.div
-                // initial={{ opacity: 0, y: 30 }}
-                // animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
-                // transition={{ delay: 0.15, duration: 0.6, ease: "easeOut" }}
-                variants={revealUp}
-                initial="hidden"
-                animate="show"
-                transition={{ delay: 0.15 }}
-              >
-                <HeroReview />
-              </motion.div>
+        <div className="relative z-10 flex h-full items-end">
+          {/* rectangle background  */}
+          <div className="absolute -z-10 w-full left-0 bottom-0 md:h-[400px] bg-[linear-gradient(0deg,_rgba(255,_255,_255,_0.1)_-5.14%,_rgba(255,_255,_255,_0)_100%)]" />
 
+          <Container className="px-6 lg:px-0">
+            <div className="flex flex-col lg:grid w-full gap-6 md:gap-8 lg:grid-cols-12 my-8 lg:items-end">
+              {/* Left: Headline */}
+              <div className="flex flex-col gap-8 lg:col-span-6">
+                <motion.div
+                  variants={revealUp}
+                  initial="hidden"
+                  animate="show"
+                  transition={{ delay: 0.15 }}
+                >
+                  <HeroReview />
+                </motion.div>
+
+                <motion.div
+                  variants={revealUp}
+                  initial="hidden"
+                  animate="show"
+                  transition={{ delay: 0.35 }}
+                >
+                  <h1 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase text-white leading-[1.21]">
+                    Join The
+                    <br />
+                    Experience
+                  </h1>
+                </motion.div>
+              </div>
+
+              {/* Right: Description + CTAs */}
               <motion.div
-                // initial={{ opacity: 0, y: 60 }}
-                // animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
-                // transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+                className="flex flex-col lg:col-span-6 lg:col-start-9 lg:max-w-sm gap-6 lg:gap-8 mb-6"
                 variants={revealUp}
                 initial="hidden"
                 animate="show"
                 // animate={phase === "reveal" ? "show" : undefined}
-                transition={{ delay: 0.35 }}
+                transition={{ delay: 0.65 }}
               >
-                <h1 className="text-4xl md:text-6xl lg:text-8xl font-black uppercase text-white leading-[1.21]">
-                  Join The
-                  <br />
-                  Experience
-                </h1>
+                <p className="text-sm lg:text-base leading-normal font-normal text-white">
+                  Private access to Monaco's most prestigious moments, curated
+                  through trusted connections and discreet hospitality for a
+                  distinguished few.
+                </p>
+
+                <div className="flex items-center lg:gap-6">
+                  <div className="w-full flex flex-wrap lg:flex-nowrap items-center gap-3 md:gap-6">
+                    <Button
+                      className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5"
+                      asChild
+                    >
+                      <Link href="/services">Explore the Experience</Link>
+                    </Button>
+
+                    <Button
+                      variant="outline"
+                      className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] px-3 py-5 bg-transparent text-gold-100 border-gold-100 hover:bg-gold-100/40 hover:border-gold-100 hover:text-white transition-colors"
+                      asChild
+                    >
+                      <Link href="/request-access">Request Access</Link>
+                    </Button>
+                  </div>
+
+                  <SocialBtn />
+                </div>
               </motion.div>
             </div>
-
-            {/* Right: Description + CTAs */}
-            <motion.div
-              className="flex flex-col lg:col-span-6 lg:col-start-9 lg:max-w-sm gap-6 lg:gap-8 mb-6"
-              // initial={{ opacity: 0, y: 40 }}
-              // animate={phase === "reveal" ? { opacity: 1, y: 0 } : {}}
-              // transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
-              variants={revealUp}
-              initial="hidden"
-              animate="show"
-              // animate={phase === "reveal" ? "show" : undefined}
-              transition={{ delay: 0.65 }}
-            >
-              <p className="text-sm leading-relaxed font-normal text-white">
-                Private access to Monaco's most prestigious moments, curated
-                through trusted connections and discreet hospitality for a
-                distinguished few.
-              </p>
-
-              <div className="flex flex-wrap lg:flex-nowrap items-center gap-3">
-                <Button
-                  className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5"
-                  asChild
-                >
-                  <Link href="/services">Explore the Experience</Link>
-                </Button>
-
-                <Button
-                  variant="outline"
-                  className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] px-3 py-5 bg-transparent text-gold-100 border-gold-100 hover:bg-gold-100/40 hover:border-gold-100 hover:text-white transition-colors"
-                  asChild
-                >
-                  <Link href="/request-access">Request Access</Link>
-                </Button>
-
-                <SocialBtn />
-              </div>
-            </motion.div>
-          </div>
-        </Container>
+          </Container>
+        </div>
       )}
     </>
   );

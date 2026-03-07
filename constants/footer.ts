@@ -9,8 +9,8 @@ export const NAVIGATION = [
 export const CONNECT = [
   { label: "Request Access", href: "/request-access" },
   { label: "Sponsor Inquiry", href: "/sponsors" },
-  { label: "WhatsApp", href: "#" },
-  { label: "Instagram", href: "#" },
+  // { label: "WhatsApp", href: "#" },
+  // { label: "Instagram", href: "#" },
 ];
 
 export const SOCIAL = [

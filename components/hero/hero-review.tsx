@@ -13,7 +13,7 @@ const HeroReview = () => {
   const filledDots = Math.round(RATING);
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-[17px]">
       <div className="flex items-center">
         {REVIEW_USERS.map((user, index) => (
           <StackedAvatar
@@ -26,18 +26,20 @@ const HeroReview = () => {
       </div>
 
       {/* Rating Info */}
-      <div className="flex flex-col gap-1">
-        <div className="flex items-center gap-3 font-light!">
+      <div className="flex flex-col gap-0.5">
+        <div className="flex items-center gap-2 font-light!">
           <Dots filledDots={filledDots} />
 
-          <span className="text-white text-sm">
+          <span className="text-white text-[8px] md:text-xs leading-3.5 tracking-[1.2px]">
             {RATING}
-            <span className="text-[#FFFFFFA3]">/5</span>
+            <span className="text-[#FFFFFFA3] tracking-[1.2px]">/5</span>
           </span>
         </div>
 
-        <span className="text-white text-xs md:text-sm tracking-[0.3em] uppercase font-light!">
-          <span className="text-[#FFFFFFA3] font-light!">Based on</span>{" "}
+        <span className="text-white text-[8px] md:text-xs leading-3.5 tracking-[1.2px] uppercase font-normal!">
+          <span className="text-[#FFFFFFA3] text-[8px] md:text-xs leading-3.5">
+            Based on
+          </span>{" "}
           {REVIEW_COUNT} Verified Reviews
         </span>
       </div>
@@ -49,7 +51,7 @@ export default HeroReview;
 
 const Dots = ({ filledDots }: { filledDots: number }) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1">
       {Array.from({ length: filledDots }).map((_, i) => (
         <span
           key={i}

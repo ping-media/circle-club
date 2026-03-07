@@ -32,10 +32,7 @@ const ChooseSection = () => {
         overlayClassName="bg-[linear-gradient(0deg,_rgba(255,246,219,0.2)_0%,_#FFF6DB_100%)]!"
       />
 
-      <Container
-        className="relative z-50 px-6 lg:px-0"
-        // className="relative z-50 px-6 md:px-0"
-      >
+      <Container className="relative z-50 px-6 lg:px-0">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -64,7 +61,7 @@ const ChooseSection = () => {
 
           <motion.div
             variants={containerVariants}
-            className="w-full flex md:grid gap-6 md:gap-8 md:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar mb-8 md:items-end"
+            className="w-full flex md:grid gap-6 md:grid-cols-3 overflow-x-auto md:overflow-visible snap-x snap-mandatory no-scrollbar mb-8 md:items-end"
           >
             {CHOOSE_LIST.map((choose, index) => (
               <ChooseCard choose={choose} index={index} key={choose.title} />
@@ -90,10 +87,10 @@ const ChooseCard = ({
       variants={itemVariants}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="snap-start shrink-0 w-[88%] md:w-auto flex flex-col p-4 lg:p-6 gap-4.5 lg:gap-6 bg-[linear-gradient(180deg,_rgba(33,34,17,0.3)_0%,_rgba(0,0,0,0.3)_100%)] shadow-[0px_0px_2px_0.25px_#FFFFFF80_inset] backdrop-blur-md h-full"
-      // className="snap-start shrink-0 w-[88%] md:w-auto flex flex-col p-4 md:p-6 gap-4.5 md:gap-6 bg-[linear-gradient(180deg,_rgba(33,34,17,0.3)_0%,_rgba(0,0,0,0.3)_100%)] shadow-[0px_0px_2px_0.25px_#FFFFFF80_inset] backdrop-blur-md h-full"
     >
       {/* Image with consistent ratio */}
-      <div className="relative w-full aspect-3/2 overflow-hidden">
+      {/* <div className="relative w-full aspect-square md:aspect-2/3 overflow-hidden"> */}
+      <div className="relative w-full aspect-square h-[342px] md:h-[451px] overflow-hidden">
         <Image
           src={choose.thumbnail}
           alt={choose.title}
@@ -102,10 +99,7 @@ const ChooseCard = ({
         />
       </div>
 
-      <div
-        className="flex flex-col flex-1 gap-3 lg:gap-4"
-        // className="flex flex-col flex-1 gap-3 md:gap-4"
-      >
+      <div className="flex flex-col flex-1 gap-3 lg:gap-4">
         <h3
           className={cn(
             "uppercase text-white font-semibold tracking-[1.1] text-lg",

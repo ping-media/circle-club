@@ -66,7 +66,7 @@ const AboutInfoTwo = () => {
             src="/images/about/about_info_2.webp"
             width={500}
             height={480}
-            className="w-full aspect-5/4 object-cover"
+            className="w-full aspect-4/5 object-cover"
             alt="about info one"
           />
         </motion.div>

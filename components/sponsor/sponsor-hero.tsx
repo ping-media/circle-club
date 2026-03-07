@@ -25,10 +25,7 @@ const SponsorHero = () => {
     <>
       <AnimatedHeader phase={"reveal"} />
 
-      <Container
-        className="mt-40 px-6 lg:px-0 mb-10"
-        // className="mt-40 px-6 md:px-0 mb-10"
-      >
+      <Container className="mt-40 px-6 lg:px-0 mb-10">
         <motion.div
           className="flex flex-col gap-6"
           initial="hidden"
@@ -38,6 +35,7 @@ const SponsorHero = () => {
           <motion.div
             variants={itemVariants}
             transition={{ duration: 0.7, ease: "easeOut" }}
+            className="w-full lg:max-w-[964px]"
           >
             <SectionTitle
               title={
@@ -46,14 +44,14 @@ const SponsorHero = () => {
                   <br /> Circle Club
                 </>
               }
-              colorClassName="font-black text-white leading-[1.01] md:text-8xl!"
+              colorClassName="font-black text-white leading-normal md:leading-[1.01] lg:leading-[124px] text-[42px] md:text-8xl! lg:text-[128px]! lg:tracking-[-4.32px]"
             />
           </motion.div>
 
           <motion.p
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-white"
+            className="text-white text-sm lg:text-xl leading-normal lg:leading-6"
           >
             Position your brand within Monaco’s most prestigious environments.
           </motion.p>

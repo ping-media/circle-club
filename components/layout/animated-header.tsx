@@ -84,7 +84,8 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={phase === "reveal" ? { opacity: 1, x: 0 } : {}}
-              transition={{ delay: 0.5, duration: 0.4 }}
+              // transition={{ delay: 0.5, duration: 0.4 }}
+              transition={{ duration: 0.4 }}
             >
               <Button
                 variant={isHome ? "outline" : "gold-gradient"}
