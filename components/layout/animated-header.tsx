@@ -167,8 +167,8 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
             <Button
               variant={isHome ? "outline" : "gold-gradient"}
               className={cn(
-                "mt-auto rounded-none uppercase text-sm font-bold",
-                isHome && "bg-gold-60 hover:bg-gold-60 border-none",
+                "mt-auto rounded-none uppercase text-sm md:text-base! leading-[100%] font-bold",
+                isHome && "bg-gold-60! hover:bg-gold-60 border-none",
               )}
               asChild
             >
