@@ -8,6 +8,7 @@ import { serviceList, SERVICES_LIST } from "@/constants/service";
 import Image from "next/image";
 import SectionLabel from "../shared/section-label";
 import SectionTitle from "../shared/section-title";
+import Link from "next/link";
 
 interface StackingCardProps {
   index: number;
@@ -24,11 +25,11 @@ const StackingCard = ({ index, children }: StackingCardProps) => {
       className="flex items-center justify-center"
       style={{
         position: "sticky",
-        top: "10vh",
+        top: "2vh",
         zIndex: index + 1,
       }}
     >
-      <motion.div className="w-full px-0 lg:px-6 bg-gold-40 h-[75vh] lg:h-[85vh] flex flex-col">
+      <motion.div className="w-full max-w-full px-0 lg:px-6 bg-gold-40 flex flex-col">
         {children}
       </motion.div>
     </div>
@@ -38,7 +39,7 @@ const StackingCard = ({ index, children }: StackingCardProps) => {
 const StackingCards = () => {
   return (
     <>
-      <Container className="relative z-50">
+      <Container className="relative min-w-0 z-50">
         {SERVICES_LIST.map((service, index) => (
           <StackingCard
             key={service.id}
@@ -63,64 +64,143 @@ const ServiceCard = ({
   src,
   overlay,
   description,
+  href,
 }: serviceList) => {
   return (
-    <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] p-6 md:p-8 flex-1 h-full">
-      {/* <div className="flex flex-col gap-6 lg:gap-8 lg:flex-row h-full"> */}
-      <div className="flex flex-col gap-6 lg:flex-row h-full">
-        {/* Left content */}
-        <div className="order-2 lg:order-0 flex-1 h-full flex flex-col lg:justify-between">
+    // <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] p-5 md:p-8 flex flex-col lg:flex-row gap-6 lg:gap-12 h-full">
+    <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] p-5 md:p-8 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-12 h-full">
+      {/* IMAGE */}
+      {/* <div className="order-1 lg:order-2 w-full lg:w-[48%]"> */}
+      <div className="order-1 lg:order-2 lg:col-span-6 flex justify-end">
+        <div className="relative w-full aspect-2/2 md:aspect-5/4 lg:aspect-4/3 overflow-hidden">
+          <Image src={src} alt={title} fill className="object-cover" />
+
+          {overlay && (
+            <div className="absolute bottom-0 inset-x-0 bg-white/10 backdrop-blur-2xl p-4 md:p-6">
+              <p className="text-white/70 font-bold uppercase text-lg md:text-2xl leading-tight">
+                {overlay}
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* TEXT */}
+      {/* <div className="order-2 lg:order-1 flex flex-col justify-between lg:w-[52%]"> */}
+      <div className="order-2 lg:order-1 flex flex-col lg:col-span-6">
+        <div className="flex flex-col gap-4">
           <SectionLabel
             number={id}
             label="Service"
             squareClassName="bg-[#0E0E0E29]!"
           />
 
-          <div className="flex flex-col gap-3 mt-3 lg:mt-5">
-            <SectionTitle
-              title={title}
-              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]! md:leading-19!"
-            />
+          <SectionTitle
+            title={title}
+            colorClassName="text-2xl! md:text-4xl lg:text-[56px]! font-bold leading-[100%] md:leading-tight"
+          />
 
-            {bullets && (
-              <ul className="flex flex-col gap-3 mb-8">
-                {bullets.map((bullet, i) => (
-                  <li
-                    key={i}
-                    className="text-base font-body text-foreground flex items-start gap-2"
-                  >
-                    <span className="mt-1.5 w-1 h-1 rounded-full bg-foreground shrink-0" />
-                    {bullet}
-                  </li>
-                ))}
-              </ul>
-            )}
+          {description && (
+            <p className="text-sm md:text-base text-foreground max-w-md">
+              {description}
+            </p>
+          )}
 
-            {description && <p className="space-y-2 mb-8">{description}</p>}
-          </div>
+          {bullets && (
+            <ul className="flex flex-col gap-2 mt-2">
+              {bullets.map((bullet, i) => (
+                <li
+                  key={i}
+                  className="text-sm md:text-base flex items-start gap-2"
+                >
+                  <span className="mt-[7px] w-[5px] h-[5px] rounded-full bg-black shrink-0" />
+                  {bullet}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
 
-          <button className="inline-flex items-center gap-2 bg-brown-100 text-white px-5 py-3 text-xs font-body font-semibold tracking-widest uppercase w-fit hover:opacity-90 transition-opacity">
+        <button className="mt-6 w-full lg:w-fit inline-flex items-center gap-2 bg-brown-100 text-white px-6 py-3 text-xs font-semibold tracking-widest uppercase hover:opacity-90 transition">
+          <Link
+            href={href}
+            className="flex items-center justify-center w-full gap-2.5"
+          >
             {cta}
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-
-        {/* Right image */}
-        {/* <div className="order-1 lg:order-0 flex-1 flex items-center justify-end mt-3 lg:mt-5 p-4 lg:p-8"> */}
-        <div className="order-1 lg:order-0 flex-1 flex items-center justify-end p-4 lg:p-8">
-          <div className="relative w-full lg:w-[85%] h-[385px] md:h-[460px] overflow-hidden">
-            <Image src={src} alt={title} fill className="object-cover" />
-
-            {overlay && (
-              <div className="absolute inset-x-0 bottom-0 bg-[#FFFFFF1A] backdrop-blur-3xl h-[105px] lg:h-[161px] p-5 lg:p-8">
-                <p className="font-display text-2xl md:text-3xl font-bold text-[#FFFFFF5E]! uppercase leading-tight">
-                  {overlay}
-                </p>
-              </div>
-            )}
-          </div>
-        </div>
+            <ArrowRight size={16} />
+          </Link>
+        </button>
       </div>
     </div>
   );
 };
+
+// const ServiceCard = ({
+//   id,
+//   title,
+//   bullets,
+//   cta,
+//   src,
+//   overlay,
+//   description,
+// }: serviceList) => {
+//   return (
+//     <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] p-6 md:p-8 flex-1 h-full">
+//       {/* <div className="flex flex-col gap-6 lg:gap-8 lg:flex-row h-full"> */}
+//       <div className="flex flex-col gap-6 lg:flex-row h-full">
+//         {/* Left content */}
+//         <div className="order-2 lg:order-0 flex-1 h-full flex flex-col lg:justify-between">
+//           <SectionLabel
+//             number={id}
+//             label="Service"
+//             squareClassName="bg-[#0E0E0E29]!"
+//           />
+
+//           <div className="flex flex-col gap-3 mt-3 lg:mt-5">
+//             <SectionTitle
+//               title={title}
+//               colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]! md:leading-19!"
+//             />
+
+//             {bullets && (
+//               <ul className="flex flex-col gap-3 mb-8">
+//                 {bullets.map((bullet, i) => (
+//                   <li
+//                     key={i}
+//                     className="text-base font-body text-foreground flex items-start gap-2"
+//                   >
+//                     <span className="mt-1.5 w-1 h-1 rounded-full bg-foreground shrink-0" />
+//                     {bullet}
+//                   </li>
+//                 ))}
+//               </ul>
+//             )}
+
+//             {description && <p className="space-y-2 mb-8">{description}</p>}
+//           </div>
+
+//           <button className="inline-flex items-center gap-2 bg-brown-100 text-white px-5 py-3 text-xs font-body font-semibold tracking-widest uppercase w-fit hover:opacity-90 transition-opacity">
+//             {cta}
+//             <ArrowRight className="w-4 h-4" />
+//           </button>
+//         </div>
+
+//         {/* Right image */}
+//         {/* <div className="order-1 lg:order-0 flex-1 flex items-center justify-end mt-3 lg:mt-5 p-4 lg:p-8"> */}
+//         <div className="order-1 lg:order-0 flex-1 flex items-center justify-end p-4 lg:p-8">
+//           <div className="relative w-full lg:w-[85%] h-[385px] md:h-[460px] overflow-hidden">
+//             <Image src={src} alt={title} fill className="object-cover" />
+
+//             {overlay && (
+//               <div className="absolute inset-x-0 bottom-0 bg-[#FFFFFF1A] backdrop-blur-3xl h-[105px] lg:h-[161px] p-5 lg:p-8">
+//                 <p className="font-display text-2xl md:text-3xl font-bold text-[#FFFFFF5E]! uppercase leading-tight">
+//                   {overlay}
+//                 </p>
+//               </div>
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

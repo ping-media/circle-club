@@ -81,7 +81,7 @@ const HeroSection = () => {
       {phase === "reveal" && (
         <div className="relative z-10 flex h-full items-end">
           {/* rectangle background  */}
-          <div className="absolute -z-10 w-full left-0 bottom-0 md:h-[400px] bg-[linear-gradient(0deg,_rgba(255,_255,_255,_0.1)_-5.14%,_rgba(255,_255,_255,_0)_100%)]" />
+          <div className="absolute -z-10 w-full left-0 bottom-0 h-[468px] md:h-[400px] bg-[linear-gradient(0deg,_rgba(255,_255,_255,_0.1)_-5.14%,_rgba(255,_255,_255,_0)_100%)] backdrop-blur-xs md:backdrop-blur-none" />
 
           <Container className="px-6 lg:px-0">
             <div className="flex flex-col lg:grid w-full gap-6 md:gap-8 lg:grid-cols-12 my-8 lg:items-end">
@@ -118,7 +118,7 @@ const HeroSection = () => {
                 animate="show"
                 transition={{ delay: 0.65 }}
               >
-                <p className="text-sm lg:text-xl tracking-[-0.05px] leading-[100%] font-normal text-white w-full lg:w-[480px]">
+                <p className="text-sm lg:text-xl tracking-[-0.05px] leading-[100%] font-normal text-white w-full lg:w-[442px]">
                   Private access to Monaco's most prestigious moments, curated
                   through trusted connections and discreet hospitality for a
                   distinguished few.

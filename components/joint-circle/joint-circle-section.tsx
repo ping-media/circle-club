@@ -24,7 +24,8 @@ const JointCircleSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {!isHome ? (
-            <div className="relative w-full aspect-4/3">
+            // <div className="relative w-full aspect-4/3">
+            <div className="relative flex-1 w-full h-full">
               <Image
                 src="/images/joint-circle/joint-circle.webp"
                 fill
@@ -34,7 +35,8 @@ const JointCircleSection = () => {
             </div>
           ) : (
             <video
-              className="w-full aspect-4/3 object-cover"
+              // className="w-full aspect-4/3 object-cover"
+              className="w-full aspect-4/4 object-cover"
               autoPlay
               muted
               loop
@@ -46,7 +48,7 @@ const JointCircleSection = () => {
         </motion.div>
 
         <motion.div
-          className="lg:col-span-6 flex flex-col p-4 lg:p-14 bg-white/10 h-full"
+          className="lg:col-span-6 flex flex-col p-4 lg:p-14.5 bg-white/10 h-full"
           initial={{ opacity: 0, x: 80 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -67,7 +69,7 @@ const JointCircleSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-white font-black text-3xl md:text-5xl uppercase"
+              className="text-white font-black text-2xl md:text-3xl lg:text-[56px] leading-[100%] lg:leading-[77px] uppercase"
             >
               Enter the Circle
             </motion.h2>
@@ -77,7 +79,7 @@ const JointCircleSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-white/80"
+              className="text-white/80 text-sm leading-[100%] md:text-2xl md:leading-6"
             >
               Access is curated. Requests are reviewed discreetly.
             </motion.p>
@@ -90,7 +92,7 @@ const JointCircleSection = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-4 lg:mt-36 2xl:mt-42"
           >
-            <Button className="text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5 w-full lg:w-1/3 2xl:w-2/3">
+            <Button className="text-sm leading-[100%] 2xl:text-sm rounded-none font-bold uppercase tracking-[4%] transition-colors text-brown-200 bg-gold-200 px-5 py-3 w-full lg:w-1/3 2xl:w-2/3">
               <Link href="/request-access">Request Access</Link>
             </Button>
           </motion.div>

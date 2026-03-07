@@ -19,7 +19,7 @@ export const SERVICES_LIST: serviceList[] = [
     ],
     cta: "CONTACT Us",
     src: "/images/ecosystem/eco_6.webp",
-    href: "#",
+    href: "/contact",
   },
   {
     id: "002",
@@ -30,7 +30,7 @@ export const SERVICES_LIST: serviceList[] = [
     ],
     cta: "CONTACT Us",
     src: "/images/ecosystem/eco_4.webp",
-    href: "#",
+    href: "/contact",
   },
   {
     id: "003",
@@ -42,7 +42,7 @@ export const SERVICES_LIST: serviceList[] = [
     ],
     cta: "CONTACT Us",
     src: "/images/ecosystem/eco_3.webp",
-    href: "#",
+    href: "/contact",
   },
   {
     id: "004",
@@ -55,7 +55,7 @@ export const SERVICES_LIST: serviceList[] = [
     cta: "CONTACT VILLA SPECIALIST",
     src: "/images/ecosystem/eco_7.webp",
     overlay: "We structure deals, not just bookings",
-    href: "#",
+    href: "/contact",
   },
   {
     id: "005",
@@ -64,6 +64,6 @@ export const SERVICES_LIST: serviceList[] = [
       "No brokers. No hidden intermediaries. For specific requests, we work directly with trusted partners — always with full control.",
     cta: "SPEAK WITH AUTOMOTIVE DIRECTOR",
     src: "/images/ecosystem/eco_8.webp",
-    href: "#",
+    href: "/contact",
   },
 ];

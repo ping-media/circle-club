@@ -40,7 +40,7 @@ const MonacoF1GrandPrix = () => {
             description={
               "Claim your place within an exclusive circle where access, influence, and visibility converge."
             }
-            btnLabel={"Send Request"}
+            btnLabel={"Send a Request"}
             href="/request-access"
           />
         </div>

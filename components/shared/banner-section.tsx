@@ -66,12 +66,12 @@ const BannerSection = ({
           <motion.div variants={itemVariants}>
             <SectionTitle
               title={title}
-              colorClassName="text-2xl! lg:text-[40px]! text-white text-center"
+              colorClassName="text-2xl! lg:text-[56px]! tracking-[-0.05px] text-white text-center"
             />
           </motion.div>
           {description && (
             <motion.p
-              className="text-white md:max-w-lg text-center font-normal"
+              className="text-white md:max-w-lg text-sm md:text-xl text-center font-normal"
               variants={itemVariants}
             >
               {description}
@@ -81,7 +81,7 @@ const BannerSection = ({
 
         <Button
           variant="outline"
-          className="w-full lg:w-1/4 text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
+          className="w-full lg:w-1/4 text-sm md:text-xl leading-[100%] rounded-none font-semibold uppercase tracking-[4%] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
           asChild
         >
           <Link href={href}>{btnLabel}</Link>

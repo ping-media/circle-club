@@ -21,7 +21,7 @@ const Services = () => {
         <BorderGrid />
         <ServicesVideos />
       </section>
-      <section className="relative bg-gold-50 py-11">
+      <section className="relative bg-gold-50 py-11 overflow-x-clip">
         <BorderGrid />
         <ScrollServiceCards />
       </section>
