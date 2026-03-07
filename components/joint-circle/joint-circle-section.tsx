@@ -25,7 +25,7 @@ const JointCircleSection = () => {
         >
           {!isHome ? (
             // <div className="relative w-full aspect-4/3">
-            <div className="relative flex-1 w-full h-full">
+            <div className="relative aspect-4/4 w-full">
               <Image
                 src="/images/joint-circle/joint-circle.webp"
                 fill
