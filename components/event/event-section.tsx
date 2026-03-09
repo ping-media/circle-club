@@ -57,7 +57,7 @@ const EventSection = () => {
               variants={itemVariants}
               className="lg:col-span-4 gap-2.5"
             >
-              <p className="text-sm md:text-base">
+              <p className="text-sm md:text-xl">
                 Access the Monaco Grand Prix from the most privileged vantage
                 points terrace and sea.
               </p>

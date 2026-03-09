@@ -84,7 +84,6 @@ const Footer = () => {
             {/* LEFT BLOCK */}
             <motion.div
               className="lg:col-span-6 flex flex-col justify-between"
-              // className="md:col-span-6 flex flex-col justify-between"
               variants={{
                 hidden: { opacity: 0, y: 40 },
                 visible: { opacity: 1, y: 0 },
@@ -98,7 +97,7 @@ const Footer = () => {
                   labelClassName="text-brown-100! tracking-[2.1] leading-4! text-sm font-normal!"
                 />
 
-                <h3 className="text-xl md:text-2xl font-normal text-brown-100">
+                <h3 className="text-sm md:text-xl 2xl:text-2xl font-normal text-brown-100 leading-[100%] md:leading-6">
                   Private Concierge – Monaco
                 </h3>
               </div>
@@ -128,7 +127,7 @@ const Footer = () => {
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        className="hover:opacity-70 transition text-brown-100"
+                        className="hover:opacity-70 transition text-brown-100 2xl:text-base"
                       >
                         {item.label}
                       </Link>
@@ -165,7 +164,7 @@ const Footer = () => {
                     <li key={item.label}>
                       <Link
                         href={item.href}
-                        className="hover:opacity-70 transition text-brown-100"
+                        className="hover:opacity-70 transition text-brown-100 2xl:text-base"
                       >
                         {item.label}
                       </Link>

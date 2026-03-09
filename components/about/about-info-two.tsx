@@ -70,9 +70,15 @@ const AboutInfoTwo = () => {
             alt="about info one"
           />
         </motion.div>
-        <motion.div className="lg:col-span-6" variants={containerVariants}>
-          <div className="flex flex-col gap-9 mt-5">
-            <motion.p variants={itemVariants}>
+        <motion.div
+          className="lg:col-span-6 h-full"
+          variants={containerVariants}
+        >
+          <div className="flex flex-col gap-9 pt-5 h-full">
+            <motion.p
+              variants={itemVariants}
+              className="text-sm md:text-xl leading-[100%] md:leading-6"
+            >
               We design, manage, and execute experiences with complete ownership
               and oversight.
             </motion.p>
@@ -86,7 +92,11 @@ const AboutInfoTwo = () => {
               ))}
             </motion.ul>
 
-            <motion.div variants={itemVariants} transition={{ duration: 0.6 }}>
+            <motion.div
+              variants={itemVariants}
+              transition={{ duration: 0.6 }}
+              className="md:mt-auto"
+            >
               <Button
                 variant="outline"
                 className="w-full lg:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
@@ -108,7 +118,7 @@ const ListItem = ({ item }: { item: string }) => (
   <motion.li
     variants={containerVariants}
     transition={{ duration: 0.5 }}
-    className="flex items-start gap-3 py-2.5 md:py-4 border-b border-[#00000014]"
+    className="flex items-start gap-3 py-2.5 md:py-4 border-b border-[#00000014] text-sm md:text-xl leading-[100%]"
   >
     <Image
       src="/icons/checkmark-circle.svg"

@@ -61,10 +61,10 @@ const ContactCard = ({ item }: { item: ContactList }) => (
     </div>
 
     <div className="flex flex-col gap-3">
-      <h2 className="text-gray-warm font-semibold uppercase group-hover:text-gold-200">
+      <h2 className="text-gray-warm font-bold uppercase text-sm md:text-xl leading-[100%] group-hover:text-gold-200">
         {item.title}
       </h2>
-      <p className="font-normal text-[#000000CC] group-hover:text-gold-200">
+      <p className="font-normal text-[#000000CC] text-sm md:text-base leading-[100%] group-hover:text-gold-200">
         {item.description}
       </p>
     </div>

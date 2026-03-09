@@ -20,3 +20,31 @@ const Container = ({
 };
 
 export default Container;
+
+// import { cn } from "@/lib/utils";
+
+// const Container = ({
+//   children,
+//   as = "div",
+//   className,
+// }: {
+//   children: React.ReactNode;
+//   as?: "div" | "section";
+//   className?: string;
+// }) => {
+//   const Component = as;
+
+//   return (
+//     <Component
+//       className={cn(
+//         "w-full mx-auto px-6 md:px-7!",
+//         "max-w-[1200px] xl:max-w-[1312px]",
+//         className,
+//       )}
+//     >
+//       {children}
+//     </Component>
+//   );
+// };
+
+// export default Container;

@@ -1,13 +1,10 @@
 import ThumbnailVideoPlayer from "@/components/shared/thumbnail-video-player";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import { FeatureItem } from "@/constants/features";
+import Link from "next/link";
 
-interface FeatureSectionProps {
-  title: string;
-  description: string;
-  buttonText: string;
-  videoSrc: string;
-  thumbnail: string;
+interface FeatureSectionProps extends FeatureItem {
   className?: string;
   reverse?: boolean;
 }
@@ -18,6 +15,7 @@ const FeatureCard = ({
   buttonText,
   videoSrc,
   thumbnail,
+  href,
   className,
   reverse,
 }: FeatureSectionProps) => {
@@ -53,7 +51,9 @@ const FeatureCard = ({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              {buttonText}
+              <Link href={href} className="w-full flex items-center">
+                {buttonText}
+              </Link>
             </motion.button>
           </div>
         </motion.div>

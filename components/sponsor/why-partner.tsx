@@ -44,7 +44,7 @@ const WhyPartner = () => {
             />
             <SectionTitle
               title="circle club provides access to:"
-              colorClassName="text-2xl! font-bold! md:text-[56px]!"
+              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]"
             />
             <div className="border-b border-[#0000002E]" />
           </div>
@@ -79,11 +79,11 @@ const PartnerCard = ({ item }: { item: PartnerList }) => (
     <SectionLabel
       label={item.title}
       colorClassName="tracking-tight! text-sm!"
-      labelClassName="text-foreground! font-semibold!"
+      labelClassName="text-foreground! font-semibold! text-sm md:text-lg leading-[100%] md:leading-7"
       squareClassName="bg-brown-100!"
     />
 
-    <p className="text-[#000000CC] md:w-2/3 font-normal leading-6">
+    <p className="text-[#000000CC] md:w-2/3 font-normal text-sm md:text-xl leading-5 md:leading-6">
       {item.description}
     </p>
   </div>

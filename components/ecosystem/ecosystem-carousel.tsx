@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import Container from "../shared/container";
 import { ECOSYSTEM_CARD } from "@/constants/ecosystem";
 import Image from "next/image";
+import Link from "next/link";
 
 const containerVariants = {
   hidden: {
@@ -79,8 +80,10 @@ const EcosystemCarousel = () => {
               </p>
 
               <button className="text-gold-200 cursor-pointer flex items-center gap-2 underline underline-offset-2 mt-auto text-[18px] leading-6">
-                {service.buttonText}
-                <ArrowRight size={16} />
+                <Link className="flex items-center gap-2" href={service.href}>
+                  {service.buttonText}
+                  <ArrowRight size={16} />
+                </Link>
               </button>
             </div>
           </motion.div>

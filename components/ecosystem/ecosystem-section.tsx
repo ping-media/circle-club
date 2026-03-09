@@ -50,7 +50,7 @@ const EcosystemSection = () => {
             variants={itemVariants}
             className="lg:col-span-7 lg:col-start-8 gap-2.5"
           >
-            <p className="text-sm md:text-base text-white">
+            <p className="text-sm md:text-xl text-white leading-[100%] md:leading-6">
               Unlike traditional concierge services, we operate our own luxury
               infrastructure — ensuring direct control, quality, and speed.
             </p>

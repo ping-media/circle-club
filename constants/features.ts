@@ -4,6 +4,7 @@ export interface FeatureItem {
   buttonText: string;
   videoSrc: string;
   thumbnail: string;
+  href: string;
 }
 
 export const FEATURES: FeatureItem[] = [
@@ -14,6 +15,7 @@ export const FEATURES: FeatureItem[] = [
     buttonText: "Request Terrace Access",
     videoSrc: "/videos/event/event_1.mp4",
     thumbnail: "/images/event/event_1.webp",
+    href: "/request-access",
   },
   {
     title: "Private Yacht Experience",
@@ -22,5 +24,6 @@ export const FEATURES: FeatureItem[] = [
     buttonText: "Request Terrace Access",
     videoSrc: "/videos/event/event_1.mp4",
     thumbnail: "/images/sponsor/sponsor.webp",
+    href: "/request-access",
   },
 ];

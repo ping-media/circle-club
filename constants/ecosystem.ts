@@ -3,6 +3,7 @@ export interface EcosystemCard {
   description: string;
   buttonText: string;
   thumbnail: string;
+  href: string;
 }
 
 export const ECOSYSTEM_CARD: EcosystemCard[] = [
@@ -11,6 +12,7 @@ export const ECOSYSTEM_CARD: EcosystemCard[] = [
     description: "Direct access to high-performance and ultra-luxury vehicles.",
     buttonText: "Contact Mobility Manager",
     thumbnail: "/images/ecosystem/eco_1.webp",
+    href: "/contact",
   },
   {
     title: "Private Villas",
@@ -18,6 +20,7 @@ export const ECOSYSTEM_CARD: EcosystemCard[] = [
       "Short and long-term curated properties in Monaco and the Riviera.",
     buttonText: "Contact Property Advisor",
     thumbnail: "/images/ecosystem/eco_2.webp",
+    href: "/contact",
   },
   {
     title: "Monaco Real Estate",
@@ -25,11 +28,13 @@ export const ECOSYSTEM_CARD: EcosystemCard[] = [
       "Strategic real estate advisory within Monaco's most prestigious districts.",
     buttonText: "Contact Real Estate Expert",
     thumbnail: "/images/ecosystem/eco_3.webp",
+    href: "/contact",
   },
   {
     title: "Valet Services",
     description: "Prestigious restaurant partnerships.",
     buttonText: "Contact Valet Director",
     thumbnail: "/images/ecosystem/eco_4.webp",
+    href: "/contact",
   },
 ];

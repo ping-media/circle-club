@@ -51,9 +51,9 @@ const ChooseSection = () => {
             />
             <SectionTitle
               title="why circle club"
-              colorClassName="text-2xl! font-bold! md:text-[56px]!"
+              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]"
             />
-            <p className="text-sm md:text-base text-center">
+            <p className="text-sm md:text-xl text-center">
               A curated private ecosystem built for individuals who expect more
               than access they expect position.
             </p>
@@ -89,7 +89,6 @@ const ChooseCard = ({
       className="snap-start shrink-0 w-[88%] md:w-auto flex flex-col p-4 lg:p-6 gap-4.5 lg:gap-6 bg-[linear-gradient(180deg,_rgba(33,34,17,0.3)_0%,_rgba(0,0,0,0.3)_100%)] shadow-[0px_0px_2px_0.25px_#FFFFFF80_inset] backdrop-blur-md h-full"
     >
       {/* Image with consistent ratio */}
-      {/* <div className="relative w-full aspect-square md:aspect-2/3 overflow-hidden"> */}
       <div className="relative w-full aspect-square h-[342px] md:h-[451px] overflow-hidden">
         <Image
           src={choose.thumbnail}
@@ -102,14 +101,14 @@ const ChooseCard = ({
       <div className="flex flex-col flex-1 gap-3 lg:gap-4">
         <h3
           className={cn(
-            "uppercase text-white font-semibold tracking-[1.1] text-lg",
+            "uppercase text-white font-semibold tracking-[1%] text-[19px] md:text-2xl leading-[100%]",
             index == 0 ? "w-1/2 md:w-auto" : "",
           )}
         >
           {choose.title}
         </h3>
 
-        <p className="text-white/80 text-sm leading-relaxed mt-auto">
+        <p className="text-white/80 text-sm md:text-xl leading-5 md:leading-6 mt-auto">
           {choose.description}
         </p>
       </div>

@@ -46,7 +46,7 @@ const MonacoTwoSection = () => {
             />
             <SectionTitle
               title={"Yacht Viewing Experience"}
-              colorClassName="text-2xl! font-bold! md:text-[56px]!"
+              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]"
             />
           </motion.div>
 
@@ -92,7 +92,7 @@ const ListItem = ({ item }: { item: string }) => (
   <motion.li
     variants={itemVariants}
     transition={{ duration: 0.5 }}
-    className="flex items-center gap-3 py-4 border-b border-[#00000014]"
+    className="flex items-center gap-3 py-4 border-b border-[#00000014] text-sm md:text-xl leading-[100%]"
   >
     <Image
       src="/icons/checkmark-circle.svg"

@@ -24,7 +24,6 @@ const JointCircleSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {!isHome ? (
-            // <div className="relative w-full aspect-4/3">
             <div className="relative aspect-4/4 w-full">
               <Image
                 src="/images/joint-circle/joint-circle.webp"
@@ -35,7 +34,6 @@ const JointCircleSection = () => {
             </div>
           ) : (
             <video
-              // className="w-full aspect-4/3 object-cover"
               className="w-full aspect-4/4 object-cover"
               autoPlay
               muted
@@ -79,7 +77,7 @@ const JointCircleSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-white/80 text-sm leading-[100%] md:text-2xl md:leading-6"
+              className="text-white/80 text-sm leading-[100%] md:text-xl md:leading-6"
             >
               Access is curated. Requests are reviewed discreetly.
             </motion.p>
@@ -92,7 +90,7 @@ const JointCircleSection = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="mt-4 lg:mt-36 2xl:mt-42"
           >
-            <Button className="text-sm leading-[100%] 2xl:text-sm rounded-none font-bold uppercase tracking-[4%] transition-colors text-brown-200 bg-gold-200 px-5 py-3 w-full lg:w-1/3 2xl:w-2/3">
+            <Button className="text-sm leading-[100%] 2xl:text-sm rounded-none font-bold uppercase tracking-[4%] transition-colors text-brown-200 bg-gold-200 px-5 py-3 w-full lg:w-1/3 2xl:w-2/3 hover:bg-gold-200/95">
               <Link href="/request-access">Request Access</Link>
             </Button>
           </motion.div>
