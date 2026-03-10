@@ -181,7 +181,7 @@ html {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  scrollbar-color: var(--border) transparent;
 }
 
 .no-scrollbar::-webkit-scrollbar {

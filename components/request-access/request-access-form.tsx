@@ -144,7 +144,7 @@ export const RequestAccessForm = () => {
                     <FormControl>
                       <Button
                         variant="outline"
-                        className="p-4 justify-start text-left font-normal border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] text-brown-100 ring-0 outline-none focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-[#530E104D] shadow-none bg-transparent hover:bg-transparent"
+                        className="p-4 justify-start text-left font-normal border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] text-brown-100 ring-0 outline-none focus:outline-none focus:ring-0 focus:ring-offset-0 focus:border-[#530E104D] shadow-none bg-transparent hover:bg-transparent text-base md:text-sm"
                       >
                         {field.value
                           ? format(field.value, "PPP")
@@ -203,7 +203,7 @@ const Input = React.forwardRef<
   React.ComponentProps<typeof ShadcnInput>
 >(({ className, ...props }, ref) => (
   <ShadcnInput
-    className="p-4 border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] placeholder:text-brown-100  outline-none ring-0 focus:ring-0 focus-visible:ring-0 focus:outline-none focus:border-[#530E104D] shadow-none"
+    className="p-4 border-t-0 border-r-0 border-l-0 rounded-none border-b border-[#530E104D] placeholder:text-brown-100 outline-none ring-0 focus:ring-0 focus-visible:ring-0 focus:outline-none focus:border-[#530E104D] shadow-none"
     {...props}
   />
 ));
