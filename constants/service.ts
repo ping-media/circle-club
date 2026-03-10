@@ -29,7 +29,7 @@ export const SERVICES_LIST: serviceList[] = [
       "Operational excellence, trusted presence, premium service.",
     ],
     cta: "CONTACT Us",
-    src: "/images/ecosystem/eco_4.webp",
+    src: "/images/ecosystem/eco_9.webp",
     href: "/contact",
   },
   {

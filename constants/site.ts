@@ -24,3 +24,5 @@ export const CONTACT_INFO: ContactInfo[] = [
     href: "mailto:contact@circleclub.co",
   },
 ];
+
+export const WA_LINK: string = "https://wa.me/+41783038313";

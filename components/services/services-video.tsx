@@ -1,5 +1,4 @@
 import Image from "next/image";
-// import HeroVideo from "../hero/hero-video";
 import DotAndLabel from "../shared/DotAndLabel";
 
 const OPERATIONS = ["Direct", "Operational", "Exclusive"];
@@ -7,11 +6,6 @@ const OPERATIONS = ["Direct", "Operational", "Exclusive"];
 const ServicesVideos = () => {
   return (
     <>
-      {/* <HeroVideo
-        src="videos/services.mp4"
-        objectPosition="50% 63%"
-        overlayClassName=""
-      /> */}
       <div className="absolute inset-0 h-full w-full object-cover">
         <Image
           src="/images/services/services.webp"

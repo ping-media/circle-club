@@ -71,15 +71,15 @@ const EcosystemCarousel = () => {
             </div>
 
             <div className="flex flex-col flex-1 gap-2 md:gap-4">
-              <h3 className="uppercase text-white font-semibold tracking-[1.1] leading-4 text-[22px]">
+              <h3 className="uppercase text-white font-semibold tracking-[1.1] leading-3.5 md:leading-4 text-base md:text-[22px]">
                 {service.title}
               </h3>
 
-              <p className="text-white/80 text-[18px] leading-6">
+              <p className="text-white/80 text-sm md:text-[18px] leading-[100%] md:leading-6">
                 {service.description}
               </p>
 
-              <button className="text-gold-200 cursor-pointer flex items-center gap-2 underline underline-offset-2 mt-auto text-[18px] leading-6">
+              <button className="text-gold-200 cursor-pointer flex items-center gap-2 underline underline-offset-2 mt-auto text-sm md:text-[18px] leading-6">
                 <Link className="flex items-center gap-2" href={service.href}>
                   {service.buttonText}
                   <ArrowRight size={16} />

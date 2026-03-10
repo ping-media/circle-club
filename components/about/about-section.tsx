@@ -67,15 +67,6 @@ const AboutSection = () => {
               height={478}
               alt="about"
             />
-            {/* <video
-              className="w-full aspect-square object-cover"
-              autoPlay
-              muted
-              loop
-              playsInline
-            >
-              <source src="/videos/about.mp4" type="video/mp4" />
-            </video> */}
           </motion.div>
         </motion.div>
 

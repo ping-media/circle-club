@@ -51,9 +51,6 @@ const HeroSection = () => {
 
   return (
     <>
-      {/* Video Background */}
-      {/* <HeroVideo src="videos/hero.mp4" poster="images/hero.webp" /> */}
-
       <div className="absolute inset-0 h-full w-full">
         {/* Desktop image */}
         <Image

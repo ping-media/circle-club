@@ -41,6 +41,7 @@ const logoVariants = {
     },
   },
 };
+const CURRENT_YEAR = new Date().getFullYear();
 
 const Footer = () => {
   return (
@@ -52,6 +53,7 @@ const Footer = () => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <BorderGrid borderClassName="border-[#0000001F]!" />
+
       {/* footer background  */}
       <div
         className="absolute inset-0 -z-20"
@@ -103,7 +105,7 @@ const Footer = () => {
               </div>
 
               <p className="hidden md:block text-xs tracking-[0.2em] uppercase text-brown-100 md:mt-16">
-                &copy; 2026 {SITE_CONFIG.name}. All rights reserved.
+                &copy; {CURRENT_YEAR} {SITE_CONFIG.name}. All rights reserved.
               </p>
             </motion.div>
 
@@ -139,7 +141,7 @@ const Footer = () => {
                 <div className="hidden md:flex items-center gap-4 pt-6">
                   {SOCIAL.map((i) => (
                     <div key={i.label}>
-                      <Link href={i.href}>
+                      <Link href={i.href} target="_blank">
                         <Image
                           src={i.src}
                           alt={i.label}
@@ -165,6 +167,7 @@ const Footer = () => {
                       <Link
                         href={item.href}
                         className="hover:opacity-70 transition text-brown-100 2xl:text-base"
+                        target={item.isexternal ? "_blank" : "_self"}
                       >
                         {item.label}
                       </Link>

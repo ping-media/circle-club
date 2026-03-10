@@ -1,5 +1,6 @@
+import { WA_LINK } from "./site";
+
 export const NAVIGATION = [
-  // { label: "Legal Notice", href: "#" },
   { label: "Services", href: "/services" },
   { label: "Monaco F1 Grand Prix", href: "/monaco-f1-grand-prix" },
   { label: "About", href: "/about" },
@@ -7,16 +8,24 @@ export const NAVIGATION = [
 ];
 
 export const CONNECT = [
-  { label: "Request Access", href: "/request-access" },
-  { label: "Sponsor Inquiry", href: "/sponsors" },
-  // { label: "WhatsApp", href: "#" },
-  // { label: "Instagram", href: "#" },
+  { label: "Request Access", href: "/request-access", isexternal: false },
+  { label: "Sponsor Inquiry", href: "/sponsors", isexternal: false },
+  { label: "WhatsApp", href: WA_LINK, isexternal: true },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/circleclub.co?utm_source=ig_web_button_share_sheet",
+    isexternal: true,
+  },
 ];
 
 export const SOCIAL = [
   // { label: "Facebook", src: "/icons/facebook.svg", href: "#" },
   // { label: "X", src: "/icons/twitter.svg", href: "#" },
-  { label: "Instagram", src: "/icons/instagram.svg", href: "#" },
+  {
+    label: "Instagram",
+    src: "/icons/instagram.svg",
+    href: "https://www.instagram.com/circleclub.co?utm_source=ig_web_button_share_sheet",
+  },
   // { label: "Youtube", src: "/icons/youtube.svg", href: "#" },
 ];
 

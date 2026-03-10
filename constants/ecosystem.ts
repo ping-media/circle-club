@@ -34,7 +34,7 @@ export const ECOSYSTEM_CARD: EcosystemCard[] = [
     title: "Valet Services",
     description: "Prestigious restaurant partnerships.",
     buttonText: "Contact Valet Director",
-    thumbnail: "/images/ecosystem/eco_4.webp",
+    thumbnail: "/images/ecosystem/eco_9.webp",
     href: "/contact",
   },
 ];

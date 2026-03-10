@@ -74,15 +74,6 @@ const SponsorSection = () => {
             height={697}
             alt="sponsor"
           />
-          {/* <video
-            className="w-full aspect-square object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src="/videos/sponsor.mp4" type="video/mp4" />
-          </video> */}
         </div>
       </div>
     </div>
