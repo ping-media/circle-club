@@ -179,12 +179,12 @@ const Footer = () => {
               {/* mobile social  */}
               <div className="w-full col-span-full">
                 <p className="md:hidden text-xs tracking-[0.2em] uppercase text-white">
-                  &copy; 2026 {SITE_CONFIG.name}. All rights reserved.
+                  &copy; {CURRENT_YEAR} {SITE_CONFIG.name}. All rights reserved.
                 </p>
 
                 <div className="md:hidden flex items-center gap-4 pt-6">
                   {SOCIAL_MOBILE.map((i) => (
-                    <Link key={i.label} href={i.href}>
+                    <Link key={i.label} href={i.href} target="_blank">
                       <Image
                         src={i.src}
                         alt={i.label}

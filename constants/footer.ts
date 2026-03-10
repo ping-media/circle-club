@@ -32,6 +32,10 @@ export const SOCIAL = [
 export const SOCIAL_MOBILE = [
   // { label: "Facebook", src: "/icons/facebook_white.svg", href: "#" },
   // { label: "X", src: "/icons/twitter_white.svg", href: "#" },
-  { label: "Instagram", src: "/icons/instagram_white.svg", href: "#" },
+  {
+    label: "Instagram",
+    src: "/icons/instagram_white.svg",
+    href: "https://www.instagram.com/circleclub.co?utm_source=ig_web_button_share_sheet",
+  },
   // { label: "Youtube", src: "/icons/youtube_white.svg", href: "#" },
 ];
