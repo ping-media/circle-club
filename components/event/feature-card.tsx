@@ -51,7 +51,10 @@ const FeatureCard = ({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Link href={href} className="w-full flex items-center">
+              <Link
+                href={href}
+                className="w-full flex items-center justify-center"
+              >
                 {buttonText}
               </Link>
             </motion.button>
