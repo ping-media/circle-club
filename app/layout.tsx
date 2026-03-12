@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/footer/footer";
 import { SITE_CONFIG } from "@/constants/site";
 import { AnimationProvider } from "@/context/animation-context";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -31,10 +32,11 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
         <AnimationProvider>
-          {/* <main className="relative min-h-screen overflow-hidden"> */}
           <main className="relative min-h-screen">{children}</main>
         </AnimationProvider>
         <Footer />
+
+        <Toaster />
       </body>
     </html>
   );
