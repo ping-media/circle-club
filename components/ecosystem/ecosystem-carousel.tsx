@@ -66,7 +66,7 @@ const EcosystemCarousel = () => {
                 src={service.thumbnail}
                 alt={service.title}
                 fill
-                className="object-cover"
+                className="object-cover object-[50%_60%]"
               />
             </div>
 

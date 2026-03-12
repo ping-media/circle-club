@@ -18,7 +18,7 @@ const ShowcaseSection = () => {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/images/showcase/section_3.webp"
-          alt=""
+          alt="monaco experience"
           fill
           className="object-cover object-[50%_100%] md:object-[50%_85%] lg:object-[5%_60%] min-w-[155%] md:min-w-[115%] lg:min-w-[120%]"
         />

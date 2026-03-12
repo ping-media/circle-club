@@ -12,7 +12,7 @@ export const ECOSYSTEM_CARD: EcosystemCard[] = [
     description: "Direct access to high-performance and ultra-luxury vehicles.",
     buttonText: "Contact Mobility Manager",
     thumbnail: "/images/ecosystem/eco_1.webp",
-    href: "/contact",
+    href: "/contact?type=cars",
   },
   {
     title: "Private Villas",
@@ -20,7 +20,7 @@ export const ECOSYSTEM_CARD: EcosystemCard[] = [
       "Short and long-term curated properties in Monaco and the Riviera.",
     buttonText: "Contact Property Advisor",
     thumbnail: "/images/ecosystem/eco_2.webp",
-    href: "/contact",
+    href: "/contact?type=real-estate",
   },
   {
     title: "Monaco Real Estate",
@@ -28,13 +28,20 @@ export const ECOSYSTEM_CARD: EcosystemCard[] = [
       "Strategic real estate advisory within Monaco's most prestigious districts.",
     buttonText: "Contact Real Estate Expert",
     thumbnail: "/images/ecosystem/eco_3.webp",
-    href: "/contact",
+    href: "/contact?type=real-estate",
+  },
+  {
+    title: "Car Support",
+    description: "Professional detailing facilities in Monaco & Cannes.",
+    buttonText: "Contact Garage Manager",
+    thumbnail: "/images/ecosystem/eco_5.webp",
+    href: "/contact?type=cars",
   },
   {
     title: "Valet Services",
     description: "Prestigious restaurant partnerships.",
     buttonText: "Contact Valet Director",
     thumbnail: "/images/ecosystem/eco_9.webp",
-    href: "/contact",
+    href: "/contact?type=cars",
   },
 ];
