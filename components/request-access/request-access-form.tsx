@@ -190,7 +190,7 @@ export const RequestAccessForm = () => {
 
           <Button
             type="submit"
-            className="bg-brown-100 text-white uppercase tracking-[0.2em] rounded-none px-3 py-5"
+            className="bg-brown-100 hover:bg-brown-100/95 text-white uppercase tracking-[0.2em] rounded-none px-3 py-5"
           >
             Submit Request
           </Button>
