@@ -170,7 +170,7 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
 
             {/* CTA */}
             <Button
-              variant={isHome ? "outline" : "gold-gradient"}
+              variant={isHome ? "outline" : "gray-gradient"}
               className={cn(
                 "mt-auto rounded-none uppercase text-sm md:text-base! leading-[100%] font-bold",
                 // isHome && "bg-gold-60! hover:bg-gold-60 border-none",

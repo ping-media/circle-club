@@ -7,6 +7,7 @@ import { Button } from "../ui/button";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const JointCircleSection = () => {
   const pathname = usePathname();
@@ -69,7 +70,8 @@ const JointCircleSection = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-black-100 font-black text-2xl md:text-3xl lg:text-[56px] leading-[100%] lg:leading-[77px] uppercase"
             >
-              Enter the <span className="text-brown-100">Circle</span>
+              Enter the{" "}
+              <span className={cn(isHome ? "text-brown-100" : "")}>Circle</span>
             </motion.h2>
 
             <motion.p
