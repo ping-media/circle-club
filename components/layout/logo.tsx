@@ -4,9 +4,10 @@ import Image from "next/image";
 
 interface LogoProps {
   size?: "normal" | "large";
+  isHome?: boolean;
 }
 
-const Logo = ({ size = "normal" }: LogoProps) => {
+const Logo = ({ size = "normal", isHome = false }: LogoProps) => {
   return (
     <motion.div
       layoutId="circleclub-logo"
@@ -16,7 +17,7 @@ const Logo = ({ size = "normal" }: LogoProps) => {
       )}
     >
       <Image
-        src="/images/logo.svg"
+        src={isHome ? "/images/logo.svg" : "/images/logo_dark.svg"}
         width={160}
         height={60}
         alt="Circle Club Logo"

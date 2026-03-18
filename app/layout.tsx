@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${inter.variable} ${spaceGrotesk.variable} font-sans antialiased`}
       >
         <AnimationProvider>
-          <main className="relative min-h-screen">{children}</main>
+          <div className="relative min-h-screen">{children}</div>
         </AnimationProvider>
         <Footer />
 

@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 const MonacoF1GrandPrix = () => {
   return (
     <>
-      <section className="bg-brown-100 relative py-11">
+      <section className="bg-white relative py-11">
         <BorderGrid />
         <MonacoHero />
       </section>
-      <section className="bg-gold-50 py-10 md:py-20 relative">
+      <section className="bg-gray-dark py-10 md:py-20 relative">
         <BorderGrid />
         <MonacoOneSection />
       </section>
-      <section className="bg-gold-300 py-10 md:py-20 relative">
+      <section className="bg-white py-10 md:py-20 relative">
         <BorderGrid />
         <MonacoTwoSection />
       </section>
@@ -30,7 +30,7 @@ const MonacoF1GrandPrix = () => {
         <BorderGrid />
         <ChooseSection />
       </section>
-      <section className="relative bg-brown-100 py-11 lg:py-30">
+      <section className="relative bg-gray-dark py-11 lg:py-30">
         <BorderGrid />
         <div className="relative z-50 px-6 lg:px-0">
           <BannerSection

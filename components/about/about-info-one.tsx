@@ -96,7 +96,7 @@ const AboutInfoOne = () => {
             >
               <Button
                 variant="outline"
-                className="w-full lg:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 bg-brown-100 text-white hover:bg-brown-100/90 hover:text-white transition-colors"
+                className="w-full lg:w-auto text-sm rounded-none font-semibold uppercase tracking-[0.1em] px-3 py-5 gray-gradient transition-colors"
                 asChild
               >
                 <Link href="/request-access">Request Access</Link>

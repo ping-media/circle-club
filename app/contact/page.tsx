@@ -12,15 +12,15 @@ export const metadata: Metadata = {
 const Contact = () => {
   return (
     <>
-      <section className="bg-brown-100 relative py-11">
+      <section className="bg-white relative py-11">
         <BorderGrid />
         <ContactHero />
       </section>
-      <section className="relative bg-gold-50 pt-11 lg:py-20">
+      <section className="relative bg-gray-dark pt-11 lg:py-20">
         <BorderGrid />
         <ContactFormSection />
       </section>
-      <section className="bg-gold-50 py-11 lg:py-20 relative">
+      <section className="bg-white py-11 lg:py-20 relative">
         <BorderGrid />
         <ContactSection />
       </section>

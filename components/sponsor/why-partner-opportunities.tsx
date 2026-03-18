@@ -87,8 +87,8 @@ const OpportunitiesCard = ({
         </div>
 
         {/* Label */}
-        <div className="bg-brown-100 px-2.5 md:px-4 py-1.5 md:py-2.5">
-          <p className="text-white text-sm md:text-lg font-medium leading-4.5 md:leading-5.5 h-[52px] lg:min-h-[72px] flex items-center justify-center">
+        <div className="px-2.5 md:px-4 py-1.5 md:py-2.5">
+          <p className="text-black text-sm md:text-lg font-medium leading-4.5 md:leading-5.5 h-[52px] lg:min-h-[72px] flex items-center text-center justify-center">
             {title}
           </p>
         </div>

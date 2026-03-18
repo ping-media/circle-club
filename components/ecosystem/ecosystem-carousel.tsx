@@ -58,7 +58,8 @@ const EcosystemCarousel = () => {
             data-slide
             variants={cardVariants}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="snap-start flex flex-col p-3 md:p-6 gap-10 md:gap-12 bg-linear-to-b from-white/20 to-transparent h-full"
+            // className="snap-start flex flex-col p-3 md:p-6 gap-10 md:gap-12 bg-linear-to-b from-white/20 to-transparent h-full"
+            className="snap-start flex flex-col p-3 md:p-6 gap-10 md:gap-12 bg-[linear-gradient(180deg,_rgba(237,_241,_245,_0.8)_0%,_rgba(237,_241,_245,_0.2)_100%)] h-full"
           >
             {/* Image with consistent ratio */}
             <div className="relative w-full aspect-3/2 overflow-hidden">
@@ -71,15 +72,15 @@ const EcosystemCarousel = () => {
             </div>
 
             <div className="flex flex-col flex-1 gap-2 md:gap-4">
-              <h3 className="uppercase text-white font-semibold tracking-[1.1] leading-3.5 md:leading-4 text-base md:text-[22px]">
+              <h3 className="uppercase text-black-100 font-semibold tracking-[1.1] leading-3.5 md:leading-4 text-base md:text-[22px]">
                 {service.title}
               </h3>
 
-              <p className="text-white/80 text-sm md:text-[18px] leading-[100%] md:leading-6">
+              <p className="text-black-100/80 text-sm md:text-[18px] leading-[100%] md:leading-6">
                 {service.description}
               </p>
 
-              <button className="text-gold-200 cursor-pointer flex items-center gap-2 underline underline-offset-2 mt-auto text-sm md:text-[18px] leading-6">
+              <button className="text-brown-100 cursor-pointer flex items-center gap-2 underline underline-offset-2 mt-auto text-sm md:text-[18px] leading-6">
                 <Link className="flex items-center gap-2" href={service.href}>
                   {service.buttonText}
                   <ArrowRight size={16} />
@@ -94,16 +95,16 @@ const EcosystemCarousel = () => {
       <div className="flex items-center justify-center gap-4 mt-12">
         <button
           onClick={prev}
-          className="w-12 h-12 bg-gold-200 flex items-center justify-center cursor-pointer"
+          className="w-12 h-12 bg-black flex items-center justify-center cursor-pointer"
         >
-          <ArrowLeft className="text-brown-100" size={16} />
+          <ArrowLeft className="text-white" size={16} />
         </button>
 
         <button
           onClick={next}
-          className="w-12 h-12 border border-gold-200 text-gold-200 flex items-center justify-center cursor-pointer"
+          className="w-12 h-12 border border-[#E6E9EB] flex items-center justify-center cursor-pointer"
         >
-          <ArrowRight className="text-gold-200" size={16} />
+          <ArrowRight className="text-black-100" size={16} />
         </button>
       </div>
     </Container>

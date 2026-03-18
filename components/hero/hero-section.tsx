@@ -123,16 +123,18 @@ const HeroSection = () => {
 
                 <div className="flex items-center lg:gap-6">
                   <div className="w-full flex flex-wrap lg:flex-nowrap items-center gap-3 md:gap-6">
+                    {/* bg-gradient-to-r from-gold-medium to-gold-light */}
                     <Button
-                      className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-gradient-to-r from-gold-medium to-gold-light px-3 py-5"
+                      className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] transition-colors text-brown-200 bg-white hover:bg-white px-3 py-5 border-none"
                       asChild
                     >
                       <Link href="/services">Explore the Experience</Link>
                     </Button>
 
+                    {/* text-gold-100 border-gold-100 hover:bg-gold-100/40 hover:border-gold-100 hover:text-white */}
                     <Button
                       variant="outline"
-                      className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] px-3 py-5 bg-transparent text-gold-100 border-gold-100 hover:bg-gold-100/40 hover:border-gold-100 hover:text-white transition-colors"
+                      className="w-full lg:w-auto text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.1em] px-3 py-5 bg-transparent text-white border-white hover:border-white transition-colors"
                       asChild
                     >
                       <Link href="/request-access">Request Access</Link>

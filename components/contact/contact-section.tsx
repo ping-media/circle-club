@@ -44,9 +44,9 @@ const ContactCard = ({ item }: { item: ContactList }) => (
   <motion.div
     variants={itemVariants}
     transition={{ duration: 0.6, ease: "easeOut" }}
-    className="bg-gold-200 flex flex-col justify-between p-5 gap-2 group hover:scale-107 transition-transform duration-150 ease-in-out hover:bg-brown-200 cursor-pointer"
+    className="bg-gray-dark flex flex-col justify-between p-5 gap-2 group hover:scale-107 transition-transform duration-150 ease-in-out hover:bg-black cursor-pointer"
   >
-    <h2 className="text-[#00000026] font-semibold text-[84px] group-hover:text-gold-200">
+    <h2 className="text-[#00000026] font-semibold text-[84px] group-hover:text-white">
       {item.number}
     </h2>
 
@@ -61,10 +61,10 @@ const ContactCard = ({ item }: { item: ContactList }) => (
     </div>
 
     <div className="flex flex-col gap-3">
-      <h2 className="text-gray-warm font-bold uppercase text-sm md:text-xl leading-[100%] group-hover:text-gold-200">
+      <h2 className="text-gray-warm font-bold uppercase text-sm md:text-xl leading-[100%] group-hover:text-white">
         {item.title}
       </h2>
-      <p className="font-normal text-[#000000CC] text-sm md:text-base leading-[100%] group-hover:text-gold-200">
+      <p className="font-normal text-[#000000CC] text-sm md:text-base leading-[100%] group-hover:text-white">
         {item.description}
       </p>
     </div>

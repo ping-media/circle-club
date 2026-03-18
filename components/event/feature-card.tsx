@@ -29,23 +29,23 @@ const FeatureCard = ({
       >
         {/* Left Content */}
         <motion.div
-          className="order-2 md:order-0 bg-gold-200 px-4 py-4 lg:py-16 lg:px-16 flex flex-col justify-center items-center"
+          className="order-2 md:order-0 bg-gray-dark px-4 py-4 lg:py-16 lg:px-16 flex flex-col justify-center items-center"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
         >
           <div className="w-full md:max-w-xs 2xl:max-w-sm space-y-6">
-            <h2 className="text-xl md:text-4xl font-bold uppercase leading-tight text-foreground">
+            <h2 className="text-xl md:text-4xl font-bold uppercase leading-tight text-[#0E0E0E]">
               {title}
             </h2>
 
-            <p className="text-sm md:text-[20px] text-foreground leading-[100%]">
+            <p className="text-sm md:text-[20px] text-[#0E0E0E] leading-[100%]">
               {description}
             </p>
 
             <motion.button
-              className="inline-block w-full lg:w-auto bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer"
+              className="inline-block w-full lg:w-auto gray-gradient px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer text-black"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -63,7 +63,7 @@ const FeatureCard = ({
 
         {/* Right Video */}
         <motion.div
-          className="order-1 md:order-0 relative h-87.5 md:h-auto p-4 md:p-0 bg-gold-200"
+          className="order-1 md:order-0 relative h-87.5 md:h-auto p-4 md:p-0 bg-gray-dark"
           initial={{
             opacity: 0,
             x: reverse ? -80 : 80,

@@ -7,6 +7,7 @@ import SectionTitle from "./section-title";
 import { Button } from "../ui/button";
 import { ReactNode } from "react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface BannerSectionProps {
   number: string;
@@ -15,6 +16,7 @@ interface BannerSectionProps {
   description?: string;
   btnLabel: string;
   href: string;
+  className?: string;
 }
 
 const containerVariants = {
@@ -39,9 +41,10 @@ const BannerSection = ({
   description,
   btnLabel,
   href,
+  className,
 }: BannerSectionProps) => {
   return (
-    <Container className="flex flex-col bg-white/20">
+    <Container className={cn("flex flex-col bg-white", className)}>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -57,21 +60,20 @@ const BannerSection = ({
             <SectionLabel
               number={number}
               label={label}
-              colorClassName="text-white"
-              descriptionClassName="text-white/64!"
-              squareClassName="bg-[#FFFFFF1A]!"
-              labelClassName="text-white"
+              descriptionClassName="text-[#000000A3]!"
+              squareClassName="bg-[#C9CBCD]!"
+              labelClassName="text-foreground"
             />
           </motion.div>
           <motion.div variants={itemVariants}>
             <SectionTitle
               title={title}
-              colorClassName="text-2xl! lg:text-[56px]! tracking-[-0.05px] text-white text-center"
+              colorClassName="text-2xl! lg:text-[56px]! tracking-[-0.05px] text-black text-center"
             />
           </motion.div>
           {description && (
             <motion.p
-              className="text-white md:max-w-lg text-sm md:text-xl text-center font-normal"
+              className="text-black md:max-w-lg text-sm md:text-xl text-center font-normal"
               variants={itemVariants}
             >
               {description}
@@ -81,7 +83,7 @@ const BannerSection = ({
 
         <Button
           variant="outline"
-          className="w-full lg:w-1/4 text-sm md:text-xl leading-[100%] rounded-none font-semibold uppercase tracking-[4%] px-3 py-5 bg-gold-200 text-brown-200 hover:bg-gold-200/95 hover:text-brown-100 transition-colors"
+          className="w-full lg:w-1/4 text-sm md:text-xl leading-[100%] rounded-none font-semibold uppercase tracking-[4%] px-3 py-5 gray-gradient transition-colors"
           asChild
         >
           <Link href={href}>{btnLabel}</Link>

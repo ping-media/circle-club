@@ -80,10 +80,10 @@ const PartnerCard = ({ item }: { item: PartnerList }) => (
       label={item.title}
       colorClassName="tracking-tight! text-sm!"
       labelClassName="text-foreground! font-semibold! text-sm md:text-lg leading-[100%] md:leading-7"
-      squareClassName="bg-brown-100!"
+      squareClassName="bg-black!"
     />
 
-    <p className="text-[#000000CC] md:w-2/3 font-normal text-sm md:text-xl leading-5 md:leading-6">
+    <p className="text-foreground md:w-2/3 font-normal text-sm md:text-xl leading-5 md:leading-6">
       {item.description}
     </p>
   </div>

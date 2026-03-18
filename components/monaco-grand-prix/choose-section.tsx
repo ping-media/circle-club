@@ -29,7 +29,8 @@ const ChooseSection = () => {
     <>
       <HeroVideo
         src="videos/monaco.mp4"
-        overlayClassName="bg-[linear-gradient(0deg,_rgba(255,246,219,0.2)_0%,_#FFF6DB_100%)]!"
+        // overlayClassName="bg-[linear-gradient(0deg,_rgba(255,246,219,0.2)_0%,_#FFF6DB_100%)]!"
+        overlayClassName="bg-[linear-gradient(0deg,_rgba(255,_255,_255,_0.2)_0%,_#FFFFFF_100%)]!"
       />
 
       <Container className="relative z-50 px-6 lg:px-0">

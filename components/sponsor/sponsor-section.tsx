@@ -57,7 +57,7 @@ const SponsorSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="inline-block w-full lg:w-5/12 2xl:1/4 bg-brown-100 text-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer mt-6 md:mt-0"
+              className="inline-block w-full lg:w-5/12 2xl:1/4 gray-gradient px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] hover:opacity-90 transition cursor-pointer mt-6 md:mt-0"
             >
               <Link href="/sponsors">Sponsor Inquiry</Link>
             </motion.button>

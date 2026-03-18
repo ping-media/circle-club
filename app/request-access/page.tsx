@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 const RequestAccess = () => {
   return (
     <>
-      <section className="relative bg-brown-100 py-11">
+      <section className="relative bg-white py-11">
         <BorderGrid />
         <RequestAccessSection />
       </section>
-      <section className="relative bg-gold-40 pt-11 lg:py-20">
+      <section className="relative bg-gray-dark pt-11 lg:py-20">
         <BorderGrid />
         <RequestAccessFormSection />
       </section>

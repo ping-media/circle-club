@@ -41,14 +41,14 @@ const ContactHero = () => {
           >
             <SectionTitle
               title={"Contact Us"}
-              colorClassName="font-black text-white leading-[100%]! md:leading-[1.01] lg:leading-[124px] text-[42px]! md:text-8xl! lg:text-[128px]! lg:tracking-[-4.32px]"
+              colorClassName="font-black text-black leading-[100%]! md:leading-[1.01] lg:leading-[124px] text-[42px]! md:text-8xl! lg:text-[128px]! lg:tracking-[-4.32px]"
             />
           </motion.div>
 
           <motion.p
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="text-white text-sm lg:text-xl leading-[100%] lg:leading-6"
+            className="text-black text-sm lg:text-xl leading-[100%] lg:leading-6"
           >
             Direct access. Discreet communication. Fast response.
           </motion.p>

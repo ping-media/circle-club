@@ -29,7 +29,8 @@ const StackingCard = ({ index, children }: StackingCardProps) => {
         zIndex: index + 1,
       }}
     >
-      <motion.div className="w-full max-w-full px-0 lg:px-6 bg-gold-40 flex flex-col">
+      {/* <motion.div className="w-full max-w-full px-0 lg:px-6 bg-gold-40 flex flex-col"> */}
+      <motion.div className="w-full max-w-full px-0 lg:px-6 bg-[linear-gradient(50.91deg,_rgba(184,_190,_198,_0.4)_5.2%,_rgba(192,_198,_206,_0.4)_13.24%,_rgba(209,_216,_222,_0.4)_23.46%,_rgba(200,_207,_213,_0.4)_27.84%,_rgba(176,_182,_189,_0.4)_34.41%,_rgba(146,_152,_160,_0.4)_41.72%,_rgba(178,_184,_191,_0.4)_51.94%,_rgba(209,_216,_222,_0.4)_59.97%,_rgba(200,_207,_213,_0.4)_64.35%,_rgba(176,_182,_189,_0.4)_70.92%,_rgba(145,_151,_159,_0.4)_78.23%)] flex flex-col">
         {children}
       </motion.div>
     </div>
@@ -67,8 +68,7 @@ const ServiceCard = ({
   href,
 }: serviceList) => {
   return (
-    // <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] p-5 md:p-8 flex flex-col lg:flex-row gap-6 lg:gap-12 h-full">
-    <div className="w-full bg-[#FFF9E7] border border-[#E9E4D6] p-5 md:p-8 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-12 h-full">
+    <div className="w-full bg-white border border-transparent md:border-[#0000004D] p-5 md:p-8 flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-12 h-full">
       {/* IMAGE */}
       {/* <div className="order-1 lg:order-2 w-full lg:w-[48%]"> */}
       <div className="order-1 lg:order-2 lg:col-span-6 flex justify-end">
@@ -121,7 +121,7 @@ const ServiceCard = ({
           )}
         </div>
 
-        <button className="mt-6 w-full lg:w-fit inline-flex items-center gap-2 bg-brown-100 text-white px-6 py-3 text-xs font-semibold tracking-widest uppercase hover:opacity-90 transition">
+        <button className="mt-6 w-full lg:w-fit inline-flex items-center gap-2 gray-gradient text-black px-6 py-3 text-xs font-semibold tracking-widest uppercase hover:opacity-90 transition">
           <Link
             href={href}
             className="flex items-center justify-center w-full gap-2.5"

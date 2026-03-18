@@ -49,15 +49,20 @@ const EventSection = () => {
           <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 lg:items-end">
             <div className="lg:col-span-7">
               <SectionTitle
-                title="Exclusive Monaco Experiences"
-                colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]! md:leading-19"
+                title={
+                  <>
+                    Exclusive <span className="text-brown-100">Monaco</span>{" "}
+                    Experiences
+                  </>
+                }
+                colorClassName="text-2xl! font-bold! text-[#0E0E0E]! md:text-[56px]! leading-[100%]! md:leading-19"
               />
             </div>
             <motion.div
               variants={itemVariants}
               className="lg:col-span-4 gap-2.5"
             >
-              <p className="text-sm md:text-xl">
+              <p className="text-sm md:text-xl text-[#0E0E0ECC]!">
                 Access the Monaco Grand Prix from the most privileged vantage
                 points terrace and sea.
               </p>

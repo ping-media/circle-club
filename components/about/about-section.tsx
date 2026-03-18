@@ -47,7 +47,12 @@ const AboutSection = () => {
               transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             >
               <SectionTitle
-                title="This Is Not A Service.This Is A Circle."
+                title={
+                  <>
+                    This Is Not A Service.This Is A{" "}
+                    <span className="text-brown-100">Circle</span>.
+                  </>
+                }
                 colorClassName="text-2xl! font-bold! block md:hidden"
               />
             </motion.div>
@@ -83,7 +88,7 @@ const AboutSection = () => {
               <>
                 This Is Not A Service.
                 <br />
-                This Is A Circle.
+                This Is A <span className="text-brown-100">Circle</span>.
               </>
             }
             colorClassName="hidden md:block md:text-3xl lg:text-5xl font-bold! leading-[1.3]"

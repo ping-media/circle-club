@@ -33,7 +33,7 @@ const RequestAccessFormSection = () => {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="w-full h-[416px] lg:h-full relative">
-            <div className="absolute z-20 top-0 left-0 inset-x-0 h-[106px] lg:h-[149px] bg-[#FFFFFF1A] backdrop-blur-sm flex flex-col justify-center">
+            <div className="absolute z-20 top-0 left-0 inset-x-0 h-[106px] lg:h-[149px] backdrop-blur-sm flex flex-col justify-center">
               <div className="max-w-xs">
                 <p className="text-white font-semibold text-sm md:text-[20px] pl-6 lg:pl-10 md:leading-7 tracking-[3%]">
                   Begin your journey to the exclusive experiences
@@ -60,7 +60,7 @@ const RequestAccessFormSection = () => {
           <div className="flex flex-col items-start justify-center gap-3 md:gap-5">
             <SectionTitle
               title="Send Request"
-              colorClassName="font-bold! text-brown-100!"
+              colorClassName="font-bold! text-black!"
             />
 
             <p className="text-foreground font-normal md:leading-6.5">

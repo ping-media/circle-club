@@ -61,7 +61,7 @@ const IconAndLabel = ({
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full md:w-auto"
       >
-        <div className="flex items-start md:items-center gap-3 text-white">
+        <div className="flex items-start md:items-center gap-3 text-black">
           <Image
             width={20}
             height={20}
@@ -75,7 +75,7 @@ const IconAndLabel = ({
               <span key={phone.value} className="flex items-center gap-2">
                 <Link
                   href={phone.href}
-                  className="hover:text-gold-200 transition-colors"
+                  className="hover:text-black/90 transition-colors"
                 >
                   {phone.value}
                 </Link>
@@ -90,8 +90,6 @@ const IconAndLabel = ({
       </motion.div>
     );
   }
-  // const values = Array.isArray(item.value) ? item.value : [item.value];
-  // const links = Array.isArray(item.href) ? item.href : [item.href];
 
   return (
     <motion.div
@@ -99,7 +97,7 @@ const IconAndLabel = ({
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="w-full md:w-auto"
     >
-      <div className="flex items-start md:items-center gap-3 text-white">
+      <div className="flex items-start md:items-center gap-3 text-black">
         <Image
           width={20}
           height={20}
@@ -110,28 +108,10 @@ const IconAndLabel = ({
 
         <Link
           href={item.href!}
-          className="hover:text-gold-200 transition-colors"
+          className="hover:text-black/90 transition-colors"
         >
           {item.value}
         </Link>
-
-        {/* <div className="flex flex-col md:flex-row md:items-center gap-1 md:gap-2">
-          {values.map((value, index) => (
-            <span key={value} className="flex items-center gap-2">
-              <Link
-                href={links[index]}
-                className="hover:text-gold-200 transition-colors"
-              >
-                {value}
-              </Link>
-
-              separator only on desktop
-              {index !== values.length - 1 && (
-                <span className="hidden md:inline text-[#DDDDDD38]">|</span>
-              )}
-            </span>
-          ))}
-        </div> */}
       </div>
     </motion.div>
   );

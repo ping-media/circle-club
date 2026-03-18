@@ -18,6 +18,7 @@ const AboutInfoThree = () => {
         }
         btnLabel={"Request Access"}
         href="/request-access"
+        className="bg-gray-dark!"
       />
     </div>
   );

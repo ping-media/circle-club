@@ -13,19 +13,19 @@ export const metadata: Metadata = {
 const About = () => {
   return (
     <>
-      <section className="bg-brown-100 relative py-11">
+      <section className="bg-white relative py-11">
         <BorderGrid />
         <AboutHero />
       </section>
-      <section className="bg-gold-50 py-20 relative border-b b-[#00000014]">
+      <section className="bg-gray-dark py-20 relative border-b b-[#00000014]">
         <BorderGrid />
         <AboutInfoOne />
       </section>
-      <section className="bg-gold-50 py-20 relative z-20">
+      <section className="bg-gray-dark py-20 relative z-20">
         <BorderGrid />
         <AboutInfoTwo />
       </section>
-      <section className="relative bg-brown-100 py-20 lg:py-30">
+      <section className="relative bg-white py-20 lg:py-30">
         <BorderGrid />
         <AboutInfoThree />
       </section>

@@ -45,7 +45,7 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
           }}
           className="fixed inset-0 flex items-center md:items-start justify-center md:justify-start top-24 md:left-60"
         >
-          <Logo size="large" />
+          <Logo size="large" isHome={isHome} />
         </motion.div>
       )}
 
@@ -55,7 +55,7 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
           <div className="flex items-center justify-between">
             {/* Logo left aligned */}
             <Link href="/">
-              <Logo />
+              <Logo isHome={isHome} />
             </Link>
             {/* Nav */}
             <nav className="hidden lg:flex items-center gap-9">
@@ -69,10 +69,13 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
                   <Link
                     href={item.href}
                     className={cn(
-                      "text-xs 2xl:text-sm tracking-[0.2em] uppercase font-bold text-white hover:text-white/90 transition-colors relative",
+                      "text-xs 2xl:text-sm tracking-[0.2em] uppercase transition-colors relative",
+                      isHome
+                        ? "text-white hover:text-white/90"
+                        : "text-black hover:text-black/95",
                       pathname === item.href
-                        ? "underline decoration-2 underline-offset-3"
-                        : "",
+                        ? "underline decoration-2 underline-offset-3 font-semibold"
+                        : "font-medium",
                     )}
                   >
                     {item.label}
@@ -86,10 +89,11 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
               transition={{ duration: 0.4 }}
             >
               <Button
-                variant={isHome ? "outline" : "gold-gradient"}
+                variant={isHome ? "outline" : "gray-gradient"}
                 className={cn(
                   "text-xs 2xl:text-sm rounded-none font-bold uppercase tracking-[0.15em] hidden lg:flex",
-                  isHome && "bg-gold-60 hover:bg-gold-60 border-none",
+                  // isHome && "bg-gold-60 hover:bg-gold-60 border-none",
+                  isHome && "bg-white hover:bg-white border-none",
                 )}
                 asChild
               >
@@ -103,7 +107,10 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
               transition={{ delay: 0.5, duration: 0.4 }}
             >
               <Button
-                className="bg-gold-50 rounded-none p-2 lg:hidden"
+                className={cn(
+                  "rounded-none p-2 lg:hidden",
+                  isHome ? "bg-gold-50" : "gray-gradient",
+                )}
                 onClick={() => setIsOpen(true)}
               >
                 <Image
@@ -166,7 +173,8 @@ const AnimatedHeader = ({ phase }: { phase: AnimatedHeaderPhase }) => {
               variant={isHome ? "outline" : "gold-gradient"}
               className={cn(
                 "mt-auto rounded-none uppercase text-sm md:text-base! leading-[100%] font-bold",
-                isHome && "bg-gold-60! hover:bg-gold-60 border-none",
+                // isHome && "bg-gold-60! hover:bg-gold-60 border-none",
+                isHome && "gray-gradient",
               )}
               asChild
             >

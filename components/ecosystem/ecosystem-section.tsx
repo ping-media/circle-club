@@ -35,22 +35,27 @@ const EcosystemSection = () => {
           number="004"
           label="Ecosystem"
           colorClassName="text-sm"
-          squareClassName="bg-[#FFFFFF29]!"
-          descriptionClassName="text-[#FFFFFFA3]!"
-          labelClassName="text-white"
+          squareClassName="bg-[#0F0F0F29]!"
+          descriptionClassName="text-[#0F0F0FA3]!"
+          labelClassName="text-black-100!"
         />
         <div className="grid lg:grid-cols-12 gap-4 lg:gap-6 lg:items-end">
           <div className="lg:col-span-4">
             <SectionTitle
-              title="The Circle Ecosystem"
-              colorClassName="text-2xl! font-bold! md:text-[56px]! leading-[100%]! md:leading-19 text-white"
+              title={
+                <>
+                  The Circle <span className="text-brown-100">Ecosystem</span>
+                </>
+              }
+              colorClassName="text-2xl! font-bold! text-black-100! md:text-[56px]! leading-[100%]! md:leading-19"
             />
           </div>
           <motion.div
             variants={itemVariants}
             className="lg:col-span-7 lg:col-start-8 gap-2.5"
           >
-            <p className="text-sm md:text-xl text-white leading-[100%] md:leading-6">
+            {/* text-[#0F0F0FCC] */}
+            <p className="text-sm md:text-xl text-black-100/80 leading-[100%] md:leading-6">
               Unlike traditional concierge services, we operate our own luxury
               infrastructure — ensuring direct control, quality, and speed.
             </p>

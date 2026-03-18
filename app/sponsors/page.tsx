@@ -13,19 +13,19 @@ export const metadata: Metadata = {
 const Sponsors = () => {
   return (
     <div className="overflow-x-hidden">
-      <section className="bg-brown-100 relative py-11">
+      <section className="bg-white relative py-11">
         <BorderGrid />
         <SponsorHero />
       </section>
-      <section className="bg-gold-50 relative py-11">
+      <section className="bg-gray-dark relative py-11">
         <BorderGrid borderClassName="border-[#EBE3CA]!" />
         <WhyPartner />
       </section>
-      <section className="bg-gold-50 relative py-11">
+      <section className="bg-gray-dark relative py-11">
         <BorderGrid borderClassName="border-[#EBE3CA]!" />
         <WhyPartnerOpportunities />
       </section>
-      <section className="relative bg-brown-100 py-11 lg:py-30">
+      <section className="relative bg-white py-11 lg:py-30">
         <BorderGrid />
         <Partnership />
       </section>
