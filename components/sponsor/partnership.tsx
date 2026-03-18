@@ -50,7 +50,7 @@ const Partnership = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-black font-bold text-2xl md:text-5xl leading-[100%] md:leading-[1.6] uppercase max-w-60 md:max-w-full"
+              className="text-black font-bold text-2xl md:text-5xl leading-normal md:leading-[1.6] uppercase max-w-60 md:max-w-full"
             >
               Let’s Discuss a Strategic Partnership
             </motion.h2>

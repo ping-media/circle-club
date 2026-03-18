@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 const Services = () => {
   return (
     <>
-      <section className="relative bg-white py-11">
+      <section className="relative bg-white py-11 overflow-hidden">
         <BorderGrid />
         <ServiceSection />
       </section>
-      <section className="relative h-20 md:h-40 2xl:h-[164px]">
+      <section className="relative h-20 md:h-40 2xl:h-[164px] overflow-hidden">
         <BorderGrid />
         <ServicesVideos />
       </section>
@@ -25,7 +25,7 @@ const Services = () => {
         <BorderGrid />
         <ScrollServiceCards />
       </section>
-      <section className="relative bg-gray-dark py-11">
+      <section className="relative bg-gray-dark py-11 overflow-hidden">
         <BorderGrid />
         <JointCircleSection />
       </section>
