@@ -13,7 +13,7 @@ const SponsorSection = () => {
       <div className="order-2 lg:order-0 lg:col-span-6">
         <Container className="max-w-lg! px-6 lg:px-0">
           <motion.div
-            className="flex flex-col gap-3 lg:gap-8 py-11"
+            className="flex flex-col gap-6 lg:gap-8 py-11"
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -28,7 +28,7 @@ const SponsorSection = () => {
               colorClassName="text-black"
             />
 
-            <div className="flex flex-col gap-2 lg:gap-6">
+            <div className="flex flex-col gap-6">
               <SectionTitle
                 title={
                   <>

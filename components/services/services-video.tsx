@@ -19,7 +19,7 @@ const ServicesVideos = () => {
 
       <div className="absolute z-50 inset-0 w-full h-full flex items-center justify-center gap-6 md:gap-12">
         {OPERATIONS.map((o) => (
-          <DotAndLabel label={o} key={o} />
+          <DotAndLabel label={o} key={o} isLight />
         ))}
       </div>
     </>
