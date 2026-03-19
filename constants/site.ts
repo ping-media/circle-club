@@ -23,29 +23,27 @@ export const SITE_CONFIG = {
 
 export const CONTACT_INFO: ContactInfo[] = [
   {
-    icon: "icons/phone.svg",
-    label: "Phone",
-    phones: [
-      {
-        type: "real-estate",
-        value: "+41 78 303 83 13",
-        href: "tel:+41783038313",
-      },
-      {
-        type: "cars",
-        value: "+33 6 27 08 53 55",
-        href: "tel:+33627085355",
-      },
-    ],
-    // value: ["+41 78 303 83 13", "+33 6 27 08 53 55"],
-    // href: ["tel:+41 78 303 83 13", "tel:+33 6 27 08 53 55"],
-  },
-  {
     icon: "icons/email.svg",
     label: "Email",
     value: "contact@circleclub.co",
     href: "mailto:contact@circleclub.co",
   },
+  {
+    icon: "images/Whatsapp.svg",
+    label: "Phone",
+    phones: [
+      {
+        type: "real-estate",
+        value: "+41 78 303 83 13",
+        href: "https://wa.me/+41783038313",
+      },
+      {
+        type: "cars",
+        value: "+33 6 27 08 53 55",
+        href: "https://wa.me/+33627085355",
+      },
+    ],
+  },
 ];
 
-export const WA_LINK: string = "https://wa.me/+41783038313";
+export const WA_LINK: string = "https://wa.me/+33627085355";
