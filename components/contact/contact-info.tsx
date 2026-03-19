@@ -65,7 +65,7 @@ const IconAndLabel = ({
       >
         <Button
           variant="gray-gradient"
-          className="font-normal! px-3! py-5!"
+          className="font-normal! px-3! py-5! border-none!"
           asChild
         >
           <Link
@@ -116,7 +116,7 @@ const IconAndLabel = ({
       <Button
         variant="outline"
         asChild
-        className="rounded-none px-3 py-5 font-normal"
+        className="rounded-none px-3 py-5 font-normal border-[#E6E9EB]!"
       >
         <Link
           href={item.href!}
@@ -133,12 +133,6 @@ const IconAndLabel = ({
           <span className="hover:text-black/90 transition-colors">
             {item.value}
           </span>
-          {/* <Link
-            href={item.href!}
-            className="hover:text-black/90 transition-colors"
-          >
-            {item.value}
-          </Link> */}
         </Link>
       </Button>
     </motion.div>
